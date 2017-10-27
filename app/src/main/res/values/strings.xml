@@ -1,8 +1,11 @@
 <resources>
-    <string name="app_name">Abcd</string>
+    <string name="app_name">Techfest 2k17</string>
     <string name="camera">Open Camera</string>
     <string name="music">Play Music</string>
     <string name="scanQR">Scan QR Code</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
     <string name="toast">Toast</string>
     <string name="click_me">Click me</string>
     <string name="done">Done</string>
