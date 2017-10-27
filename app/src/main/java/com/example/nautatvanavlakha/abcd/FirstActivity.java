@@ -90,28 +90,12 @@ public class FirstActivity extends AppCompatActivity {
         // Handle your other action bar items...
         return super.onOptionsItemSelected(item);
     }
-
-    public void MainProcess(View view) {
-
-        final String TAG = "DEBUG";
-
-        EditText owner = (EditText) findViewById(R.id.name);
-        String owner_string = owner.getText().toString();
-
-        setContentView(R.layout.activity_main_screen);
-
-        TextView custom = (TextView) findViewById(R.id.welcome);
-        custom.setText("Hi " + owner_string + ".");
-        Log.d(TAG, "owner name is set");
-
-        Log.d(TAG, "content shown");
-    }
-
-    public void toaster() {
-        EditText toast = (EditText) findViewById(R.id.toastText);
-        String final_toast = toast.getText().toString();
-        Toast.makeText(getApplicationContext(), final_toast, Toast.LENGTH_SHORT).show();
-    }
+//
+//    public void toaster() {
+//        EditText toast = (EditText) findViewById(R.id.toastText);
+//        String final_toast = toast.getText().toString();
+//        Toast.makeText(getApplicationContext(), final_toast, Toast.LENGTH_SHORT).show();
+//    }
 
     public void open_camera() {
         Intent Intent3=new   Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA);
