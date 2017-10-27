@@ -83,6 +83,10 @@ public class FirstActivity extends AppCompatActivity {
             public void onDrawerOpened(View drawerView) {
             }
         };
+
+        //change the color of toggle
+        mDrawerToggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.white));
+
         mDrawer.addDrawerListener(mDrawerToggle);
         mDrawerToggle.syncState();
 
