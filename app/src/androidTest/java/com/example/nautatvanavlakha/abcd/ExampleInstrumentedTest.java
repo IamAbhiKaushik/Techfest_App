@@ -1,4 +1,4 @@
-package com.example.android.techfest_app;
+package com.example.nautatvanavlakha.abcd;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.android.techfest_app", appContext.getPackageName());
+        assertEquals("com.example.nautatvanavlakha.abcd", appContext.getPackageName());
     }
 }

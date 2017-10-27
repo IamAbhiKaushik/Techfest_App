@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">Techfest_App</string>
+    <string name="app_name">Abcd</string>
+    <string name="camera">Open Camera</string>
+    <string name="music">Play Music</string>
+    <string name="scanQR">Scan QR Code</string>
+    <string name="toast">Toast</string>
+    <string name="click_me">Click me</string>
+    <string name="done">Done</string>
+    <string name="intro">I am cortana. What\'s Your name?</string>
+    <string name="welcome">Hi there</string>
+    <string name="order">this will be toasted!!</string>
+    <string name="what_would_you_like_me_to_do_today">What would you like me to do today?</string>
+    <string name="hello_world">HELLO WORLD</string>
+    <string-array name="LeftmenuItems">
+        <item>Menu Item 0</item>
+        <item>Menu Item 1</item>
+        <item>Menu Item 2</item>
+        <item>Menu Item 3</item>
+        <item>Menu Item 4</item>
+    </string-array>
+
+    <string-array name="RightmenuItems">
+        <item>Right Menu Item 0</item>
+        <item>Right Menu Item 1</item>
+        <item>Right Menu Item 2</item>
+        <item>Right Menu Item 3</item>
+        <item>Right Menu Item 4</item>
+    </string-array>
 </resources>

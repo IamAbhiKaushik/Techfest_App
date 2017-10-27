@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/what_would_you_like_me_to_do_today"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/Cam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:onClick="open_camera"
+        android:padding="0dp"
+        android:paddingTop="15dp"
+        android:text="@string/camera" />
+
+    <Button
+        android:id="@+id/Mus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="0dp"
+        android:paddingTop="15dp"
+        android:text="@string/music" />
+
+    <Button
+        android:id="@+id/QR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="0dp"
+        android:paddingTop="15dp"
+        android:text="@string/scanQR" />
+
+
+    <EditText
+        android:id="@+id/toastText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/order"
+        android:inputType="textPersonName" />
+
+
+    <Button
+        android:id="@+id/toaster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:onClick="toaster"
+        android:padding="0dp"
+        android:paddingTop="15dp"
+        android:text="@string/toast"
+        android:layout_marginEnd="100dp"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
