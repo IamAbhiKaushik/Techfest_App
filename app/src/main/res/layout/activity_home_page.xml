@@ -13,7 +13,6 @@
         android:layout_height="match_parent"
         android:background="@drawable/rectangle_40"
         android:baselineAligned="false"
-
         android:fitsSystemWindows="false"
         android:orientation="vertical"
         tools:context="com.example.nautatvanavlakha.abcd.Homepage">
@@ -58,12 +57,19 @@
                         android:contentDescription="@string/compi"
                         android:src="@drawable/cup_2_" />
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="0.6"-->
+                        <!--android:gravity="center"-->
+                        <!--android:src="@drawable/competitions" />-->
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.6"
                         android:gravity="center"
-                        android:src="@drawable/competitions" />
+                        android:textColor="#ffffff"
+                        android:text="COMPETITIONS" />
                 </LinearLayout>
                 
                 <!--technoholix-->
@@ -83,13 +89,20 @@
                         android:contentDescription="@+string/technoholix"
                         android:src="@drawable/vinyl_2_" />
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="0.6"-->
+                        <!--android:gravity="center"-->
+                        <!--android:src="@drawable/technoholix"-->
+                        <!--android:textColor="#fff" />-->
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.6"
                         android:gravity="center"
-                        android:src="@drawable/technoholix"
-                        android:textColor="#fff" />
+                        android:textColor="#ffffff"
+                        android:text="TECHNOHOLIXS" />
                 </LinearLayout>
 
                 <!--ideate-->
@@ -107,12 +120,13 @@
                         android:contentDescription="@+string/ideate"
                         android:src="@drawable/lightbulb_2_" />
 
-                    <ImageView
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.6"
                         android:gravity="center"
-                        android:src="@drawable/ideate" />
+                        android:textColor="#ffffff"
+                        android:text="SUMMIT" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -141,12 +155,19 @@
                         android:src="@drawable/pen_2_"
                         tools:ignore="NestedWeights" />
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="0.6"-->
+                        <!--android:gravity="center"-->
+                        <!--android:src="@drawable/workshops" />-->
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.6"
                         android:gravity="center"
-                        android:src="@drawable/workshops" />
+                        android:textColor="#ffffff"
+                        android:text="WORKSHOP" />
                 </LinearLayout>
 
                 <!--initiative-->
@@ -167,12 +188,19 @@
                         android:src="@drawable/power_2_"
                         tools:ignore="NestedWeights" />
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="0.6"-->
+                        <!--android:gravity="center"-->
+                        <!--android:src="@drawable/initiatives" />-->
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.6"
                         android:gravity="center"
-                        android:src="@drawable/initiatives" />
+                        android:textColor="#ffffff"
+                        android:text="INITIATIVES" />
                 </LinearLayout>
 
                 <!--ozone-->
@@ -191,12 +219,19 @@
                         android:src="@drawable/joypad_2_"
                         tools:ignore="NestedWeights" />
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="0.6"-->
+                        <!--android:gravity="center"-->
+                        <!--android:src="@drawable/ozone" />-->
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.6"
                         android:gravity="center"
-                        android:src="@drawable/ozone" />
+                        android:textColor="#ffffff"
+                        android:text="OZONE" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -227,12 +262,19 @@
                         android:src="@drawable/_x39__2_"
                         tools:ignore="NestedWeights" />
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="0.6"-->
+                        <!--android:gravity="center"-->
+                        <!--android:src="@drawable/summit" />-->
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.6"
                         android:gravity="center"
-                        android:src="@drawable/summit" />
+                        android:textColor="#ffffff"
+                        android:text="SUMMIT" />
                 </LinearLayout>
 
                 <!--lectures-->
@@ -242,23 +284,29 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.33"
                     android:orientation="vertical"
-                    
-                    android:paddingLeft="30dp"
                     tools:ignore="RtlSymmetry">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.4"
+                        android:gravity="center"
                         android:src="@drawable/user_2_"
                         tools:ignore="NestedWeights" />
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="0.6"-->
+                        <!--android:gravity="center"-->
+                        <!--android:src="@drawable/lectures" />-->
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.6"
                         android:gravity="center"
-                        android:src="@drawable/lectures" />
+                        android:textColor="#ffffff"
+                        android:text="LECTURES" />
                 </LinearLayout>
 
                 <!--exhibitions-->
@@ -268,7 +316,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.33"
                     android:orientation="vertical"
-                    android:paddingLeft="20dp">
+                    >
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -277,12 +325,20 @@
                         android:src="@drawable/pic_2_"
                         tools:ignore="NestedWeights" />
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="0.6"-->
+                        <!--android:gravity="center"-->
+                        <!--android:src="@drawable/exhibitions" />-->
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.6"
                         android:gravity="center"
-                        android:src="@drawable/exhibitions" />
+                        android:textColor="#ffffff"
+                        android:text="EXHIBITIONS" />
+
                 </LinearLayout>
             </LinearLayout>
 
@@ -311,12 +367,19 @@
                         android:src="@drawable/ic_language_24px"
                         tools:ignore="NestedWeights" />
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="0.6"-->
+                        <!--android:gravity="center"-->
+                        <!--android:src="@drawable/world_mun" />-->
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.6"
                         android:gravity="center"
-                        android:src="@drawable/world_mun" />
+                        android:textColor="#ffffff"
+                        android:text="WORLD MUN" />
                 </LinearLayout>
 
                 <!--cyclothon-->
@@ -336,12 +399,19 @@
                         android:src="@drawable/ic_directions_bike_24px"
                         tools:ignore="NestedWeights" />
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="0.6"-->
+                        <!--android:gravity="center"-->
+                        <!--android:src="@drawable/cyclothon" />-->
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.6"
                         android:gravity="center"
-                        android:src="@drawable/cyclothon" />
+                        android:textColor="#ffffff"
+                        android:text="CYCLOTHON" />
                 </LinearLayout>
 
                 <!--sponsers-->
@@ -359,12 +429,19 @@
                         android:src="@drawable/_x24__2_"
                         tools:ignore="NestedWeights" />
 
-                    <ImageView
+                    <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="0.6"-->
+                        <!--android:gravity="center"-->
+                        <!--android:src="@drawable/sponsers" />-->
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.6"
                         android:gravity="center"
-                        android:src="@drawable/sponsers" />
+                        android:textColor="#ffffff"
+                        android:text="SPONSERS" />
                 </LinearLayout>
             </LinearLayout>
 
