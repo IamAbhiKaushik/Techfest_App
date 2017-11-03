@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Techfest_App.iml" filepath="$PROJECT_DIR$/Techfest_App.iml" />
-      <module fileurl="file://D:\Techfest_App\Techfest_App.iml" filepath="D:\Techfest_App\Techfest_App.iml" />
+      <module fileurl="file://D:/Techfest_App/Techfest_App.iml" filepath="D:/Techfest_App/Techfest_App.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://D:\Techfest_App\app\app.iml" filepath="D:\Techfest_App\app\app.iml" />
+      <module fileurl="file://D:/Techfest_App/app/app.iml" filepath="D:/Techfest_App/app/app.iml" />
     </modules>
   </component>
 </project>
