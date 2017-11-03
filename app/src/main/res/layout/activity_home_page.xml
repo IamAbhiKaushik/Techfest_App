@@ -20,6 +20,7 @@
 
         <include layout="@layout/custom_toolbar" />
 
+        <!--The full front activity box-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0px"
@@ -31,6 +32,7 @@
             android:paddingRight="20dp"
             android:paddingTop="30dp">
 
+            <!--master layout 1-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -39,13 +41,14 @@
                 android:orientation="horizontal"
                 tools:ignore="NestedWeights">
 
+                <!--compi-->
                 <LinearLayout
                     android:id="@+id/compi"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.33"
                     android:orientation="vertical"
-                    android:paddingEnd="25dp"
+                    
                     tools:ignore="NestedWeights,RtlSymmetry">
 
                     <ImageView
@@ -61,17 +64,16 @@
                         android:layout_weight="0.6"
                         android:gravity="center"
                         android:src="@drawable/competitions" />
-
                 </LinearLayout>
-
-
+                
+                <!--technoholix-->
                 <LinearLayout
                     android:id="@+id/technoholix"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.33"
                     android:orientation="vertical"
-                    android:paddingEnd="25dp"
+                   
                     tools:ignore="RtlSymmetry">
 
                     <ImageView
@@ -85,15 +87,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.6"
-
                         android:gravity="center"
                         android:src="@drawable/technoholix"
                         android:textColor="#fff" />
                 </LinearLayout>
 
+                <!--ideate-->
                 <LinearLayout
                     android:id="@+id/ideate"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.33"
                     android:orientation="vertical">
@@ -114,6 +116,7 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <!--Master layout 2-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -121,13 +124,14 @@
                 android:baselineAligned="false"
                 android:orientation="horizontal">
 
+                <!--workshop-->
                 <LinearLayout
                     android:id="@+id/workshop"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.33"
                     android:orientation="vertical"
-                    android:paddingEnd="25dp"
+                    
                     tools:ignore="RtlSymmetry">
 
                     <ImageView
@@ -145,14 +149,15 @@
                         android:src="@drawable/workshops" />
                 </LinearLayout>
 
+                <!--initiative-->
                 <LinearLayout
                     android:id="@+id/initiative"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.33"
                     android:orientation="vertical"
 
-                    android:paddingEnd="25dp"
+                    
                     tools:ignore="RtlSymmetry">
 
                     <ImageView
@@ -170,9 +175,10 @@
                         android:src="@drawable/initiatives" />
                 </LinearLayout>
 
+                <!--ozone-->
                 <LinearLayout
                     android:id="@+id/ozone"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.33"
                     android:orientation="vertical">
@@ -194,6 +200,7 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <!--master layout 3-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -201,13 +208,14 @@
                 android:orientation="horizontal"
                 android:baselineAligned="false">
 
+                <!--summit-->
                 <LinearLayout
                     android:id="@+id/summit"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.33"
                     android:orientation="vertical"
-                    android:paddingEnd="25dp"
+                    
                     tools:ignore="RtlSymmetry">
 
                     <ImageView
@@ -227,13 +235,14 @@
                         android:src="@drawable/summit" />
                 </LinearLayout>
 
+                <!--lectures-->
                 <LinearLayout
                     android:id="@+id/lectures"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.33"
                     android:orientation="vertical"
-                    android:paddingEnd="25dp"
+                    
                     android:paddingLeft="30dp"
                     tools:ignore="RtlSymmetry">
 
@@ -252,9 +261,10 @@
                         android:src="@drawable/lectures" />
                 </LinearLayout>
 
+                <!--exhibitions-->
                 <LinearLayout
                     android:id="@+id/exibitions"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.33"
                     android:orientation="vertical"
@@ -276,6 +286,7 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <!--master layout 4-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -283,13 +294,14 @@
                 android:orientation="horizontal"
                 android:baselineAligned="false">
 
+                <!--world mun-->
                 <LinearLayout
                     android:id="@+id/mun"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.33"
                     android:orientation="vertical"
-                    android:paddingEnd="25dp"
+                    
                     tools:ignore="RtlSymmetry">
 
                     <ImageView
@@ -307,13 +319,14 @@
                         android:src="@drawable/world_mun" />
                 </LinearLayout>
 
+                <!--cyclothon-->
                 <LinearLayout
                     android:id="@+id/cyclothon"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.33"
                     android:orientation="vertical"
-                    android:paddingEnd="25dp"
+                    
                     tools:ignore="RtlSymmetry">
 
                     <ImageView
@@ -331,9 +344,10 @@
                         android:src="@drawable/cyclothon" />
                 </LinearLayout>
 
+                <!--sponsers-->
                 <LinearLayout
                     android:id="@+id/sponsers"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0sp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.33"
                     android:orientation="vertical">
@@ -357,6 +371,7 @@
 
         </LinearLayout>
 
+<!--The bottom bar-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
@@ -374,35 +389,34 @@
 
                 <ImageView
                     android:id="@+id/map_bottom"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
-                    android:paddingRight="10dp"
 
-                    android:src="@drawable/aaa" />
+                    android:src="@drawable/map" />
 
                 <ImageView
                     android:id="@+id/QR_bottom"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
-                    android:paddingEnd="10dp"
-                    android:src="@drawable/bb" />
+
+                    android:src="@drawable/qrscan" />
 
                 <ImageView
                     android:id="@+id/schedule_bottom"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
-                    android:paddingEnd="10dp"
-                    android:src="@drawable/cc" />
+                    android:src="@drawable/schedule"
+                    tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:id="@+id/favorite_bottom"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
-                    android:src="@drawable/dd" />
+                    android:src="@drawable/favorites" />
             </LinearLayout>
         </LinearLayout>
 
