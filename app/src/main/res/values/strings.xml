@@ -1,8 +1,9 @@
 <resources>
+
+    <!--app by java-->
     <string name="app_name">Techfest 2k17</string>
     <string name="camera">Open Camera</string>
     <string name="music">Play Music</string>
-    <string name="scanQR">Scan QR Code</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -14,7 +15,6 @@
     <string name="order">this will be toasted!!</string>
     <string name="what_would_you_like_me_to_do_today">What would you like me to do today?</string>
     <string name="hello_world">HELLO WORLD</string>
-    <string name="compi">compi</string>
     <string-array name="LeftmenuItems">
         <item>Menu Item 0</item>
         <item>Menu Item 1</item>
@@ -22,7 +22,6 @@
         <item>Menu Item 3</item>
         <item>Menu Item 4</item>
     </string-array>
-
     <string-array name="RightmenuItems">
         <item>Right Menu Item 0</item>
         <item>Right Menu Item 1</item>
@@ -44,4 +43,23 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+    <!--Techfest app-->
+    <string name="compi">COMPETITIONS</string>
+    <string name="tech">TECHNOHOLIX</string>
+    <string name="ideate">IDEATE</string>
+    <string name="workshop">WORKSHOPS</string>
+    <string name="initiatives">INITIATIVES</string>
+    <string name="ozone">OZONE</string>
+    <string name="summit">SUMMIT</string>
+    <string name="lectures">LECTURES</string>
+    <string name="exhibitions">EXHIBITIONS</string>
+    <string name="world_mun">WORLD MUN</string>
+    <string name="cyclothon">CYCLOTHON</string>
+    <string name="sponsers">SPONSERS</string>
+
+    <string name="scanQR">Scan QR Code</string>
+    <string name="map">Show the map of IIT Bombay</string>
+    <string name="schedule">Schedule of the events held</string>
+    <string name="fav">favourites</string>
 </resources>

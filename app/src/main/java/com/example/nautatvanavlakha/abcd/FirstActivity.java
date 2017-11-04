@@ -34,13 +34,16 @@ public class FirstActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_home:
+                case R.id.map:
                     mTextMessage.setText(R.string.title_home);
                     return true;
-                case R.id.navigation_dashboard:
+                case R.id.QRscan:
                     mTextMessage.setText(R.string.title_dashboard);
                     return true;
-                case R.id.navigation_notifications:
+                case R.id.schedule:
+                    mTextMessage.setText(R.string.title_notifications);
+                    return true;
+                case R.id.favourite:
                     mTextMessage.setText(R.string.title_notifications);
                     return true;
             }
@@ -55,17 +58,20 @@ public class FirstActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_me_clicked);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);    //removes the package name from toolbar
+
+        if(getActionBar() != null) {
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setDisplayShowTitleEnabled(false);    //removes the package name from toolbar
 
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
 //            Window w = getWindow(); // in Activity's onCreate() for instance          //Integration of app into status bar
 //            w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 //        }
 
-        // These lines are needed to display the top-left hamburger button
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            // These lines are needed to display the top-left hamburger button
+            getSupportActionBar().setHomeButtonEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         mTextMessage = (TextView) findViewById(R.id.main_2);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
