@@ -6,6 +6,9 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@android:color/darker_gray</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <!--change color of subheadings-->
+        <item name="android:textColorSecondary">#FFF000</item>
     </style>
 
 </resources>

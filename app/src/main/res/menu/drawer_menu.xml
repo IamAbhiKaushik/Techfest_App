@@ -1,24 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
+        <!--master layout 1-->
         <item
-            android:id="@+id/nav_inbox"
+            android:id="@+id/drawer_compi"
             android:checked="true"
-            android:icon="@drawable/ic_done_black_24dp"
-            android:title="@string/inbox"/>
+            android:icon="@drawable/cup_2_"
+            android:title="@string/compi"/>
         <item
-            android:id="@+id/nav_starred"
-            android:icon="@drawable/map"
-            android:title="@string/starred"/>
-        <!-- more items -->
+            android:id="@+id/drawer_tech"
+            android:icon="@drawable/vinyl_2_"
+            android:title="@string/tech"/>
+        <item
+            android:id="@+id/drawer_ideate"
+            android:icon="@drawable/lightbulb_2_"
+            android:title="@string/ideate"/>
+
+        <!--master layout 2-->
+        <item
+            android:id="@+id/drawer_workshop"
+            android:icon="@drawable/pen_2_"
+            android:title="@string/workshop"/>
+        <item
+            android:id="@+id/drawer_initiative"
+            android:icon="@drawable/power_2_"
+            android:title="@string/initiatives"/>
+        <item
+            android:id="@+id/drawer_ozone"
+            android:icon="@drawable/joypad_2_"
+            android:title="@string/ozone"/>
+
+        <!--master layout 3-->
+        <item
+            android:id="@+id/drawer_summit"
+            android:icon="@drawable/_x39__2_"
+            android:title="@string/summit"/>
+        <item
+            android:id="@+id/drawer_lectures"
+            android:icon="@drawable/lectures"
+            android:title="@string/lectures"/>
+        <item
+            android:id="@+id/drawer_exhi"
+            android:icon="@drawable/pic_2_"
+            android:title="@string/exhibitions"/>
+
+        <!--master layout 4-->
+        <item
+            android:id="@+id/drawer_mun"
+            android:icon="@drawable/ic_language_24px"
+            android:title="@string/world_mun"/>
+        <item
+            android:id="@+id/drawer_cyclothon"
+            android:icon="@drawable/ic_directions_bike_24px"
+            android:title="@string/cyclothon"/>
+        <item
+            android:id="@+id/drawer_sponsers"
+            android:icon="@drawable/_x24__2_"
+            android:title="@string/sponsers"/>
+
+
+
 
         <item
             android:id="@+id/subheader"
-            android:title="@string/subheader">
+            android:title="@string/subheader"
+            >
             <menu>
                 <item
                     android:id="@+id/nav_all_email"
-                    android:icon="@drawable/ic_battery_50_24px"
+                    android:icon="@drawable/schedule"
                     android:title="@string/all_email"/>
                 <!-- more items -->
             </menu>

@@ -8,35 +8,31 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
+    <!--Main Content here-->
     <include layout="@layout/content_main"/>
 
-    <!--<ListView android:id="@+id/left_drawer"-->
-        <!--android:layout_width="240dp"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_gravity="start"-->
-        <!--android:entries="@array/LeftmenuItems"-->
-        <!--android:choiceMode="singleChoice"-->
-        <!--android:divider="@android:color/transparent"-->
-        <!--android:dividerHeight="0dp"-->
-        <!--android:background="#EEEEEE"/>-->
-
+    <!--Left drawer here-->
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:background="@drawable/drawer_background"
         android:fitsSystemWindows="true"
+        app:headerLayout="@layout/drawer_header"
+        app:itemIconTint="#DAFDFF"
+        app:itemTextColor="#DAFDFF"
         app:menu="@menu/drawer_menu"/>
-    <!--app:headerLayout="@layout/drawer_header"-->
+<!--app:headerLayout="@layout/drawer_header"-->
 
-    <ListView android:id="@+id/right_drawer"
-        android:layout_width="240dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="end"
-        android:entries="@array/RightmenuItems"
-        android:choiceMode="singleChoice"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="0dp"
-        android:background="#EEEEEE"/>
+    <!--<ListView android:id="@+id/right_drawer"-->
+        <!--android:layout_width="240dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="end"-->
+        <!--android:entries="@array/RightmenuItems"-->
+        <!--android:choiceMode="singleChoice"-->
+        <!--android:divider="@android:color/transparent"-->
+        <!--android:dividerHeight="0dp"-->
+        <!--android:background="#EEEEEE"/>-->
 
 </android.support.v4.widget.DrawerLayout>

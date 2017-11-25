@@ -58,11 +58,12 @@
     <string name="cyclothon">CYCLOTHON</string>
     <string name="sponsers">SPONSERS</string>
 
+    <string name="author">Nautatva Navlakha</string>
+    <string name="email">nnautatva@gmail.com</string>
     <string name="scanQR">Scan QR Code</string>
     <string name="map">Show the map of IIT Bombay</string>
     <string name="schedule">Schedule of the events held</string>
     <string name="fav">favourites</string>
-
 
     <string name="inbox">inbox</string>
     <string name="starred">starred</string>
