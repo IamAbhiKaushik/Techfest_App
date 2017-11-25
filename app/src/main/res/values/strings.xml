@@ -1,4 +1,5 @@
 <resources>
+    <string name="toolbar_title">HOME</string>
 
     <!--app by java-->
     <string name="app_name">Techfest 2k17</string>
