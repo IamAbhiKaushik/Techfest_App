@@ -62,4 +62,10 @@
     <string name="map">Show the map of IIT Bombay</string>
     <string name="schedule">Schedule of the events held</string>
     <string name="fav">favourites</string>
+
+
+    <string name="inbox">inbox</string>
+    <string name="starred">starred</string>
+    <string name="subheader">subheader</string>
+    <string name="all_email">email</string>
 </resources>
