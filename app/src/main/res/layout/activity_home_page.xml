@@ -3,13 +3,86 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/DL"
+    android:background="#212A33"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <!--Main Content here-->
-    <include layout="@layout/content_main"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/custom_toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            android:fitsSystemWindows="true">
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:name="com.example.nautatvanavlakha.abcd.HomeFragment"
+                android:id="@+id/fragment_space">
+            </fragment>
+        </LinearLayout>
+
+            <!--The bottom bar-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="bottom"
+                android:background="#212A33">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="0dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/map_bottom"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:src="@drawable/map"
+                        android:contentDescription="@string/map"/>
+
+                    <ImageView
+                        android:id="@+id/QR_bottom"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:src="@drawable/qrscan"
+                        android:contentDescription="@string/scanQR" />
+
+                    <ImageView
+                        android:id="@+id/schedule_bottom"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:src="@drawable/schedule"
+                        android:contentDescription="@string/schedule"/>
+
+                    <ImageView
+                        android:id="@+id/favorite_bottom"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:src="@drawable/favorites"
+                        android:contentDescription="@string/fav"/>
+                </LinearLayout>
+            </LinearLayout>
+
+    </LinearLayout>
+
 
     <!--Left drawer here-->
     <android.support.design.widget.NavigationView
@@ -17,22 +90,11 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@drawable/drawer_background"
+        android:background="#212A33"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/drawer_header"
         app:itemIconTint="#DAFDFF"
         app:itemTextColor="#DAFDFF"
         app:menu="@menu/drawer_menu"/>
-<!--app:headerLayout="@layout/drawer_header"-->
-
-    <!--<ListView android:id="@+id/right_drawer"-->
-        <!--android:layout_width="240dp"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_gravity="end"-->
-        <!--android:entries="@array/RightmenuItems"-->
-        <!--android:choiceMode="singleChoice"-->
-        <!--android:divider="@android:color/transparent"-->
-        <!--android:dividerHeight="0dp"-->
-        <!--android:background="#EEEEEE"/>-->
 
 </android.support.v4.widget.DrawerLayout>
