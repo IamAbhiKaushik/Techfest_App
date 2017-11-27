@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/blurr"
     android:orientation="vertical"
-
     tools:context="com.example.nautatvanavlakha.abcd.EventFragment">
 
     <!-- TODO: Update blank fragment layout -->
