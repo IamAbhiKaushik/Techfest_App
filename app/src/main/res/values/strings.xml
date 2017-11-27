@@ -75,4 +75,5 @@
     <string name="event_venue">event venue</string>
     <string name="time">event time</string>
     <string name="event_description">event discription</string>
+    <string name="event_name">event name</string>
 </resources>
