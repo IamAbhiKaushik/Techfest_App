@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/blurr"
     android:orientation="vertical"
-
     tools:context="com.example.nautatvanavlakha.abcd.EventFragment">
 
     <include layout="@layout/custom_toolbar" />
@@ -26,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="EVENT_NAME"
+            android:text="@string/event_name"
             android:textColor="#3E5B72"
             android:textSize="40sp" />
 
@@ -39,7 +38,7 @@
                 android:id="@+id/location_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="32dp"
+                android:paddingStart="32dp"
                 android:paddingTop="8dp"
                 android:src="@drawable/ic_place_black_24dp"
                 android:tint="#FFFFFF" />
@@ -48,10 +47,8 @@
                 android:id="@+id/event_venue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/location_icon"
-                android:layout_toEndOf="@id/location_icon"
                 android:fontFamily="sans-serif-light"
-                android:paddingStart="8dp"
+                android:paddingStart="4dp"
                 android:text="@string/event_venue"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -67,9 +64,8 @@
                 android:id="@+id/clock_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/location_icon"
                 android:paddingStart="32dp"
-                android:paddingTop="8dp"
+                android:paddingTop="4dp"
                 android:src="@drawable/ic_access_time_black_24dp"
                 android:tint="#FFFFFF" />
 
@@ -78,7 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
-                android:paddingStart="8dp"
+                android:paddingStart="4dp"
                 android:text="@string/time"
                 android:textColor="@color/white"
                 android:textSize='20sp' />
