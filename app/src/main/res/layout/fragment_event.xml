@@ -7,7 +7,6 @@
 
     tools:context="com.example.nautatvanavlakha.abcd.EventFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <include layout="@layout/custom_toolbar" />
 
     <LinearLayout
