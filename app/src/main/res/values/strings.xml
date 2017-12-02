@@ -76,4 +76,5 @@
     <string name="time">event time</string>
     <string name="event_description">event discription</string>
     <string name="event_name">event name</string>
+    <string name="logout">Logout</string>
 </resources>

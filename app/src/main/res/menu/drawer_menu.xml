@@ -57,6 +57,9 @@
             android:id="@+id/drawer_sponsers"
             android:icon="@drawable/_x24__2_"
             android:title="@string/sponsers"/>
+        <item
+            android:id="@+id/LogoutBTN"
+            android:title="@string/logout"/>
 
 
 
@@ -71,6 +74,7 @@
                     android:icon="@drawable/schedule"
                     android:title="@string/all_email"/>
                 <!-- more items -->
+
             </menu>
         </item>
     </group>

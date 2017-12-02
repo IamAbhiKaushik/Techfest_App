@@ -1,5 +1,8 @@
 package com.example.nautatvanavlakha.abcd;
 
+import android.content.ClipData;
+import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -8,17 +11,27 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class HomePage extends AppCompatActivity {
 
     DrawerLayout mDrawer;
     ActionBarDrawerToggle mDrawerToggle;
+    MenuItem mLogout;
+//    Create Firebase Fields
+    FirebaseAuth mAuth;
+    FirebaseAuth.AuthStateListener mAuthListner;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+        mLogout= (MenuItem) findViewById(R.id.LogoutBTN);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -44,6 +57,34 @@ public class HomePage extends AppCompatActivity {
 
         mDrawer.addDrawerListener(mDrawerToggle);
         mDrawerToggle.syncState();
+
+        mAuth=FirebaseAuth.getInstance();
+        mAuthListner= new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+
+                FirebaseUser user =firebaseAuth.getCurrentUser();
+
+                if (user!=null){
+
+                }else {
+
+
+                }
+
+            }
+        };
+
+    mLogout.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+         @Override
+         public boolean onMenuItemClick(MenuItem item) {
+            mAuth.signOut();
+            finish();
+            startActivity(new Intent(HomePage.this,MainActivity.class));
+            return false;
+
+    }
+});
 
         // toasts the message when ListView item is clicked
 // ListView mDrawerListView = (ListView) findViewById(R.id.left_drawer);
@@ -77,5 +118,17 @@ public class HomePage extends AppCompatActivity {
         }
         // Handle your other action bar items...
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListner);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mAuth.removeAuthStateListener(mAuthListner);
     }
 }
