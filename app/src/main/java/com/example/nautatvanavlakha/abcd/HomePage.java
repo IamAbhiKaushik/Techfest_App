@@ -20,7 +20,8 @@ public class HomePage extends AppCompatActivity {
 
     DrawerLayout mDrawer;
     ActionBarDrawerToggle mDrawerToggle;
-    MenuItem mLogout;
+//    MenuItem mLogout;
+    Button Logout;
 //    Create Firebase Fields
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListner;
@@ -31,7 +32,8 @@ public class HomePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-        mLogout= (MenuItem) findViewById(R.id.LogoutBTN);
+//        mLogout= (MenuItem) findViewById(R.id.LogoutBTN);
+        Logout=(Button) findViewById(R.id.Button_logout);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -65,7 +67,8 @@ public class HomePage extends AppCompatActivity {
 
                 FirebaseUser user =firebaseAuth.getCurrentUser();
 
-                if (user!=null){
+                if (firebaseAuth.getCurrentUser()==null){
+                    startActivity(new Intent(HomePage.this,LoginActivity.class));
 
                 }else {
 
@@ -74,18 +77,32 @@ public class HomePage extends AppCompatActivity {
 
             }
         };
-
-    mLogout.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-         @Override
-         public boolean onMenuItemClick(MenuItem item) {
-            mAuth.signOut();
-            finish();
+//
+//    mLogout.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+//         @Override
+//         public boolean onMenuItemClick(MenuItem item) {
+//            mAuth.signOut();
+//            finish();
+//            startActivity(new Intent(HomePage.this,MainActivity.class));
+//            return false;
+//
+//    }
+//});
+//       mLogout.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+//           @Override
+//           public boolean onMenuItemClick(MenuItem item) {
+//               mAuth.signOut();
+//             return false;
+//           }
+//       });
+        Logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAuth.signOut();
+                finish();
             startActivity(new Intent(HomePage.this,MainActivity.class));
-            return false;
-
-    }
-});
-
+            }
+        });
         // toasts the message when ListView item is clicked
 // ListView mDrawerListView = (ListView) findViewById(R.id.left_drawer);
 //        mDrawerListView.setOnItemClickListener(new ListView.OnItemClickListener() {

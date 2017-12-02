@@ -23,6 +23,13 @@
             android:baselineAligned="false"
             android:orientation="vertical"
             android:fitsSystemWindows="true">
+
+            <Button
+                android:id="@+id/Button_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
             <fragment
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -79,6 +86,7 @@
                         android:src="@drawable/favorites"
                         android:contentDescription="@string/fav"/>
                 </LinearLayout>
+
             </LinearLayout>
 
     </LinearLayout>

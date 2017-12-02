@@ -59,6 +59,7 @@
             android:title="@string/sponsers"/>
         <item
             android:id="@+id/LogoutBTN"
+            android:icon="@drawable/ic_exit_to_app_white_24dp"
             android:title="@string/logout"/>
 
 

@@ -15,6 +15,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
     //Create button and edittext
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     //Create Firebase Fields
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListner;
+    DatabaseReference mDatabaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         userPassEdit=(EditText) findViewById(R.id.EnterPass);
 
         mAuth=FirebaseAuth.getInstance();
+        mDatabaseReference= FirebaseDatabase.getInstance().getReference();
         mAuthListner= new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -55,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String userEmailString,userPassString;
+                final String userEmailString,userPassString;
                 userEmailString = userEmailEdit.getText().toString().trim();
                 userPassString = userPassEdit.getText().toString().trim();
 
@@ -65,6 +69,13 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
+
+                                DatabaseReference mChildDataRef=mDatabaseReference.child("Users").push();
+
+                                String key_user=mChildDataRef.getKey();
+                                mChildDataRef.child("keyUser").setValue(key_user);
+                                mChildDataRef.child("emailUser").setValue(userEmailString);
+                                mChildDataRef.child("passUser").setValue(userPassString);
 
                                 Toast.makeText(MainActivity.this,"User Account Created",Toast.LENGTH_LONG).show();
 
