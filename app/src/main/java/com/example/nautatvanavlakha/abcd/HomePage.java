@@ -26,8 +26,6 @@ public class HomePage extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListner;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,7 +69,6 @@ public class HomePage extends AppCompatActivity {
                     startActivity(new Intent(HomePage.this,LoginActivity.class));
 
                 }else {
-
 
                 }
 
