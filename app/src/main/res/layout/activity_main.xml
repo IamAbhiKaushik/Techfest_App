@@ -1,46 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
 xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:background="#212A33"
+android:orientation="vertical"
 tools:context="com.example.nautatvanavlakha.abcd.LoginActivity">
 
+    <EditText
+        android:id="@+id/EnterEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="204dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:ems="10"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Enter Email ID"
+        android:inputType="textEmailAddress" />
 
-<EditText
-    android:id="@+id/EnterEmail"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="204dp"
-    android:ems="10"
-    android:hint="Enter Email ID"
-    android:inputType="textEmailAddress" />
+    <EditText
+        android:id="@+id/EnterPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="Enter Password"
+        android:inputType="textPassword" />
 
-<EditText
-    android:id="@+id/EnterPass"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignEnd="@+id/EnterEmail"
-    android:layout_below="@+id/EnterEmail"
-    android:layout_marginTop="57dp"
-    android:ems="10"
-    android:hint="Enter Password"
-    android:inputType="textPassword" />
 
-<Button
-    android:id="@+id/CreateUser"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/EnterPass"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="45dp"
-    android:text="Create" />
-
-<Button
+    <Button
     android:id="@+id/MoveLogin"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -49,13 +45,9 @@ tools:context="com.example.nautatvanavlakha.abcd.LoginActivity">
     android:layout_marginBottom="27dp"
     android:text="Login" />
 
-<ImageView
-    android:id="@+id/imageView"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_above="@+id/EnterPass"
-    android:layout_centerHorizontal="true"
-    android:layout_marginBottom="69dp"
-    app:srcCompat="@drawable/unnamed" />
+    <com.google.android.gms.common.SignInButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"/>
 
-</RelativeLayout>
+</LinearLayout>
