@@ -44,6 +44,8 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="facebook_app_id">183202845595053</string>
+    <string name="fb_login_protocol_scheme">fb183202845595053</string>
 
     <!--Techfest app-->
     <string name="compi">COMPETITIONS</string>
