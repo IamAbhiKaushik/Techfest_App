@@ -101,15 +101,16 @@ public class LoginActivity extends AppCompatActivity {
 
 
                 if (!TextUtils.isEmpty(userEmailString) && !TextUtils.isEmpty(userPassString)){
-                    ProgressDialog progress = new ProgressDialog(LoginActivity.this);
-                    progress.setMessage("Logging in...");
-                    progress.show();
+
 
                     mAuth.signInWithEmailAndPassword(userEmailString, userPassString ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
                             if (task.isSuccessful()){
+                                ProgressDialog progress = new ProgressDialog(LoginActivity.this);
+                                progress.setMessage("Logging in...");
+                                progress.show();
 
                                 startActivity(new Intent(LoginActivity.this, HomePage.class));
                             }else{

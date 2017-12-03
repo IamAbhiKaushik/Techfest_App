@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -69,15 +70,23 @@ public class MainActivity extends AppCompatActivity {
 
 
                 if (!TextUtils.isEmpty(userEmailString) && !TextUtils.isEmpty(userPassString)) {
-                    ProgressDialog progress = new ProgressDialog(MainActivity.this);
-                    progress.setMessage("Please wait");
+                    final ProgressDialog progress = new ProgressDialog(MainActivity.this);
+                    progress.setMessage("Please wait....");
                     progress.show();
-
                     mAuth.createUserWithEmailAndPassword(userEmailString, userPassString).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-
+                                FirebaseUser user = mAuth.getCurrentUser();
+                                user.sendEmailVerification()
+                                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                if (task.isSuccessful()) {
+                                                    Toast.makeText(MainActivity.this, "Account Created and verification email sent ", Toast.LENGTH_SHORT).show();
+                                                }
+                                             }
+                                        });
 
                                 DatabaseReference mChildDataRef = mDatabaseReference.child("Users").push();
 
@@ -87,16 +96,21 @@ public class MainActivity extends AppCompatActivity {
                                 mChildDataRef.child("passUser").setValue(userPassString);
                                 mChildDataRef.child("nameUser").setValue(userNameString);
 
-                                Toast.makeText(MainActivity.this, "User Account Created", Toast.LENGTH_SHORT).show();
+
 //                                sendVerificationEmail();
 
-                                startActivity(new Intent(MainActivity.this, HomePage.class));
+                                startActivity(new Intent(MainActivity.this, VerificationActivity.class));
 
                             } else {
+                                progress.dismiss();
 
                                 if (task.getException() instanceof FirebaseAuthUserCollisionException) {
                                     Toast.makeText(MainActivity.this, "User with this email already exist.", Toast.LENGTH_SHORT).show();
-                                } else {
+                                }else if (userPassString.length()<6){
+                                    Toast.makeText(MainActivity.this, "Password must be of Minimum 6 characters", Toast.LENGTH_SHORT).show();
+
+                                }
+                                else {
                                     Toast.makeText(MainActivity.this, " Fail to create User Account ", Toast.LENGTH_SHORT).show();
                                 }
 

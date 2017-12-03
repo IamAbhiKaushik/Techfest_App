@@ -7,4 +7,49 @@
     android:background="#212A33"
     tools:context="com.example.nautatvanavlakha.abcd.VerificationActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="201dp"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:text="Verification mail has been sent to your email...."
+        android:textColor="#cccccc"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginStart="16dp"
+        android:text="After verification click on verified button"
+        android:textColor="#cccccc"
+        android:textSize="18sp" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/Verified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="91dp"
+        android:background="#31475b"
+        android:padding="12dp"
+        android:text="@string/verified"
+        android:textColor="#cccccc" />
+
+    <TextView
+        android:id="@+id/display_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
+        android:textSize="25sp" />
+
 </RelativeLayout>
