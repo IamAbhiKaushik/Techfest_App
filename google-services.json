@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1065722414908",
+    "firebase_url": "https://my-first-project-nautatva.firebaseio.com",
+    "project_id": "my-first-project-nautatva",
+    "storage_bucket": "my-first-project-nautatva.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065722414908:android:82ab83883b57e158",
+        "android_client_info": {
+          "package_name": "com.example.nautatvanavlakha.abcd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1065722414908-ktrtiq9l6h6asi0p4lkpp2gqmgdat27t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nautatvanavlakha.abcd",
+            "certificate_hash": "0f662e95ff0e5e8afa12a5ec8e0abb877d5b2316"
+          }
+        },
+        {
+          "client_id": "1065722414908-j10sriavbbi6qou977tgsjtmts26q451.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNmjtaOxzamfHPdqxLn1nZ8lxV8J-dv1Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065722414908-j10sriavbbi6qou977tgsjtmts26q451.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
