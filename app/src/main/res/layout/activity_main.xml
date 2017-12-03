@@ -27,12 +27,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textColorHint="#cccccc"
+            android:textColorHint="#D7D7D7"
+            android:textColor="#cccccc"
+
             android:layout_marginBottom="8dp">
             <EditText android:id="@+id/EnterUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColorHint="#cccccc"
+                android:textColor="#cccccc"
                 android:inputType="textCapWords"
                 android:hint="Username" />
         </android.support.design.widget.TextInputLayout>
@@ -41,11 +44,14 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="#cccccc"
+            android:textColorHint="#D7D7D7"
             android:layout_marginTop="8dp"
+            android:textColor="#cccccc"
+
             android:layout_marginBottom="8dp">
             <EditText android:id="@+id/EnterEmail"
                 android:layout_width="match_parent"
+                android:textColor="#cccccc"
                 android:layout_height="wrap_content"
                 android:textColorHint="#cccccc"
                 android:inputType="textEmailAddress"
@@ -58,10 +64,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:textColorHint="#cccccc"
+            android:textColor="#cccccc"
             android:layout_marginBottom="8dp">
             <EditText android:id="@+id/EnterPass"
                 android:layout_width="match_parent"
-
+                android:textColor="#cccccc"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:hint="Password"/>

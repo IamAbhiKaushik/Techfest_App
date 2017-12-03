@@ -25,13 +25,15 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="#cccccc"
+            android:textColorHint="#D7D7D7"
             android:layout_marginTop="8dp"
+            android:textColor="#cccccc"
             android:layout_marginBottom="8dp">
             <EditText android:id="@+id/LoginEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="#cccccc"
+                android:textColorHint="#D7D7D7"
+                android:textColor="#cccccc"
                 android:inputType="textEmailAddress"
                 android:hint="Email" />
         </android.support.design.widget.TextInputLayout>
@@ -41,12 +43,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textColorHint="#cccccc"
+            android:textColor="#cccccc"
+            android:textColorHint="#D7D7D7"
             android:layout_marginBottom="8dp">
             <EditText android:id="@+id/LoginPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="#cccccc"
+                android:textColorHint="#D7D7D7"
+                android:textColor="#cccccc"
                 android:inputType="textPassword"
                 android:hint="@string/password"/>
         </android.support.design.widget.TextInputLayout>
