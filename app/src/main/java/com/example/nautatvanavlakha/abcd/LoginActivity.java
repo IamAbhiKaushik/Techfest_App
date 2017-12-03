@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
     //Views and Widgets
     Button LoginBtn ;
     TextView MoveToSignin;
-    EditText userEmail,userPass;
+    EditText userEmail,userPass ;
     String userEmailString,userPassString;
 
     //Create Firebase Fields

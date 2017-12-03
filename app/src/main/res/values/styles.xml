@@ -5,10 +5,10 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@android:color/darker_gray</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">#3E5B72</item>
 
         <!--change color of subheadings-->
-        <item name="android:textColorSecondary">#FFF000</item>
+        <item name="android:textColorSecondary">#000</item>
     </style>
 
 </resources>

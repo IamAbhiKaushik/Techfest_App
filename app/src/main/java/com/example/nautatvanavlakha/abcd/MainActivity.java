@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -22,14 +23,14 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainActivity extends AppCompatActivity {
     //Create button and edittext
     Button createUser;
-    EditText userEmailEdit, userPassEdit;
+    EditText userEmailEdit, userPassEdit, userNameEdit;
     //Create Firebase Fields
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListner;
     DatabaseReference mDatabaseReference;
     TextView moveToLogin;
 
-//ADDING THE USERNAME FIELD TO THE DATABASE FOR CREATING USER
+    //ADDING THE USERNAME FIELD TO THE DATABASE FOR CREATING USER
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,19 +38,20 @@ public class MainActivity extends AppCompatActivity {
 
         //assign id
         createUser = (Button) findViewById(R.id.CreateUser);
-        moveToLogin =(TextView) findViewById(R.id.MoveLogin);
-        userEmailEdit=(EditText) findViewById(R.id.EnterEmail);
-        userPassEdit=(EditText) findViewById(R.id.EnterPass);
+        moveToLogin = (TextView) findViewById(R.id.MoveLogin);
+        userEmailEdit = (EditText) findViewById(R.id.EnterEmail);
+        userPassEdit = (EditText) findViewById(R.id.EnterPass);
+        userNameEdit = (EditText) findViewById(R.id.EnterUsername);
 
-        mAuth=FirebaseAuth.getInstance();
-        mDatabaseReference= FirebaseDatabase.getInstance().getReference();
-        mAuthListner= new FirebaseAuth.AuthStateListener() {
+        mAuth = FirebaseAuth.getInstance();
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
+        mAuthListner = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
 
-                FirebaseUser user =firebaseAuth.getCurrentUser();
+                FirebaseUser user = firebaseAuth.getCurrentUser();
 
-                if (user!=null){
+                if (user != null) {
                     startActivity(new Intent(MainActivity.this, HomePage.class));
                 }
             }
@@ -59,29 +61,39 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                final String userEmailString,userPassString;
+                final String userEmailString, userPassString, userNameString;
                 userEmailString = userEmailEdit.getText().toString().trim();
                 userPassString = userPassEdit.getText().toString().trim();
+                userNameString = userNameEdit.getText().toString().trim();
 
-                if (!TextUtils.isEmpty(userEmailString) && !TextUtils.isEmpty(userPassString)){
 
-                    mAuth.createUserWithEmailAndPassword(userEmailString,userPassString).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                if (!TextUtils.isEmpty(userEmailString) && !TextUtils.isEmpty(userPassString)) {
+
+                    mAuth.createUserWithEmailAndPassword(userEmailString, userPassString).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()){
+                            if (task.isSuccessful()) {
 
-                                DatabaseReference mChildDataRef=mDatabaseReference.child("Users").push();
 
-                                String key_user=mChildDataRef.getKey();
+                                DatabaseReference mChildDataRef = mDatabaseReference.child("Users").push();
+
+                                String key_user = mChildDataRef.getKey();
                                 mChildDataRef.child("keyUser").setValue(key_user);
                                 mChildDataRef.child("emailUser").setValue(userEmailString);
                                 mChildDataRef.child("passUser").setValue(userPassString);
+                                mChildDataRef.child("nameUser").setValue(userNameString);
 
-                                Toast.makeText(MainActivity.this,"User Account Created",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "User Account Created", Toast.LENGTH_SHORT).show();
 
                                 startActivity(new Intent(MainActivity.this, HomePage.class));
-                            }else {
-                                Toast.makeText(MainActivity.this," Fail to create User Account ",Toast.LENGTH_SHORT).show();
+
+                            } else {
+
+                                if (task.getException() instanceof FirebaseAuthUserCollisionException) {
+                                    Toast.makeText(MainActivity.this, "User with this email already exist.", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(MainActivity.this, " Fail to create User Account ", Toast.LENGTH_SHORT).show();
+                                }
 
                             }
 
@@ -93,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         moveToLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,LoginActivity.class));
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
 
             }
         });
