@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
@@ -27,9 +28,12 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import org.w3c.dom.Text;
+
 public class LoginActivity extends AppCompatActivity {
     //Views and Widgets
-    Button LoginBtn;
+    Button LoginBtn ;
+    TextView MoveToSignin;
     EditText userEmail,userPass;
     String userEmailString,userPassString;
 
@@ -51,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
         userEmail=(EditText) findViewById(R.id.LoginEmail);
         userPass=(EditText) findViewById(R.id.LoginPass);
         button=(SignInButton) findViewById(R.id.googleBtn);
-
+        MoveToSignin=(TextView) findViewById(R.id.moveToSignin);
 
         mAuth=FirebaseAuth.getInstance();
         mAuthListner= new FirebaseAuth.AuthStateListener() {
@@ -74,6 +78,14 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 signIn();
+            }
+        });
+        MoveToSignin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(LoginActivity.this,MainActivity.class));
+
             }
         });
         LoginBtn.setOnClickListener(new View.OnClickListener() {

@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -20,13 +21,15 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
     //Create button and edittext
-    Button createUser ,moveToLogin;
+    Button createUser;
     EditText userEmailEdit, userPassEdit;
     //Create Firebase Fields
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListner;
     DatabaseReference mDatabaseReference;
+    TextView moveToLogin;
 
+//ADDING THE USERNAME FIELD TO THE DATABASE FOR CREATING USER
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         //assign id
         createUser = (Button) findViewById(R.id.CreateUser);
-        moveToLogin =(Button) findViewById(R.id.MoveLogin);
+        moveToLogin =(TextView) findViewById(R.id.MoveLogin);
         userEmailEdit=(EditText) findViewById(R.id.EnterEmail);
         userPassEdit=(EditText) findViewById(R.id.EnterPass);
 
@@ -74,11 +77,11 @@ public class MainActivity extends AppCompatActivity {
                                 mChildDataRef.child("emailUser").setValue(userEmailString);
                                 mChildDataRef.child("passUser").setValue(userPassString);
 
-                                Toast.makeText(MainActivity.this,"User Account Created",Toast.LENGTH_LONG).show();
+                                Toast.makeText(MainActivity.this,"User Account Created",Toast.LENGTH_SHORT).show();
 
                                 startActivity(new Intent(MainActivity.this, HomePage.class));
                             }else {
-                                Toast.makeText(MainActivity.this," Fail to create User Account ",Toast.LENGTH_LONG).show();
+                                Toast.makeText(MainActivity.this," Fail to create User Account ",Toast.LENGTH_SHORT).show();
 
                             }
 
@@ -90,11 +93,11 @@ public class MainActivity extends AppCompatActivity {
         moveToLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 startActivity(new Intent(MainActivity.this,LoginActivity.class));
 
             }
         });
+
     }
 
     @Override

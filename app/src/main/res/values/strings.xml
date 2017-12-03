@@ -77,4 +77,10 @@
     <string name="event_description">event discription</string>
     <string name="event_name">event name</string>
     <string name="logout">Logout</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="click_here_to_register">Click Here to register</string>
+    <string name="or_login_via_email">Or login via email</string>
+    <string name="no_account_yet_create_one">No account yet? Create one</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
 </resources>
