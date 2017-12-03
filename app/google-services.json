@@ -1,35 +1,27 @@
 {
   "project_info": {
-    "project_number": "343251618586",
-    "firebase_url": "https://techfest-c2794.firebaseio.com",
-    "project_id": "techfest-c2794",
-    "storage_bucket": "techfest-c2794.appspot.com"
+    "project_number": "2058412217",
+    "firebase_url": "https://techfest-app-c7638.firebaseio.com",
+    "project_id": "techfest-app-c7638",
+    "storage_bucket": "techfest-app-c7638.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:343251618586:android:82ab83883b57e158",
+        "mobilesdk_app_id": "1:2058412217:android:82ab83883b57e158",
         "android_client_info": {
           "package_name": "com.example.nautatvanavlakha.abcd"
         }
       },
       "oauth_client": [
         {
-          "client_id": "343251618586-7ihdglfbqng34ik0o5ul3pt1gg7gmpn3.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.nautatvanavlakha.abcd",
-            "certificate_hash": "65a316b6f07e5c0006e119eb4ae91830e824884a"
-          }
-        },
-        {
-          "client_id": "343251618586-te5vj5cv1o4b86moto8jlclc6heat7nl.apps.googleusercontent.com",
+          "client_id": "2058412217-mg8npq1id1r3f1fjqt2ej4dmncvter19.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCBclznipSmAjedrGzpPh3rn4huJWWqR7o"
+          "current_key": "AIzaSyBkFVKb-ARyAUy9OBd0YFIPzaj4hBvjSpw"
         }
       ],
       "services": {
@@ -37,13 +29,8 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "343251618586-te5vj5cv1o4b86moto8jlclc6heat7nl.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2
