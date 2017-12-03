@@ -40,10 +40,14 @@ tools:context="com.example.nautatvanavlakha.abcd.LoginActivity">
     android:id="@+id/MoveLogin"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
-    android:layout_centerHorizontal="true"
-    android:layout_marginBottom="27dp"
     android:text="Login" />
+
+    <Button
+        android:id="@+id/CreateUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        android:text="Create ID" />
 
     <com.google.android.gms.common.SignInButton
         android:layout_width="match_parent"
