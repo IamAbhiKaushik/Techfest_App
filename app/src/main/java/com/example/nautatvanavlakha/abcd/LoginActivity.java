@@ -1,5 +1,6 @@
 package com.example.nautatvanavlakha.abcd;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -75,9 +76,13 @@ public class LoginActivity extends AppCompatActivity {
             }
         };
         button.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 signIn();
+                ProgressDialog progress = new ProgressDialog(LoginActivity.this);
+                progress.setMessage("Logging in...");
+                progress.show();
             }
         });
         MoveToSignin.setOnClickListener(new View.OnClickListener() {
@@ -94,7 +99,11 @@ public class LoginActivity extends AppCompatActivity {
                 userEmailString=userEmail.getText().toString().trim();
                 userPassString=userPass.getText().toString().trim();
 
+
                 if (!TextUtils.isEmpty(userEmailString) && !TextUtils.isEmpty(userPassString)){
+                    ProgressDialog progress = new ProgressDialog(LoginActivity.this);
+                    progress.setMessage("Logging in...");
+                    progress.show();
 
                     mAuth.signInWithEmailAndPassword(userEmailString, userPassString ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
@@ -109,6 +118,8 @@ public class LoginActivity extends AppCompatActivity {
                             }
                         }
                     });
+                }else {
+                    Toast.makeText(LoginActivity.this,"Please fill the details first",Toast.LENGTH_LONG).show();
                 }
                 
             }

@@ -1,5 +1,6 @@
 package com.example.nautatvanavlakha.abcd;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -68,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
 
 
                 if (!TextUtils.isEmpty(userEmailString) && !TextUtils.isEmpty(userPassString)) {
+                    ProgressDialog progress = new ProgressDialog(MainActivity.this);
+                    progress.setMessage("Please wait");
+                    progress.show();
 
                     mAuth.createUserWithEmailAndPassword(userEmailString, userPassString).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
@@ -84,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
                                 mChildDataRef.child("nameUser").setValue(userNameString);
 
                                 Toast.makeText(MainActivity.this, "User Account Created", Toast.LENGTH_SHORT).show();
+//                                sendVerificationEmail();
 
                                 startActivity(new Intent(MainActivity.this, HomePage.class));
 
@@ -99,6 +104,9 @@ public class MainActivity extends AppCompatActivity {
 
                         }
                     });
+                }else {
+                    Toast.makeText(MainActivity.this, " Please fill the details first", Toast.LENGTH_SHORT).show();
+
                 }
             }
         });
