@@ -43,13 +43,14 @@ public class VerificationActivity extends AppCompatActivity {
                     hello=(TextView) findViewById(R.id.display_name);
                     hello.setText("Hello " + email);
 
-
-
                     // Check if user's email is verified
                     VerificationBtn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            FirebaseUser user = mAuth.getCurrentUser();
+
                             mAuth.addAuthStateListener(mAuthListner);
+                            boolean emailVerified=user.isEmailVerified();
                             if (emailVerified){
                                 startActivity(new Intent(VerificationActivity.this,HomePage.class));
 

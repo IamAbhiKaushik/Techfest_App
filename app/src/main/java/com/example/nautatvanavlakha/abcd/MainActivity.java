@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                                                 if (task.isSuccessful()) {
                                                     Toast.makeText(MainActivity.this, "Account Created and verification email sent ", Toast.LENGTH_SHORT).show();
                                                 }
-                                             }
+                                            }
                                         });
 
                                 DatabaseReference mChildDataRef = mDatabaseReference.child("Users").push();
@@ -106,11 +106,10 @@ public class MainActivity extends AppCompatActivity {
 
                                 if (task.getException() instanceof FirebaseAuthUserCollisionException) {
                                     Toast.makeText(MainActivity.this, "User with this email already exist.", Toast.LENGTH_SHORT).show();
-                                }else if (userPassString.length()<6){
+                                } else if (userPassString.length() < 6) {
                                     Toast.makeText(MainActivity.this, "Password must be of Minimum 6 characters", Toast.LENGTH_SHORT).show();
 
-                                }
-                                else {
+                                } else {
                                     Toast.makeText(MainActivity.this, " Fail to create User Account ", Toast.LENGTH_SHORT).show();
                                 }
 
@@ -118,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
 
                         }
                     });
-                }else {
+                } else {
                     Toast.makeText(MainActivity.this, " Please fill the details first", Toast.LENGTH_SHORT).show();
 
                 }
