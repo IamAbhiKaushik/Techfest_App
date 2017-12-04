@@ -3,6 +3,7 @@ package com.example.nautatvanavlakha.abcd;
 import android.content.ClipData;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -20,9 +21,7 @@ public class HomePage extends AppCompatActivity {
 
     DrawerLayout mDrawer;
     ActionBarDrawerToggle mDrawerToggle;
-//    MenuItem mLogout;
-    Button Logout;
-//    Create Firebase Fields
+    NavigationView mNavigation;
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListner;
 
@@ -30,9 +29,6 @@ public class HomePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-//        mLogout= (MenuItem) findViewById(R.id.LogoutBTN);
-        Logout=(Button) findViewById(R.id.Button_logout);
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         if(getActionBar() != null) {
@@ -58,6 +54,28 @@ public class HomePage extends AppCompatActivity {
         mDrawer.addDrawerListener(mDrawerToggle);
         mDrawerToggle.syncState();
 
+        mNavigation = (NavigationView) findViewById(R.id.nav_view);
+        mNavigation.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+                if (item.isChecked()){
+                    mDrawer.closeDrawer(GravityCompat.START);
+                    item.setChecked(true);
+                    return false;
+                }
+                if (id == R.id.LogoutBTN){      /*Logout button*/
+                    mAuth.signOut();
+                    finish();
+                    item.setChecked(true);
+                    startActivity(new Intent(HomePage.this,LoginActivity.class));
+
+                }
+
+                return false;
+            }
+        });
+
         mAuth=FirebaseAuth.getInstance();
         mAuthListner= new FirebaseAuth.AuthStateListener() {
             @Override
@@ -74,32 +92,7 @@ public class HomePage extends AppCompatActivity {
 
             }
         };
-//
-//    mLogout.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-//         @Override
-//         public boolean onMenuItemClick(MenuItem item) {
-//            mAuth.signOut();
-//            finish();
-//            startActivity(new Intent(HomePage.this,MainActivity.class));
-//            return false;
-//
-//    }
-//});
-//       mLogout.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-//           @Override
-//           public boolean onMenuItemClick(MenuItem item) {
-//               mAuth.signOut();
-//             return false;
-//           }
-//       });
-        Logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mAuth.signOut();
-                finish();
-            startActivity(new Intent(HomePage.this,MainActivity.class));
-            }
-        });
+
         // toasts the message when ListView item is clicked
 // ListView mDrawerListView = (ListView) findViewById(R.id.left_drawer);
 //        mDrawerListView.setOnItemClickListener(new ListView.OnItemClickListener() {
