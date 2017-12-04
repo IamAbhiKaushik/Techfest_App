@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212A33"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/qn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TempQn" />
+
+    <TextView
+        android:id="@+id/ans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TempAns" />
+
+</LinearLayout>

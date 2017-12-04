@@ -99,5 +99,22 @@
         app:itemIconTint="#DAFDFF"
         app:itemTextColor="#DAFDFF"
         app:menu="@menu/drawer_menu"/>
+    <!--<android.support.design.widget.NavigationView-->
+        <!--android:id="@+id/noti_view"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="end"-->
+        <!--android:background="#212A33"-->
+        <!--android:fitsSystemWindows="true"-->
+        <!--app:headerLayout="@layout/fragment_item_list"-->
+        <!--app:itemIconTint="#DAFDFF"-->
+        <!--app:itemTextColor="#DAFDFF"-->
+        <!--/>-->
+    <include layout="@layout/fragment_item_list"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_gravity="end"
+        />
 
 </android.support.v4.widget.DrawerLayout>

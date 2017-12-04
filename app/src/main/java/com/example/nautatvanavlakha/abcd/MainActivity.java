@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListner;
     DatabaseReference mDatabaseReference;
-    TextView moveToLogin ,displayemail;
+    TextView moveToLogin;
 
     //ADDING THE USERNAME FIELD TO THE DATABASE FOR CREATING USER
     @Override
@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         userEmailEdit = (EditText) findViewById(R.id.EnterEmail);
         userPassEdit = (EditText) findViewById(R.id.EnterPass);
         userNameEdit = (EditText) findViewById(R.id.EnterUsername);
-        displayemail =(TextView) findViewById(R.id.emailUserDisplay);
 
         mAuth = FirebaseAuth.getInstance();
         mDatabaseReference = FirebaseDatabase.getInstance().getReference();
@@ -69,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
                 userPassString = userPassEdit.getText().toString().trim();
                 userNameString = userNameEdit.getText().toString().trim();
 
-
                 if (!TextUtils.isEmpty(userEmailString) && !TextUtils.isEmpty(userPassString)) {
                     final ProgressDialog progress = new ProgressDialog(MainActivity.this);
                     progress.setMessage("Please wait....");
@@ -88,7 +86,6 @@ public class MainActivity extends AppCompatActivity {
                                                 }
                                             }
                                         });
-                                displayemail.setText(userEmailString);
 
                                 DatabaseReference mChildDataRef = mDatabaseReference.child("Users").push();
 
