@@ -10,21 +10,22 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView android:text=""
+        <TextView
+            android:id="@+id/txtContent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtContent"/>
+            android:text="" />
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Process"
             android:id="@+id/button"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true" />
-        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imgview"/>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Process" />
+        <ImageView
+            android:id="@+id/imgview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </RelativeLayout>
