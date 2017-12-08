@@ -1,8 +1,12 @@
 package com.example.nautatvanavlakha.abcd;
 
 import android.content.ClipData;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -23,6 +27,12 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.io.File;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URI;
+import java.net.URL;
+
 public class HomePage extends AppCompatActivity {
 
     DrawerLayout mDrawer;
@@ -32,8 +42,9 @@ public class HomePage extends AppCompatActivity {
     FirebaseAuth.AuthStateListener mAuthListner;
     TextView displayEmail ,emailNoti;
     String emailDisplay;
-    ImageView logoutImage;
+    ImageView logoutImage ,notificationUser;
     Drawable noti;
+    Bitmap imagebit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +56,7 @@ public class HomePage extends AppCompatActivity {
         noti = (Drawable) getDrawable(R.drawable.ic_notifications_active_24px);
         logoutImage = (ImageView) findViewById(R.id.logout_noti);
         emailNoti =(TextView) findViewById(R.id.email_noti);
+        notificationUser =(ImageView) findViewById(R.id.notificationimg);
         logoutImage.setOnClickListener(new View.OnClickListener() {  /*Logout for button in notification*/
             @Override
             public void onClick(View v) {
@@ -111,12 +123,24 @@ public class HomePage extends AppCompatActivity {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
 
                 if (user != null) {
-                    String email = user.getEmail();
-                    emailDisplay = email;
+                    String email = user.getDisplayName();
+                    Uri imageUrl = user.getPhotoUrl();
+                    ImageView i = (ImageView)findViewById(R.id.profile_image);
+//                    i.setImageURI(imageUrl);
+//                    emailDisplay =
+                    assert imageUrl != null;
+                    String strURL = imageUrl.toString();
+                    imagebit = getBitmapfromURL(strURL);
+                    if (imagebit!=null){ //TODO: User image update is not working fix it
+                        i.setImageBitmap(imagebit);
+                        notificationUser.setImageBitmap(imagebit);
+                    }
                     emailNoti.setText(email);
+
+
                     // TODO: Update the email in drawer header for the user
 //                    displayEmail.setText(email);
-//                    Toast.makeText(HomePage.this,"Hello " + emailDisplay , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HomePage.this,"Hello " + email , Toast.LENGTH_SHORT).show();
                 } else {
                     startActivity(new Intent(HomePage.this, LoginActivity.class));
 
@@ -136,6 +160,23 @@ public class HomePage extends AppCompatActivity {
 //            }
 //        });
 
+    }
+    public Bitmap getBitmapfromURL(String src){
+
+        try {
+            URL url = new URL(src);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setDoInput(true);
+            connection.connect();
+            InputStream input = connection.getInputStream();
+            return BitmapFactory.decodeStream(input);
+        }catch (Exception e){
+            e.printStackTrace();
+            Toast.makeText(HomePage.this,"Image could not be loaded",Toast.LENGTH_SHORT).show();
+            return null;
+
+
+        }
     }
 
     @Override

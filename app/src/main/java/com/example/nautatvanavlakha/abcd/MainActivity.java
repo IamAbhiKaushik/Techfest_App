@@ -77,15 +77,15 @@ public class MainActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 FirebaseUser user = mAuth.getCurrentUser();
-                                user.sendEmailVerification()
-                                        .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                            @Override
-                                            public void onComplete(@NonNull Task<Void> task) {
-                                                if (task.isSuccessful()) {
-                                                    Toast.makeText(MainActivity.this, "Account Created and verification email sent ", Toast.LENGTH_SHORT).show();
-                                                }
-                                            }
-                                        });
+//                                user.sendEmailVerification()
+//                                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+//                                            @Override
+//                                            public void onComplete(@NonNull Task<Void> task) {
+//                                                if (task.isSuccessful()) {
+//                                                    Toast.makeText(MainActivity.this, "Account Created and verification email sent ", Toast.LENGTH_SHORT).show();
+//                                                }
+//                                            }
+//                                        });
 
                                 DatabaseReference mChildDataRef = mDatabaseReference.child("Users").push();
 
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
 //                                sendVerificationEmail();
 
-                                startActivity(new Intent(MainActivity.this, VerificationActivity.class));
+                                startActivity(new Intent(MainActivity.this, HomePage.class));
 
                             } else {
                                 progress.dismiss();

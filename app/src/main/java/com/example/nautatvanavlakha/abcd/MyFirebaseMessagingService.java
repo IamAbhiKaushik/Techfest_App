@@ -6,13 +6,28 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.NotificationCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
+    DatabaseReference mDatabaseReference;
+    FirebaseAuth mAuth;
+    FirebaseAuth.AuthStateListener mAuthListner;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        mAuth = FirebaseAuth.getInstance();
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
+    }
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
+        mAuth = FirebaseAuth.getInstance();
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
         Intent intent=new Intent(this,LoginActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -26,6 +41,14 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         notificationBuilder.setContentIntent(pendingIntent);
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.notify(0,notificationBuilder.build());
+
+        DatabaseReference mChildDataRef = mDatabaseReference.child("Notifications").push();
+        String key_notification = mChildDataRef.getKey();
+        mChildDataRef.child("Message").setValue(remoteMessage.getNotification().getBody());
+        mChildDataRef.child("Tittle").setValue(remoteMessage.getNotification().getTitle());
+
+
+
 
 
     }

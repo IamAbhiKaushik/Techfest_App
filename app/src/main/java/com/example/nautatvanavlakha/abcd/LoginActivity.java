@@ -2,6 +2,7 @@ package com.example.nautatvanavlakha.abcd;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,15 +29,17 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.w3c.dom.Text;
 
 public class LoginActivity extends AppCompatActivity {
     //Views and Widgets
     Button LoginBtn ;
-    TextView MoveToSignin;
+    TextView MoveToSignin ,displayEmail,ndisplayEmail;
     EditText userEmail,userPass ;
-    String userEmailString,userPassString;
+    String userEmailString,userPassString,userNameString;
 
     //Create Firebase Fields
     FirebaseAuth mAuth;
@@ -45,6 +48,7 @@ public class LoginActivity extends AppCompatActivity {
     private final static int RC_SIGN_IN=123;
     GoogleSignInClient mGoogleSignInClient;
     GoogleApiClient mGoogleApiClient;
+    DatabaseReference mDatabaseReference;
 
 
     @Override
@@ -57,6 +61,10 @@ public class LoginActivity extends AppCompatActivity {
         userPass=(EditText) findViewById(R.id.LoginPass);
         button=(SignInButton) findViewById(R.id.googleBtn);
         MoveToSignin=(TextView) findViewById(R.id.moveToSignin);
+        displayEmail = (TextView) findViewById(R.id.emailUserDisplay);
+        ndisplayEmail = (TextView) findViewById(R.id.email_noti);
+
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
         mAuth=FirebaseAuth.getInstance();
         mAuthListner= new FirebaseAuth.AuthStateListener() {
@@ -65,11 +73,13 @@ public class LoginActivity extends AppCompatActivity {
 
                 FirebaseUser user =firebaseAuth.getCurrentUser();
 
+
+
                 if (user!=null){
                     startActivity(new Intent(LoginActivity.this, HomePage.class));
 
-
                 }else {
+
 
                 }
 
@@ -122,7 +132,7 @@ public class LoginActivity extends AppCompatActivity {
                 }else {
                     Toast.makeText(LoginActivity.this,"Please fill the details first",Toast.LENGTH_LONG).show();
                 }
-                
+
             }
         });
         // Configure Google Sign In
@@ -160,7 +170,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void firebaseAuthWithGoogle(GoogleSignInAccount account) {
-
+        ProgressDialog progress = new ProgressDialog(LoginActivity.this);
+                                progress.setMessage("Logging in...");
+                                progress.show();
         AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(), null);
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -170,7 +182,19 @@ public class LoginActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-//                            updateUI(user);
+                            userEmailString = user.getEmail();
+                            userPassString = null;
+                            userNameString = user.getDisplayName();
+                            Uri userUrl = user.getPhotoUrl();
+                            String userImageString = userUrl.toString();
+                            DatabaseReference mChildDataRef = mDatabaseReference.child("Users").push();
+                            String key_user = mChildDataRef.getKey();
+                            mChildDataRef.child("keyUser").setValue(key_user);
+                            mChildDataRef.child("emailUser").setValue(userEmailString);
+                            mChildDataRef.child("passUser").setValue(userPassString);
+                            mChildDataRef.child("nameUser").setValue(userNameString);
+                            mChildDataRef.child("photoUser").setValue(userImageString);
+
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("TAG", "signInWithCredential:failure", task.getException());

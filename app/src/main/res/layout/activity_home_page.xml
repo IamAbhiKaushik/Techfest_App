@@ -110,7 +110,7 @@
         <!--app:itemIconTint="#DAFDFF"-->
         <!--app:itemTextColor="#DAFDFF"-->
         <!--/>-->
-    <include layout="@layout/fragment_item_list"
+    <include layout="@layout/activity_notification"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
