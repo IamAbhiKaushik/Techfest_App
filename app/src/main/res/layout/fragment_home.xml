@@ -1,22 +1,20 @@
+<!--The full front activity box-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212A33"
+    android:baselineAligned="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingEnd="5dp"
+    android:paddingStart="5dp"
+    android:paddingTop="30dp"
+    tools:context="com.example.nautatvanavlakha.abcd.HomeFragment">
 
-    <!--The full front activity box-->
+    <!--master layout 1-->
     <LinearLayout
-     xmlns:android="http://schemas.android.com/apk/res/android"
-     xmlns:tools="http://schemas.android.com/tools"
-     android:layout_width="match_parent"
-     android:layout_height="match_parent"
-     tools:context="com.example.nautatvanavlakha.abcd.HomeFragment"
-     android:baselineAligned="false"
-     android:orientation="vertical"
-     android:paddingBottom="20dp"
-     android:fitsSystemWindows="true"
-     android:paddingStart="5dp"
-     android:paddingEnd="5dp"
-     android:paddingTop="30dp"
-     android:background="#212A33">
-
-        <!--master layout 1-->
-        <LinearLayout
         android:id="@+id/row1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,10 +35,11 @@
             tools:ignore="NestedWeights">
 
             <ImageView
+                android:id="@+id/competetion"
                 android:layout_width="match_parent"
-                android:contentDescription="@string/compi"
                 android:layout_height="match_parent"
                 android:layout_weight="0.4"
+                android:contentDescription="@string/compi"
                 android:src="@drawable/cup_2_" />
 
             <TextView
@@ -62,10 +61,11 @@
             android:orientation="vertical">
 
             <ImageView
+
                 android:layout_width="match_parent"
-                android:contentDescription="@string/tech"
                 android:layout_height="match_parent"
                 android:layout_weight="0.4"
+                android:contentDescription="@string/tech"
                 android:src="@drawable/vinyl_2_" />
 
             <TextView
@@ -87,9 +87,9 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:contentDescription="@string/ideate"
                 android:layout_height="match_parent"
                 android:layout_weight="0.4"
+                android:contentDescription="@string/ideate"
                 android:src="@drawable/lightbulb_2_" />
 
             <TextView
@@ -102,8 +102,8 @@
         </LinearLayout>
     </LinearLayout>
 
-        <!--Master layout 2-->
-        <LinearLayout
+    <!--Master layout 2-->
+    <LinearLayout
         android:id="@+id/row2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -148,8 +148,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.4"
-                android:src="@drawable/power_2_"
                 android:contentDescription="@string/initiatives"
+                android:src="@drawable/power_2_"
                 tools:ignore="NestedWeights" />
 
             <TextView
@@ -173,8 +173,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.4"
-                android:src="@drawable/joypad_2_"
                 android:contentDescription="@string/ozone"
+                android:src="@drawable/joypad_2_"
                 tools:ignore="NestedWeights" />
 
             <TextView
@@ -187,8 +187,8 @@
         </LinearLayout>
     </LinearLayout>
 
-        <!--master layout 3-->
-        <LinearLayout
+    <!--master layout 3-->
+    <LinearLayout
         android:id="@+id/row3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -208,10 +208,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.4"
+                android:contentDescription="@string/summit"
                 android:gravity="center"
                 android:src="@drawable/_x39__2_"
-                tools:ignore="NestedWeights"
-                android:contentDescription="@string/summit"/>
+                tools:ignore="NestedWeights" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -234,8 +234,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.4"
-                android:gravity="center"
                 android:contentDescription="@string/lectures"
+                android:gravity="center"
                 android:src="@drawable/user_2_"
                 tools:ignore="NestedWeights" />
 
@@ -260,8 +260,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.4"
-                android:src="@drawable/pic_2_"
                 android:contentDescription="@string/exhibitions"
+                android:src="@drawable/pic_2_"
                 tools:ignore="NestedWeights" />
 
             <TextView
@@ -275,8 +275,8 @@
         </LinearLayout>
     </LinearLayout>
 
-        <!--master layout 4-->
-        <LinearLayout
+    <!--master layout 4-->
+    <LinearLayout
         android:id="@+id/row4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -359,6 +359,6 @@
                 android:textColor="#ffffff" />
         </LinearLayout>
     </LinearLayout>
-    </LinearLayout>
+</LinearLayout>
 
-<!--</FrameLayout>-->
+    <!--</FrameLayout>-->

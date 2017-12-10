@@ -33,6 +33,7 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URL;
+import java.util.ArrayList;
 
 public class HomePage extends AppCompatActivity {
 
@@ -57,7 +58,7 @@ public class HomePage extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         displayEmail = (TextView) findViewById(R.id.emailUserDisplay);
         emailDisplay = getString(R.string.emaildrawer);
-        noti = getDrawable(R.drawable.ic_notifications_active_24px);
+//        noti = getDrawable(R.drawable.ic_notifications_active_24px);
         logoutImage = (ImageView) findViewById(R.id.logout_noti);
         emailNoti =(TextView) findViewById(R.id.email_noti);
         notificationUser =(ImageView) findViewById(R.id.notificationimg);
@@ -132,12 +133,12 @@ public class HomePage extends AppCompatActivity {
                     ImageView i = (ImageView)findViewById(R.id.profile_image);
 
                     assert imageUrl != null;
-//                    String strURL = imageUrl.toString();
-//                    imagebit = getBitmapfromURL(strURL);
-//                    if (imagebit!=null){
-//                        i.setImageBitmap(imagebit);
-//                        notificationUser.setImageBitmap(imagebit);
-//                    }
+                    String strURL = imageUrl.toString();
+                    imagebit = getBitmapfromURL(strURL);
+                    if (imagebit != null) {
+                        i.setImageBitmap(imagebit);
+                        notificationUser.setImageBitmap(imagebit);
+                    }
                     emailNoti.setText(email);
 
                     // TODO: Update the email in drawer header for the user
@@ -163,6 +164,7 @@ public class HomePage extends AppCompatActivity {
 //        });
 
     }
+
     public Bitmap getBitmapfromURL(String src){
 
         try {
@@ -213,6 +215,10 @@ public class HomePage extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         mAuth.removeAuthStateListener(mAuthListner);
+    }
+
+    public static class Data_super {
+        public static final ArrayList<data> loff = new ArrayList<data>();
     }
 
 }

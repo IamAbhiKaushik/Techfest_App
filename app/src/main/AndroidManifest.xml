@@ -42,6 +42,12 @@
         <activity android:name=".VerificationActivity" />
         <activity android:name=".BarcodeActivity" />
         <activity android:name=".NotificationActivity"/>
+        <activity
+            android:name=".CompetetionActivity"
+            android:parentActivityName=".HomePage"
+            android:theme="@style/AppTheme">
+
+        </activity>
     </application>
 
 </manifest>

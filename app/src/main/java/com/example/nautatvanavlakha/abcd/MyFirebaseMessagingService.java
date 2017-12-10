@@ -34,8 +34,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         notificationBuilder.setContentTitle("FCM NOTIFICATION");
         notificationBuilder.setContentTitle(remoteMessage.getNotification().getBody());
         notificationBuilder.setAutoCancel(true);
-        notificationBuilder.setColor(334351);
-        notificationBuilder.setSmallIcon(android.R.drawable.ic_notification_overlay);
+        notificationBuilder.setColor(554654);
+        notificationBuilder.setSmallIcon(R.drawable.tf);
         notificationBuilder.setContentIntent(pendingIntent);
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.notify(0,notificationBuilder.build());
