@@ -56,8 +56,8 @@ public class HomePage extends AppCompatActivity {
         StrictMode.setThreadPolicy(policy);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         displayEmail = (TextView) findViewById(R.id.emailUserDisplay);
-        emailDisplay = (String) getString(R.string.emaildrawer);
-        noti = (Drawable) getDrawable(R.drawable.ic_notifications_active_24px);
+        emailDisplay = getString(R.string.emaildrawer);
+        noti = getDrawable(R.drawable.ic_notifications_active_24px);
         logoutImage = (ImageView) findViewById(R.id.logout_noti);
         emailNoti =(TextView) findViewById(R.id.email_noti);
         notificationUser =(ImageView) findViewById(R.id.notificationimg);
@@ -130,20 +130,18 @@ public class HomePage extends AppCompatActivity {
                     String email = user.getDisplayName();
                     Uri imageUrl = user.getPhotoUrl();
                     ImageView i = (ImageView)findViewById(R.id.profile_image);
-//                    i.setImageURI(imageUrl);
-//                    emailDisplay =
+
                     assert imageUrl != null;
-                    String strURL = imageUrl.toString();
-                    imagebit = getBitmapfromURL(strURL);
-                    if (imagebit!=null){ //TODO: User image update is not working fix it
-                        i.setImageBitmap(imagebit);
-                        notificationUser.setImageBitmap(imagebit);
-                    }
+//                    String strURL = imageUrl.toString();
+//                    imagebit = getBitmapfromURL(strURL);
+//                    if (imagebit!=null){
+//                        i.setImageBitmap(imagebit);
+//                        notificationUser.setImageBitmap(imagebit);
+//                    }
                     emailNoti.setText(email);
 
-
                     // TODO: Update the email in drawer header for the user
-//                    displayEmail.setText(email);
+//                    displayEmail.setText("hhh");
                     Toast.makeText(HomePage.this,"Hello " + email , Toast.LENGTH_SHORT).show();
                 } else {
                     startActivity(new Intent(HomePage.this, LoginActivity.class));

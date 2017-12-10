@@ -26,8 +26,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-        mAuth = FirebaseAuth.getInstance();
-        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
         Intent intent=new Intent(this,LoginActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -47,6 +45,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         mChildDataRef.child("Message").setValue(remoteMessage.getNotification().getBody());
         mChildDataRef.child("Tittle").setValue(remoteMessage.getNotification().getTitle());
 
+        mAuth = FirebaseAuth.getInstance();
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
 
 
