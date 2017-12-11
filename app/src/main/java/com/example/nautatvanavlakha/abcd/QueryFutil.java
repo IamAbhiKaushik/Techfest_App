@@ -17,6 +17,7 @@ public class QueryFutil {
         List<String> imglinkk = new ArrayList<>();
         List<String> introk = new ArrayList<>();
         List<String> timek = new ArrayList<>();
+        if(HomePage.Data_Super.loff.size()>0) {
         namek = HomePage.Data_super.loff.get(mPage - 1).getMName();
         linkk = HomePage.Data_super.loff.get(mPage - 1).getLink();
 
@@ -32,6 +33,10 @@ public class QueryFutil {
 
 
         return item;
+        }
+        else {
+        return null;
+        }
     }
 
 
