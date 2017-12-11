@@ -117,7 +117,7 @@ public class BlankFragment extends Fragment implements LoaderCallbacks<List<Item
 
 
         final View rootView = inflater.inflate(R.layout.activity_competetion, container, false);
-
+        emptyView = (LinearLayout) rootView.findViewById(R.id.empty_state);
         final View bottomSheet = rootView.findViewById(R.id.design_bottom_sheet);
         final BottomSheetBehavior behavior = BottomSheetBehavior.from(bottomSheet);
         behavior.setPeekHeight(0);
@@ -207,7 +207,13 @@ public class BlankFragment extends Fragment implements LoaderCallbacks<List<Item
             }
 
         });
-
+         TextView no_net = (TextView) rootView.findViewById(R.id.no_net);
+        no_net.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               getActivity().finish();
+            }
+        });
         ImageView close = (ImageView) rootView.findViewById(R.id.kclose);
         close.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -235,6 +241,7 @@ public class BlankFragment extends Fragment implements LoaderCallbacks<List<Item
         // Ifl there is a valid list of {@link news}s, then add them to the adapter's
         // data set. This will trigger the ListView to update.
         if (data != null && !data.isEmpty()) {
+            emptyView.setVisibility(View.GONE);
             adapter.addAll(data);
 
         }
