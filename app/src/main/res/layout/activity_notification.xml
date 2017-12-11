@@ -7,15 +7,12 @@
     android:layout_height="match_parent"
     android:background="#31313B">
 
-    <android.support.v7.widget.RecyclerView
+    <ListView
         android:id="@+id/list"
-        android:name="com.example.nautatvanavlakha.abcd.NotificationFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="200dp"
         android:background="#31313B"
-        app:layoutManager="LinearLayoutManager"
-        tools:context="com.example.nautatvanavlakha.abcd.NotificationFragment"
         tools:listitem="@layout/notifiation_item" />
 
     <!--<ImageView-->

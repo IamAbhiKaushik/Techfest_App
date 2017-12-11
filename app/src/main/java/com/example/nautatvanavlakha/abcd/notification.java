@@ -4,21 +4,21 @@ package com.example.nautatvanavlakha.abcd;
  * Created by abhishek on 8/12/17.
  */
 
-public class ListData {
+public class notification {
 
     private String messege;
     private String title;
 
-    public ListData(String messege ,String title){
-        this.messege=messege;
-        this.title=title;
+    public notification(String messege, String title) {
+        this.messege = messege;
+        this.title = title;
     }
 
-    public String getMessege(){
+    public String getMessege() {
         return messege;
     }
 
-    public String getTitle(){
+    public String getTitle() {
         return title;
     }
 }

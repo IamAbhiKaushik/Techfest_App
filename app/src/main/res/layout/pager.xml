@@ -11,18 +11,21 @@
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="10.5"></android.support.v4.view.ViewPager>
+        android:layout_weight="10.5">
+
+    </android.support.v4.view.ViewPager>
 
     <android.support.design.widget.TabLayout
         android:id="@+id/sliding_tabs"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:background="#212A33"
         app:paddingEnd="12dp"
         app:paddingStart="12dp"
         app:tabBackground="@color/colorPrimaryDark"
         app:tabGravity="fill"
-        app:tabIndicatorColor="#000"
+        app:tabIndicatorColor="#fff"
         app:tabMaxWidth="0dp"
         app:tabMode="scrollable"
         app:tabSelectedTextColor="#000"

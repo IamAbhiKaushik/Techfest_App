@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +16,9 @@ import com.squareup.picasso.Target;
 
 import java.util.ArrayList;
 
+/**
+ * Created by amank on 2/12/17.
+ */
 
 public class ItemAdapter extends ArrayAdapter<Item> {
 
@@ -26,9 +28,8 @@ public class ItemAdapter extends ArrayAdapter<Item> {
     }
 
 
-    @NonNull
     @Override
-    public View getView(int position, View currentView, @NonNull ViewGroup parent) {
+    public View getView(int position, View currentView, ViewGroup parent) {
 
         View listItemView = currentView;
         if (listItemView == null) {
@@ -39,7 +40,6 @@ public class ItemAdapter extends ArrayAdapter<Item> {
         Item currentFile = getItem(position);
         //   ImageView iv1 = (ImageView)listItemView.findViewById(R.id.iv1);
         //   Picasso.with(getContext()).load(currentFile.getImageResource()).placeholder(R.drawable.unnamed).resize(80,80).centerCrop().into(iv1);
-        assert currentFile != null;
         Picasso.with(getContext()).load(currentFile.getImageResource()).placeholder(R.drawable.unnamed).into(new Target() {
 
 

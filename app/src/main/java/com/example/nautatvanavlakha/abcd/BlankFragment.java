@@ -20,6 +20,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -34,6 +35,7 @@ public class BlankFragment extends Fragment implements LoaderCallbacks<List<Item
     public static final String TITLE = "ARG_TITLE";
     final private String TAG = "BlankFragment";
     ArrayList<Item> item = new ArrayList<Item>();
+    LinearLayout emptyView;
     private ItemAdapter adapter;
     private String Title;
     private int mPage;

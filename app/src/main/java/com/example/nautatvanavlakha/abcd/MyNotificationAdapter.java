@@ -23,10 +23,10 @@ public class MyNotificationAdapter extends RecyclerView.Adapter<MyNotificationAd
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListner;
     DatabaseReference mDatabaseReference;
-    private List<ListData> listItems;
+    private List<NotificationData> listItems;
     private Context context;
 
-    public MyNotificationAdapter(List<ListData> listItems, Context context) {
+    public MyNotificationAdapter(List<NotificationData> listItems, Context context) {
         this.listItems = listItems;
         this.context = context;
     }
@@ -44,11 +44,11 @@ public class MyNotificationAdapter extends RecyclerView.Adapter<MyNotificationAd
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        ListData listItem = listItems.get(position);
+        NotificationData listItem = listItems.get(position);
 
 
-        holder.textViewTittle.setText(listItem.getTitle());
-        holder.textViewMessage.setText(listItem.getMessege());
+        holder.textViewTittle.setText(listItem.getTittle());
+        holder.textViewMessage.setText(listItem.getMessage());
 
     }
 

@@ -16,12 +16,10 @@ public class ItemLoader extends AsyncTaskLoader<List<Item>> {
         super(context);
         i = k;
     }
-
     @Override
     protected void onStartLoading() {
         forceLoad();
     }
-
     @Override
     public List<Item> loadInBackground() {
         return QueryFutil.fetchData(i);
