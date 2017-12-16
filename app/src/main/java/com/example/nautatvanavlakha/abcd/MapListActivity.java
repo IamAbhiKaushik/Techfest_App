@@ -30,9 +30,26 @@ public class MapListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map_list);
 
-        TextView[] textViews = new TextView[10];
+        TextView[] textViews = new TextView[17];
 
         textViews[0] = (TextView) findViewById(R.id.convo);
+        textViews[1] = (TextView) findViewById(R.id.lhc);
+        textViews[2] = (TextView) findViewById(R.id.pcsa);
+        textViews[3] = (TextView) findViewById(R.id.gymkhana);
+        textViews[4] = (TextView) findViewById(R.id.ncc);
+        textViews[5] = (TextView) findViewById(R.id.fck);
+        textViews[6] = (TextView) findViewById(R.id.newSwim);
+        textViews[7] = (TextView) findViewById(R.id.kv);
+        textViews[8] = (TextView) findViewById(R.id.sac);
+        textViews[9] = (TextView) findViewById(R.id.som);
+        textViews[10] = (TextView) findViewById(R.id.oat);
+        textViews[11] = (TextView) findViewById(R.id.chub);
+        textViews[12] = (TextView) findViewById(R.id.bb);
+        textViews[13] = (TextView) findViewById(R.id.gulmohar);
+        textViews[14] = (TextView) findViewById(R.id.sacfc);
+        textViews[15] = (TextView) findViewById(R.id.dayfc);
+        textViews[16] = (TextView) findViewById(R.id.amul);
+        textViews[17] = (TextView) findViewById(R.id.coffees);
 
 
         textViews[0].setOnClickListener(new View.OnClickListener() {
