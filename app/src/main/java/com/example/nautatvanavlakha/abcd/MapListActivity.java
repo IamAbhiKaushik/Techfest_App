@@ -64,7 +64,7 @@ public class MapListActivity extends AppCompatActivity {
         textViews[1].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.131973, 72.914285(Lecture Hall Complex (LHC)");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.130735, 72.916900(Lecture Hall Complex (LHC)");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
@@ -82,7 +82,7 @@ public class MapListActivity extends AppCompatActivity {
         textViews[3].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.131973, 72.914285(Gymkhana Grounds)");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.134446, 72.912217(Gymkhana Grounds)");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
@@ -91,7 +91,7 @@ public class MapListActivity extends AppCompatActivity {
         textViews[4].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.131973, 72.914285(NCC Grounds)");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.133572, 72.913399(NCC Grounds)");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
@@ -100,7 +100,7 @@ public class MapListActivity extends AppCompatActivity {
         textViews[5].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.131973, 72.914285(FC Kohli Auditorium (FCK)");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.130480, 72.915724(FC Kohli Auditorium (FCK)");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
@@ -109,7 +109,7 @@ public class MapListActivity extends AppCompatActivity {
         textViews[6].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.131973, 72.914285(New Swimming Pool)");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.135574, 72.912930(New Swimming Pool)");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
@@ -118,7 +118,7 @@ public class MapListActivity extends AppCompatActivity {
         textViews[7].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.131973, 72.914285(Kendriya Vidyalaya (KV))");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.129113, 72.918408(Kendriya Vidyalaya (KV))");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
@@ -127,7 +127,7 @@ public class MapListActivity extends AppCompatActivity {
         textViews[8].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.131973, 72.914285(Student Activity Centre (SAC))");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.135422, 72.913674(Student Activity Centre (SAC))");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
@@ -136,7 +136,7 @@ public class MapListActivity extends AppCompatActivity {
         textViews[9].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.131973, 72.914285(SJM SOM)");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.131651, 72.915758(SJM SOM)");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
@@ -145,7 +145,7 @@ public class MapListActivity extends AppCompatActivity {
         textViews[10].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.131973, 72.914285(Open Air Theatre (OAT))");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.135045, 72.913401(Open Air Theatre (OAT))");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
@@ -154,7 +154,7 @@ public class MapListActivity extends AppCompatActivity {
         textViews[11].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.131973, 72.914285(The Campus Hub)");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.134599, 72.910057(The Campus Hub)");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
@@ -163,7 +163,7 @@ public class MapListActivity extends AppCompatActivity {
         textViews[12].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.131973, 72.914285(Brews n Bites)");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.133698, 72.911471(Brews n Bites)");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
@@ -172,7 +172,7 @@ public class MapListActivity extends AppCompatActivity {
         textViews[13].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.131973, 72.914285(Gulmohar)");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.129769, 72.915152(Gulmohar)");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
@@ -181,7 +181,7 @@ public class MapListActivity extends AppCompatActivity {
         textViews[14].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.131973, 72.914285(SAC Food Cour)");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.134865, 72.913824(SAC Food Court)");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
@@ -190,7 +190,7 @@ public class MapListActivity extends AppCompatActivity {
         textViews[15].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.131973, 72.914285(Day Food Court)");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.129861, 72.915798(Day Food Court)");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
@@ -199,7 +199,7 @@ public class MapListActivity extends AppCompatActivity {
         textViews[16].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.131973, 72.914285(Amul Parlour)");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.135148, 72.905608(Amul Parlour)");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
@@ -208,7 +208,7 @@ public class MapListActivity extends AppCompatActivity {
         textViews[17].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.131973, 72.914285(Coffee Shack)");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.131994, 72.915479(Coffee Shack)");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
