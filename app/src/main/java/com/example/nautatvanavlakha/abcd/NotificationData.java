@@ -1,9 +1,11 @@
 package com.example.nautatvanavlakha.abcd;
 
+import com.google.firebase.database.IgnoreExtraProperties;
+
 /**
  * Created by abhishek on 8/12/17.
  */
-
+@IgnoreExtraProperties
 public class NotificationData {
 
     private String Message;

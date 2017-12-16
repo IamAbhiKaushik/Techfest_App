@@ -22,7 +22,6 @@ public class NotificationActivity extends AppCompatActivity {
     DatabaseReference mDatabaseReference;
     ListView notificationList;
     List<NotificationData> notiList;
-    private RecyclerView.Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

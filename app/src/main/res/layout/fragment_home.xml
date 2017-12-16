@@ -7,13 +7,18 @@
     android:baselineAligned="false"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    android:paddingBottom="20dp"
-    android:paddingEnd="5dp"
-    android:paddingStart="5dp"
-    android:paddingTop="30dp"
+    android:paddingBottom="10dp"
     tools:context="com.example.nautatvanavlakha.abcd.HomeFragment">
 
+
+    <ImageView
+        android:id="@+id/home_logo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/tf_logo" />
+
     <!--master layout 1-->
+
     <LinearLayout
         android:id="@+id/row1"
         android:layout_width="match_parent"
@@ -21,6 +26,8 @@
         android:layout_weight="0.25"
         android:baselineAligned="false"
         android:orientation="horizontal"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
         tools:ignore="NestedWeights">
 
         <!--compi-->
@@ -40,6 +47,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.4"
                 android:contentDescription="@string/compi"
+                android:paddingEnd="35dp"
+                android:paddingStart="35dp"
                 android:src="@drawable/cup_2_" />
 
             <TextView
@@ -48,9 +57,81 @@
                 android:layout_weight="0.6"
                 android:gravity="center"
                 android:text="@string/compi"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <!--ozone-->
+        <LinearLayout
+            android:id="@+id/ozone"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.33"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:contentDescription="@string/ozone"
+                android:paddingEnd="35dp"
+                android:paddingStart="35dp"
+                android:src="@drawable/joypad_2_"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:text="@string/ozone"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
         </LinearLayout>
 
+
+        <LinearLayout
+            android:id="@+id/workshop"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.33"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:contentDescription="@string/workshop"
+                android:paddingEnd="35dp"
+                android:paddingStart="35dp"
+                android:src="@drawable/pen_2_"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:text="@string/workshop"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!--Ideate-->
+
+    </LinearLayout>
+
+    <!--Master layout 2-->
+    <LinearLayout
+        android:id="@+id/row2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp">
+
+        <!--workshop-->
         <!--technoholix-->
         <LinearLayout
             android:id="@+id/technoholix"
@@ -66,6 +147,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.4"
                 android:contentDescription="@string/tech"
+                android:paddingEnd="35dp"
+                android:paddingStart="35dp"
                 android:src="@drawable/vinyl_2_" />
 
             <TextView
@@ -74,128 +157,9 @@
                 android:layout_weight="0.6"
                 android:gravity="center"
                 android:text="@string/tech"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
         </LinearLayout>
-
-        <!--Ideate-->
-        <LinearLayout
-            android:id="@+id/ideate"
-            android:layout_width="0sp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.33"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.4"
-                android:contentDescription="@string/ideate"
-                android:src="@drawable/lightbulb_2_" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.6"
-                android:gravity="center"
-                android:text="@string/ideate"
-                android:textColor="#ffffff" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <!--Master layout 2-->
-    <LinearLayout
-        android:id="@+id/row2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.25"
-        android:baselineAligned="false"
-        android:orientation="horizontal">
-
-        <!--workshop-->
-        <LinearLayout
-            android:id="@+id/workshop"
-            android:layout_width="0sp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.33"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.4"
-                android:contentDescription="@string/workshop"
-                android:src="@drawable/pen_2_"
-                tools:ignore="NestedWeights" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.6"
-                android:gravity="center"
-                android:text="@string/workshop"
-                android:textColor="#ffffff" />
-        </LinearLayout>
-
-        <!--initiative-->
-        <LinearLayout
-            android:id="@+id/initiative"
-            android:layout_width="0sp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.33"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.4"
-                android:contentDescription="@string/initiatives"
-                android:src="@drawable/power_2_"
-                tools:ignore="NestedWeights" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.6"
-                android:gravity="center"
-                android:text="@string/initiatives"
-                android:textColor="#ffffff" />
-        </LinearLayout>
-
-        <!--ozone-->
-        <LinearLayout
-            android:id="@+id/ozone"
-            android:layout_width="0sp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.33"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.4"
-                android:contentDescription="@string/ozone"
-                android:src="@drawable/joypad_2_"
-                tools:ignore="NestedWeights" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.6"
-                android:gravity="center"
-                android:text="@string/ozone"
-                android:textColor="#ffffff" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <!--master layout 3-->
-    <LinearLayout
-        android:id="@+id/row3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.25"
-        android:baselineAligned="false"
-        android:orientation="horizontal">
-
         <!--summit-->
         <LinearLayout
             android:id="@+id/summit"
@@ -210,6 +174,8 @@
                 android:layout_weight="0.4"
                 android:contentDescription="@string/summit"
                 android:gravity="center"
+                android:paddingEnd="35dp"
+                android:paddingStart="35dp"
                 android:src="@drawable/_x39__2_"
                 tools:ignore="NestedWeights" />
 
@@ -219,34 +185,12 @@
                 android:layout_weight="0.6"
                 android:gravity="center"
                 android:text="@string/summit"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
         </LinearLayout>
 
-        <!--lectures-->
-        <LinearLayout
-            android:id="@+id/lectures"
-            android:layout_width="0sp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.33"
-            android:orientation="vertical">
+        <!--initiative-->
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.4"
-                android:contentDescription="@string/lectures"
-                android:gravity="center"
-                android:src="@drawable/user_2_"
-                tools:ignore="NestedWeights" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.6"
-                android:gravity="center"
-                android:text="@string/lectures"
-                android:textColor="#ffffff" />
-        </LinearLayout>
 
         <!--exhibitions-->
         <LinearLayout
@@ -261,6 +205,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.4"
                 android:contentDescription="@string/exhibitions"
+                android:paddingEnd="35dp"
+                android:paddingStart="35dp"
                 android:src="@drawable/pic_2_"
                 tools:ignore="NestedWeights" />
 
@@ -270,23 +216,26 @@
                 android:layout_weight="0.6"
                 android:gravity="center"
                 android:text="@string/exhibitions"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
 
         </LinearLayout>
+
+
     </LinearLayout>
 
-    <!--master layout 4-->
+    <!--master layout 3-->
     <LinearLayout
-        android:id="@+id/row4"
+        android:id="@+id/row3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.25"
         android:baselineAligned="false"
-        android:orientation="horizontal">
-
-        <!--world mun-->
+        android:orientation="horizontal"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp">
         <LinearLayout
-            android:id="@+id/mun"
+            android:id="@+id/initiative"
             android:layout_width="0sp"
             android:layout_height="match_parent"
             android:layout_weight="0.33"
@@ -296,8 +245,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.4"
-                android:contentDescription="@string/world_mun"
-                android:src="@drawable/ic_language_24px"
+                android:contentDescription="@string/initiatives"
+                android:paddingEnd="35dp"
+                android:paddingStart="35dp"
+                android:src="@drawable/power_2_"
                 tools:ignore="NestedWeights" />
 
             <TextView
@@ -305,13 +256,13 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.6"
                 android:gravity="center"
-                android:text="@string/world_mun"
-                android:textColor="#ffffff" />
+                android:text="@string/initiatives"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
         </LinearLayout>
-
-        <!--cyclothon-->
+        <!--Ideate-->
         <LinearLayout
-            android:id="@+id/cyclothon"
+            android:id="@+id/ideate"
             android:layout_width="0sp"
             android:layout_height="match_parent"
             android:layout_weight="0.33"
@@ -321,22 +272,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.4"
-                android:contentDescription="@string/cyclothon"
-                android:src="@drawable/ic_directions_bike_24px"
-                tools:ignore="NestedWeights" />
+                android:contentDescription="@string/ideate"
+                android:paddingEnd="35dp"
+                android:paddingStart="35dp"
+                android:src="@drawable/lightbulb_2_" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.6"
                 android:gravity="center"
-                android:text="@string/cyclothon"
-                android:textColor="#ffffff" />
+                android:text="@string/ideate"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
         </LinearLayout>
+        <!--initiative-->
 
-        <!--sponsers-->
+
         <LinearLayout
-            android:id="@+id/sponsers"
+            android:id="@+id/lectures"
             android:layout_width="0sp"
             android:layout_height="match_parent"
             android:layout_weight="0.33"
@@ -346,8 +300,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.4"
-                android:contentDescription="@string/sponsers"
-                android:src="@drawable/_x24__2_"
+                android:contentDescription="@string/lectures"
+                android:gravity="center"
+                android:paddingEnd="35dp"
+                android:paddingStart="35dp"
+                android:src="@drawable/user_2_"
                 tools:ignore="NestedWeights" />
 
             <TextView
@@ -355,10 +312,14 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.6"
                 android:gravity="center"
-                android:text="@string/sponsers"
-                android:textColor="#ffffff" />
+                android:text="@string/lectures"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
         </LinearLayout>
+
     </LinearLayout>
+
+
 </LinearLayout>
 
     <!--</FrameLayout>-->

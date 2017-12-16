@@ -51,7 +51,7 @@ public class HomePage extends AppCompatActivity {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        displayEmail = (TextView) findViewById(R.id.emailUserDisplay);
+
         emailDisplay = getString(R.string.emaildrawer);
 //        noti = getDrawable(R.drawable.ic_notifications_active_24px);
         logoutImage = (ImageView) findViewById(R.id.logout_noti);
@@ -118,8 +118,8 @@ public class HomePage extends AppCompatActivity {
                 if (user != null) {
                     String email = user.getDisplayName();
                     Uri imageUrl = user.getPhotoUrl();
-                    ImageView i = (ImageView) findViewById(R.id.profile_image);
-
+                    ImageView i = (ImageView) mNavigation.getHeaderView(0).findViewById(R.id.profile_image);
+                    displayEmail = (TextView) mNavigation.getHeaderView(0).findViewById(R.id.emailUserDisplay);
                     String strURL = imageUrl.toString();
                     imagebit = getBitmapfromURL(strURL);
                     if (imagebit != null) {
@@ -129,7 +129,7 @@ public class HomePage extends AppCompatActivity {
                     emailNoti.setText(email);
 
                     // TODO: Update the email in drawer header for the user
-//                    displayEmail.setText("hhh");
+                    displayEmail.setText("Hello" + " " + email);
 //                    Toast.makeText(HomePage.this,"Hello " + email , Toast.LENGTH_SHORT).show();
                 } else {
                     startActivity(new Intent(HomePage.this, LoginActivity.class));

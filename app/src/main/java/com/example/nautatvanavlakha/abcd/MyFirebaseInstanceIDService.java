@@ -14,14 +14,14 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
         String recentToken = FirebaseInstanceId.getInstance().getToken();
         Log.d(REG_TOKEN,recentToken);
 
-        sendRegistrationToServer(recentToken);
+//        sendRegistrationToServer(recentToken);
 
 
     }
-
-    private void sendRegistrationToServer(String recentToken) {
-
-    }
+//
+//    private void sendRegistrationToServer(String recentToken) {
+//
+//    }
 
 
 }
