@@ -103,6 +103,4 @@
         android:fitsSystemWindows="true"
         />
 
-    <include layout="@layout/bottom_toolbar" />
-
 </android.support.v4.widget.DrawerLayout>

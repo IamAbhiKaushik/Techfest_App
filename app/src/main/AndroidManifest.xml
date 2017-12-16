@@ -43,12 +43,6 @@
             android:name=".MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ProfileUser"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".VerificationActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".NotificationActivity"
             android:screenOrientation="portrait" />
         <activity
@@ -80,6 +74,8 @@
         <activity
             android:name=".MapListActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".ScheduleActivity" />
+        <activity android:name=".AboutActivity"></activity>
     </application>
 
 </manifest>

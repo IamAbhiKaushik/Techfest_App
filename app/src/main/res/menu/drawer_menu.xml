@@ -57,24 +57,18 @@
             android:id="@+id/drawer_sponsers"
             android:icon="@drawable/_x24__2_"
             android:title="@string/sponsers"/>
-        <item
-            android:id="@+id/LogoutBTN"
-            android:icon="@drawable/ic_exit_to_app_white_24dp"
-            android:title="@string/logout"/>
-
-
 
 
         <item
             android:id="@+id/subheader"
-            android:title="@string/subheader"
+            android:title="More"
+
             >
             <menu>
                 <item
-                    android:id="@+id/nav_all_email"
-                    android:icon="@drawable/schedule"
-                    android:title="@string/all_email"/>
-                <!-- more items -->
+                    android:id="@+id/LogoutBTN"
+                    android:icon="@drawable/ic_exit_to_app_white_24dp"
+                    android:title="@string/logout" />
 
             </menu>
         </item>

@@ -30,7 +30,7 @@ public class MapListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map_list);
 
-        TextView[] textViews = new TextView[17];
+        TextView[] textViews = new TextView[18];
 
         textViews[0] = (TextView) findViewById(R.id.convo);
         textViews[1] = (TextView) findViewById(R.id.lhc);
@@ -100,7 +100,7 @@ public class MapListActivity extends AppCompatActivity {
         textViews[5].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.130480, 72.915724(FC Kohli Auditorium (FCK)");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=19.130480, 72.915724(FC Kohli Auditorium (FCK))");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);

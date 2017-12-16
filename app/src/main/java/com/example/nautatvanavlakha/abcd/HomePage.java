@@ -39,7 +39,7 @@ public class HomePage extends AppCompatActivity {
     FirebaseAuth.AuthStateListener mAuthListner;
     TextView displayEmail, emailNoti;
     String emailDisplay;
-    ImageView logoutImage, notificationUser, mapimage, homeimage;
+    ImageView logoutImage, notificationUser, mapimage, homeimage, aboutimage, schedimage;
     Drawable noti;
     Bitmap imagebit;
     boolean doubleBackToExitPressedOnce = false;
@@ -60,14 +60,16 @@ public class HomePage extends AppCompatActivity {
         notificationUser = (ImageView) findViewById(R.id.notificationimg);
         mapimage = (ImageView) findViewById(R.id.map_bottom);
         homeimage = (ImageView) findViewById(R.id.QR_bottom);
+        schedimage = (ImageView) findViewById(R.id.schedule_bottom);
+        aboutimage = (ImageView) findViewById(R.id.favorite_bottom);
 
 
-        setSupportActionBar(toolbar);
-        if (getActionBar() != null) {
-            // Display the top-left hamburger button
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
-        getSupportActionBar().setHomeButtonEnabled(true);
+//        setSupportActionBar(toolbar);
+//        if (getActionBar() != null) {
+//            // Display the top-left hamburger button
+//            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        }
+//        getSupportActionBar().setHomeButtonEnabled(true);
 
 
         // Make the hamburger button work
@@ -171,6 +173,20 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomePage.this, MapListActivity.class);
+                startActivity(intent);
+            }
+        });
+        aboutimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, AboutActivity.class);
+                startActivity(intent);
+            }
+        });
+        schedimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, ScheduleActivity.class);
                 startActivity(intent);
             }
         });
