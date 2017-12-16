@@ -1,5 +1,6 @@
 package com.example.nautatvanavlakha.abcd;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -38,7 +39,7 @@ public class HomePage extends AppCompatActivity {
     FirebaseAuth.AuthStateListener mAuthListner;
     TextView displayEmail, emailNoti;
     String emailDisplay;
-    ImageView logoutImage, notificationUser;
+    ImageView logoutImage, notificationUser, mapimage, homeimage;
     Drawable noti;
     Bitmap imagebit;
     boolean doubleBackToExitPressedOnce = false;
@@ -57,6 +58,8 @@ public class HomePage extends AppCompatActivity {
         logoutImage = (ImageView) findViewById(R.id.logout_noti);
         emailNoti = (TextView) findViewById(R.id.email_noti);
         notificationUser = (ImageView) findViewById(R.id.notificationimg);
+        mapimage = (ImageView) findViewById(R.id.map_bottom);
+        homeimage = (ImageView) findViewById(R.id.QR_bottom);
 
 
         setSupportActionBar(toolbar);
@@ -157,6 +160,21 @@ public class HomePage extends AppCompatActivity {
                 startActivity(new Intent(HomePage.this, LoginActivity.class));
             }
         });
+        mapimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, MapListActivity.class);
+                startActivity(intent);
+            }
+        });
+        homeimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, MapListActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     public Bitmap getBitmapfromURL(String src) {
@@ -179,7 +197,6 @@ public class HomePage extends AppCompatActivity {
 //
 //        @Override
 //    public void onBackPressed() {
-//        // TODO: Back press for homepage is not correct correct it
 //        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.DL);
 //        if (drawer != null && drawer.isDrawerOpen(GravityCompat.START)) {
 //            drawer.closeDrawer(GravityCompat.START);

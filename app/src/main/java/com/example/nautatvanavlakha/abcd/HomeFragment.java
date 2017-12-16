@@ -43,7 +43,7 @@ public class HomeFragment extends Fragment {
 //        linearLayout[11] = (LinearLayout) rootView.findViewById(R.id.sponsers);
 
         int i;
-        for (i = 0; i < 6; i += 1) {
+        for (i = 0; i < 9; i += 1) {
             final int finalI = i;
             linearLayout[i].setOnClickListener(new View.OnClickListener() {
 
