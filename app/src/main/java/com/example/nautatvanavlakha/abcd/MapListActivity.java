@@ -30,10 +30,10 @@ public class MapListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map_list);
 
-        TextView[] textViews = new TextView[1];
+        TextView[] textViews = new TextView[10];
 
         textViews[0] = (TextView) findViewById(R.id.convo);
-//        textViews[1] =(TextView) findViewById(R.id.pcsa);
+
 
         textViews[0].setOnClickListener(new View.OnClickListener() {
             @Override
