@@ -69,7 +69,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
                     android:contentDescription="@string/schedule"
-                    android:src="@drawable/schedule" />
+                    android:src="@drawable/betting" />
 
                 <ImageView
                     android:id="@+id/favorite_bottom"

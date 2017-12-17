@@ -91,7 +91,6 @@ public class HomePage extends AppCompatActivity {
 
         mNavigation = (NavigationView) findViewById(R.id.nav_view);
 
-
         mNavigation.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -107,6 +106,12 @@ public class HomePage extends AppCompatActivity {
                     item.setChecked(true);
                     startActivity(new Intent(HomePage.this, LoginActivity.class));
 
+                }
+                if (id == R.id.drawer_compi) {
+
+                    Intent intent = new Intent(HomePage.this, CompetetionActivity.class);
+                    intent.putExtra("_ID", 0);
+                    startActivity(intent);
                 }
 
                 return false;
@@ -186,7 +191,7 @@ public class HomePage extends AppCompatActivity {
         schedimage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomePage.this, ScheduleActivity.class);
+                Intent intent = new Intent(HomePage.this, SponserActivity.class);
                 startActivity(intent);
             }
         });

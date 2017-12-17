@@ -4,7 +4,6 @@
         <!--master layout 1-->
         <item
             android:id="@+id/drawer_compi"
-            android:checked="true"
             android:icon="@drawable/cup_2_"
             android:title="@string/compi"/>
         <item

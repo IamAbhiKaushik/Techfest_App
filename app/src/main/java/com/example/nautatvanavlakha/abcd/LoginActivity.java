@@ -35,17 +35,16 @@ import com.google.firebase.database.FirebaseDatabase;
 import org.w3c.dom.Text;
 
 public class LoginActivity extends AppCompatActivity {
+    private final static int RC_SIGN_IN = 123;
     //Views and Widgets
     Button LoginBtn ;
     TextView MoveToSignin ,displayEmail,ndisplayEmail;
     EditText userEmail,userPass ;
     String userEmailString,userPassString,userNameString;
-
     //Create Firebase Fields
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListner;
     SignInButton button;
-    private final static int RC_SIGN_IN=123;
     GoogleSignInClient mGoogleSignInClient;
     GoogleApiClient mGoogleApiClient;
     DatabaseReference mDatabaseReference;
@@ -56,11 +55,11 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        LoginBtn = (Button) findViewById(R.id.LoginButton);
-        userEmail=(EditText) findViewById(R.id.LoginEmail);
-        userPass=(EditText) findViewById(R.id.LoginPass);
+//        LoginBtn = (Button) findViewById(R.id.LoginButton);
+//        userEmail=(EditText) findViewById(R.id.LoginEmail);
+//        userPass=(EditText) findViewById(R.id.LoginPass);
         button=(SignInButton) findViewById(R.id.googleBtn);
-        MoveToSignin=(TextView) findViewById(R.id.moveToSignin);
+//        MoveToSignin=(TextView) findViewById(R.id.moveToSignin);
         displayEmail = (TextView) findViewById(R.id.emailUserDisplay);
         ndisplayEmail = (TextView) findViewById(R.id.email_noti);
 
@@ -95,46 +94,46 @@ public class LoginActivity extends AppCompatActivity {
                 progress.show();
             }
         });
-        MoveToSignin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                startActivity(new Intent(LoginActivity.this,MainActivity.class));
-
-            }
-        });
-        LoginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                userEmailString=userEmail.getText().toString().trim();
-                userPassString=userPass.getText().toString().trim();
-
-
-                if (!TextUtils.isEmpty(userEmailString) && !TextUtils.isEmpty(userPassString)){
-
-
-                    mAuth.signInWithEmailAndPassword(userEmailString, userPassString ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-
-                            if (task.isSuccessful()){
-                                ProgressDialog progress = new ProgressDialog(LoginActivity.this);
-                                progress.setMessage("Logging in...");
-                                progress.show();
-
-                                startActivity(new Intent(LoginActivity.this, HomePage.class));
-                            }else{
-
-                                Toast.makeText(LoginActivity.this,"Login Failed",Toast.LENGTH_LONG).show();
-                            }
-                        }
-                    });
-                }else {
-                    Toast.makeText(LoginActivity.this,"Please fill the details first",Toast.LENGTH_LONG).show();
-                }
-
-            }
-        });
+//        MoveToSignin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                startActivity(new Intent(LoginActivity.this,MainActivity.class));
+//
+//            }
+//        });
+//        LoginBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                userEmailString=userEmail.getText().toString().trim();
+//                userPassString=userPass.getText().toString().trim();
+//
+//
+//                if (!TextUtils.isEmpty(userEmailString) && !TextUtils.isEmpty(userPassString)){
+//
+//
+//                    mAuth.signInWithEmailAndPassword(userEmailString, userPassString ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                        @Override
+//                        public void onComplete(@NonNull Task<AuthResult> task) {
+//
+//                            if (task.isSuccessful()){
+//                                ProgressDialog progress = new ProgressDialog(LoginActivity.this);
+//                                progress.setMessage("Logging in...");
+//                                progress.show();
+//
+//                                startActivity(new Intent(LoginActivity.this, HomePage.class));
+//                            }else{
+//
+//                                Toast.makeText(LoginActivity.this,"Login Failed",Toast.LENGTH_LONG).show();
+//                            }
+//                        }
+//                    });
+//                }else {
+//                    Toast.makeText(LoginActivity.this,"Please fill the details first",Toast.LENGTH_LONG).show();
+//                }
+//
+//            }
+//        });
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))

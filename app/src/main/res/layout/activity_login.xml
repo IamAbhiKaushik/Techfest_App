@@ -4,23 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#212A33"
+    android:background="@drawable/screen"
     android:fitsSystemWindows="true">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingLeft="24dp"
-        android:paddingRight="24dp"
-        android:paddingTop="56dp">
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/to_proceed_sign_in"
+            android:textColor="#fff"
+            android:textSize="30sp" />
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/googleBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="28dp" />
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="50dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="40dp" />
+    </LinearLayout>
 
-    </RelativeLayout>
+
 </ScrollView>

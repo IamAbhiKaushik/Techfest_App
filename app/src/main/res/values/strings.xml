@@ -89,4 +89,5 @@
     <string name="hellotext">Hello </string>
     <string name="emaildrawer"></string>
     <string name="title_activity_maps">Map</string>
+    <string name="to_proceed_sign_in">To proceed Sign in...</string>
 </resources>
