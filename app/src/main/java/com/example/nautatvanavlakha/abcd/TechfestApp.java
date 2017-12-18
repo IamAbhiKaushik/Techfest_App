@@ -32,7 +32,7 @@ public class TechfestApp extends Application {
         final ArrayList<ArrayList<String>> intro = new ArrayList<ArrayList<String>>();
         final ArrayList<ArrayList<String>> time = new ArrayList<ArrayList<String>>();
 
-        final String[] super_events = new String[]{"competitions", "technoholix", "ideate", "workshops", "initiatives", "ozone", "summit", "lectures", "exhibitions", "World_Mun", "cyclothon", "sponsers"};
+        final String[] super_events = new String[]{"World_Mun", "competitions", "cyclothon", "lectures", "Workshop", "initiatives", "lectures", "ozone", "sponsers", "summit", "technoholix", "kk"};
 
 
         final FirebaseDatabase database = FirebaseDatabase.getInstance();

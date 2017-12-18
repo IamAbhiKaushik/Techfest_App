@@ -1,6 +1,9 @@
 package com.example.nautatvanavlakha.abcd;
 
 import android.app.Activity;
+
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -11,6 +14,8 @@ import android.os.Handler;
 import android.os.StrictMode;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -37,7 +42,7 @@ public class HomePage extends AppCompatActivity {
     NavigationView mNavigation;
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListner;
-    TextView displayEmail, emailNoti;
+    TextView displayEmail, emailNoti, displayName;
     String emailDisplay;
     ImageView logoutImage, notificationUser, mapimage, homeimage, aboutimage, schedimage;
     Drawable noti;
@@ -94,6 +99,8 @@ public class HomePage extends AppCompatActivity {
         mNavigation.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Fragment fragment = new Fragment();
+
                 int id = item.getItemId();
                 if (item.isChecked()) {
                     mDrawer.closeDrawer(GravityCompat.START);
@@ -108,10 +115,22 @@ public class HomePage extends AppCompatActivity {
 
                 }
                 if (id == R.id.drawer_compi) {
+//                    Intent intent = new Intent(HomePage.this, MapListFragment.class);
+//                    intent.putExtra("_ID", 0);
+//                    startActivity(intent);
+                    MapListFragment mapFragment = new MapListFragment();
+                    FragmentManager manager = getSupportFragmentManager();
+                    FragmentTransaction transaction = manager.beginTransaction();
+                    transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
+                    transaction.addToBackStack(null);
+                    transaction.commit();
+                }
+                if (id == R.id.drawer_contact) {
 
-                    Intent intent = new Intent(HomePage.this, CompetetionActivity.class);
+                    Intent intent = new Intent(HomePage.this, ContactActivity.class);
                     intent.putExtra("_ID", 0);
                     startActivity(intent);
+                    fragment = new MapListFragment();
                 }
 
                 return false;
@@ -126,10 +145,13 @@ public class HomePage extends AppCompatActivity {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
 
                 if (user != null) {
-                    String email = user.getDisplayName();
+                    String email = user.getEmail();
+                    String name = user.getDisplayName();
                     Uri imageUrl = user.getPhotoUrl();
                     ImageView i = (ImageView) mNavigation.getHeaderView(0).findViewById(R.id.profile_image);
                     displayEmail = (TextView) mNavigation.getHeaderView(0).findViewById(R.id.emailUserDisplay);
+                    displayName = (TextView) mNavigation.getHeaderView(0).findViewById(R.id.username);
+
                     String strURL = imageUrl.toString();
                     imagebit = getBitmapfromURL(strURL);
                     if (imagebit != null) {
@@ -139,7 +161,8 @@ public class HomePage extends AppCompatActivity {
                     emailNoti.setText(email);
 
                     // TODO: Update the email in drawer header for the user
-                    displayEmail.setText("Hello" + " " + email);
+                    displayEmail.setText(email);
+                    displayName.setText(name);
 //                    Toast.makeText(HomePage.this,"Hello " + email , Toast.LENGTH_SHORT).show();
                 } else {
                     startActivity(new Intent(HomePage.this, LoginActivity.class));
@@ -177,14 +200,14 @@ public class HomePage extends AppCompatActivity {
         homeimage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomePage.this, MapListActivity.class);
+                Intent intent = new Intent(HomePage.this, QRActivity.class);
                 startActivity(intent);
             }
         });
         aboutimage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomePage.this, AboutActivity.class);
+                Intent intent = new Intent(HomePage.this, FaqActivity.class);
                 startActivity(intent);
             }
         });
@@ -226,24 +249,24 @@ public class HomePage extends AppCompatActivity {
 //        }
 ////        super.onBackPressed();
 //    }
-//    @Override
-//    public void onBackPressed() {
-//        if (doubleBackToExitPressedOnce) {
-//            super.onBackPressed();
-//            return;
-//        }
-//
-//        this.doubleBackToExitPressedOnce = true;
-//        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
-//
-//        new Handler().postDelayed(new Runnable() {
-//
-//            @Override
-//            public void run() {
-//                doubleBackToExitPressedOnce = false;
-//            }
-//        }, 2000);
-//    }
+@Override
+public void onBackPressed() {
+    if (doubleBackToExitPressedOnce) {
+        super.onBackPressed();
+        return;
+    }
+
+    this.doubleBackToExitPressedOnce = true;
+    Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+    new Handler().postDelayed(new Runnable() {
+
+        @Override
+        public void run() {
+            doubleBackToExitPressedOnce = false;
+        }
+    }, 2000);
+}
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

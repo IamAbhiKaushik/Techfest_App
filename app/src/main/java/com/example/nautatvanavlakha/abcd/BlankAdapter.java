@@ -5,13 +5,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-/**
- * Created by amank on 3/12/17.
- */
-
 public class BlankAdapter extends FragmentPagerAdapter {
     private Context mContext;
-    private String tabTitle[] = new String[]{"COMPETETION", "TECHNOHOLIX", "IDEATE", "WORKSHOPS", "INITIATIVES", "OZONE", "SUMMIT", "LECTURES", "EXHIBITIONS", "WORLD MUN", "CYCLOTHON", "SPONSERS"};
+    private String tabTitle[] = new String[]{"COMPETETION", "OZONE", "WORKSHOPS", "TECHNOHOLIX", "SUMMIT", "EXHIBITIONS", "INITIATIVES", "IDEATE", "LECTURES"};
 
     public BlankAdapter(Context context, FragmentManager fm) {
         super(fm);
@@ -32,15 +28,15 @@ public class BlankAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 12;
+        return 9;
     }
 }
 
 
 //        if(position == 0){
-//            return BlankFragment.newInstance(position+1,tabTitle[position]);
-//        } else if(position == 1){
-//            return BlankFragment.newInstance(position+1,tabTitle[position]);
+//            return Blanosition == 1){
+//            return kFragment.newInstance(position+1,tabTitle[position]);
+//        } else if(pBlankFragment.newInstance(position+1,tabTitle[position]);
 //        } else if(position == 2){
 //            return BlankFragment.newInstance(position+1,tabTitle[position]);
 //        } else if(position == 3){

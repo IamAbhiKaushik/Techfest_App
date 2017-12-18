@@ -28,7 +28,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
-        LinearLayout[] linearLayout = new LinearLayout[12];
+        LinearLayout[] linearLayout = new LinearLayout[9];
         linearLayout[0] = (LinearLayout) rootView.findViewById(R.id.compi);
         linearLayout[1] = (LinearLayout) rootView.findViewById(R.id.ozone);
         linearLayout[2] = (LinearLayout) rootView.findViewById(R.id.workshop);

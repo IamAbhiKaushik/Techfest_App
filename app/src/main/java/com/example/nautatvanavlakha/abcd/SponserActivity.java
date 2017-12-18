@@ -12,7 +12,7 @@ public class SponserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sponser);
         WebView myWebView = (WebView) findViewById(R.id.webView);
-        myWebView.loadUrl("http://www.techfest.org/betting");
+        myWebView.loadUrl("https://www.techfest.org/betting");
 
         myWebView.setWebViewClient(new WebViewClient() {
 

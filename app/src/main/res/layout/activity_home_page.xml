@@ -14,9 +14,10 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!--<include layout="@layout/custom_toolbar" />-->
+        <!--<include layout="@layout/toolbar_main" />-->
 
         <LinearLayout
+            android:id="@+id/fragment"
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="1"
@@ -69,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
                     android:contentDescription="@string/schedule"
-                    android:src="@drawable/betting" />
+                    android:src="@drawable/bettinf" />
 
                 <ImageView
                     android:id="@+id/favorite_bottom"
@@ -95,7 +96,8 @@
         app:headerLayout="@layout/drawer_header"
         app:itemIconTint="#DAFDFF"
         app:itemTextColor="#DAFDFF"
-        app:menu="@menu/drawer_menu"/>
+        app:menu="@menu/drawer_menu"
+        app:theme="@style/NavigationDrawerStyle" />
     <include layout="@layout/activity_notification"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

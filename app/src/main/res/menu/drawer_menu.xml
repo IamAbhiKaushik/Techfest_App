@@ -5,7 +5,8 @@
         <item
             android:id="@+id/drawer_compi"
             android:icon="@drawable/cup_2_"
-            android:title="@string/compi"/>
+
+            android:title="Robowars" />
         <item
             android:id="@+id/drawer_tech"
             android:icon="@drawable/vinyl_2_"
@@ -17,9 +18,9 @@
 
         <!--master layout 2-->
         <item
-            android:id="@+id/drawer_workshop"
+            android:id="@+id/drawer_contact"
             android:icon="@drawable/pen_2_"
-            android:title="@string/workshop"/>
+            android:title="Contact Us" />
         <item
             android:id="@+id/drawer_initiative"
             android:icon="@drawable/power_2_"
@@ -27,8 +28,7 @@
         <item
             android:id="@+id/drawer_ozone"
             android:icon="@drawable/joypad_2_"
-            android:title="@string/ozone"/>
-
+            android:title="E-Sports" />
         <!--master layout 3-->
         <item
             android:id="@+id/drawer_summit"
@@ -47,7 +47,7 @@
         <item
             android:id="@+id/drawer_mun"
             android:icon="@drawable/ic_language_24px"
-            android:title="@string/world_mun"/>
+            android:title="Developers" />
         <item
             android:id="@+id/drawer_cyclothon"
             android:icon="@drawable/ic_directions_bike_24px"
