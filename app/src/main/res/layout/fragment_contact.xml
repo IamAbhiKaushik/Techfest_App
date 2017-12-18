@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212A33"
+    android:orientation="vertical">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/Department">
+
+                <TextView
+                    style="@style/Department_Header"
+
+                    android:text="MEDIA AND PUBLICITY" />
+
+                <LinearLayout style="@style/CG_Row">
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="ACHYUT KESHAV" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-7045570815" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="achyut@techfest.org" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="ANIRUDH PODDAR" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-9920198901" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="anirudh@techfest.org" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/Department">
+
+                <TextView
+                    style="@style/Department_Header"
+                    android:text="TECHNOHOLIX" />
+
+                <LinearLayout style="@style/CG_Row">
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="SHUBHAM GOYAL" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-8003473030" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="shubham@techfest.org" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/Department">
+
+                <TextView
+                    style="@style/Department_Header"
+                    android:text="FOOD AND BEVERAGES" />
+
+                <LinearLayout style="@style/CG_Row">
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="MANIK DEEP SINGH" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-9814594990" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="manik@techfest.org" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/Department">
+
+                <TextView
+                    style="@style/Department_Header"
+                    android:text="OZONE" />
+
+                <LinearLayout style="@style/CG_Row">
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="PRANJAL AGRAWAL" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-8828291914" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="pranjal@techfest.org" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="ANANTSHREE" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-9867654091" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="anantshree@techfest.org" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/Department">
+
+                <TextView
+                    style="@style/Department_Header"
+                    android:text="HOSPITALITY" />
+
+                <LinearLayout style="@style/CG_Row">
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="SOURAV GARG" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-9769397136" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="sourav@techfest.org" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/Department">
+
+                <TextView
+                    style="@style/Department_Header"
+                    android:text="LECTURES" />
+
+                <LinearLayout style="@style/CG_Row">
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="SHOBHIT GARG" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-9414276446" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="shobhit@techfest.org" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/Department">
+
+                <TextView
+                    style="@style/Department_Header"
+                    android:text="IDEATE" />
+
+                <LinearLayout style="@style/CG_Row">
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="PRITHVIRAJ" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-9421741200" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="prithviraj@techfest.org" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/Department">
+
+                <TextView
+                    style="@style/Department_Header"
+                    android:text="WEB AND CREATIVES" />
+
+                <LinearLayout style="@style/CG_Row">
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="ABHINAV KAUSHIK" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-7045800411" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="abhinav@techfest.org" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="RAUSHAN SHARMMA" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-8797926509" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="raushan@techfest.org" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/Department">
+
+                <TextView
+                    style="@style/Department_Header"
+                    android:text="EXHIBITIONS" />
+
+                <LinearLayout style="@style/CG_Row">
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="DIVYANSHU PRASAD" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-8569917969" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="divyanshu@techfest.org" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="MRITYUNJAY KUMAR" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-8879137304" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="mrityunjayk@techfest.org" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/Department">
+
+                <TextView
+                    style="@style/Department_Header"
+                    android:text="MARKETING" />
+
+                <LinearLayout style="@style/CG_Row">
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="NIKHIL GAWADE" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-9168778678" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="nikhil@moodi.org" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="RISHI JAIN" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-9930652916" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="rishi@techfest.org" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/Department">
+
+                <TextView
+                    style="@style/Department_Header"
+                    android:text="INFRASTRUCTURE" />
+
+                <LinearLayout style="@style/CG_Row">
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="SHASHANK SAHU" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-9630809789" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="shashank@techfest.org" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="SAGAR GUPTA" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-8828494971" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="sagar@techfest.org" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/Department">
+
+                <TextView
+                    style="@style/Department_Header"
+                    android:text="COMPETITIONS" />
+
+                <LinearLayout style="@style/CG_Row">
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="HARSH SHARMA" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-9407268415" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="harsh@techfest.org" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="HIMANSHU KALA" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-8828290544" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="himanshu@moodi.org" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/Department">
+
+                <TextView
+                    style="@style/Department_Header"
+                    android:text="ROBOWARS" />
+
+                <LinearLayout style="@style/CG_Row">
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="KRISH MEHTA" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-7990632982" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="krish@techfest.org" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="SACHIT MEHROTRA" />
+
+                        <TextView
+                            style="@style/CG_Contact"
+                            android:text="+91-9619264565" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="sachit@techfest.org" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/Department">
+
+                <TextView
+                    style="@style/Department_Header"
+                    android:text="OVERALL COORDINATOR" />
+
+                <LinearLayout style="@style/CG_Row">
+
+                    <LinearLayout style="@style/CG_Holder">
+
+                        <TextView
+                            style="@style/CG_Name"
+                            android:text="HIMMAT SINGH RAJPUT" />
+
+                        <TextView
+                            style="@style/CG_Mail"
+                            android:text="himmat@techfest.org" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

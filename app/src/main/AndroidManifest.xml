@@ -83,8 +83,12 @@
         <activity
             android:name=".BettingActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".ContactActivity" />
-        <activity android:name=".FaqActivity"></activity>
+        <activity
+            android:name=".ContactActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FaqActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

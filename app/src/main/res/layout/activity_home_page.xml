@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#212A33"
-    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
     <LinearLayout
@@ -14,8 +13,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!--<include layout="@layout/toolbar_main" />-->
-
+        <include layout="@layout/toolbar_main" />
         <LinearLayout
             android:id="@+id/fragment"
             android:layout_width="match_parent"
@@ -70,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
                     android:contentDescription="@string/schedule"
-                    android:src="@drawable/bettinf" />
+                    android:src="@drawable/betteing_new" />
 
                 <ImageView
                     android:id="@+id/favorite_bottom"
@@ -78,7 +76,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
                     android:contentDescription="@string/fav"
-                    android:src="@drawable/favorites" />
+                    android:src="@drawable/faq_n" />
             </LinearLayout>
         </LinearLayout>
 

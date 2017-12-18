@@ -5,57 +5,27 @@
         <item
             android:id="@+id/drawer_compi"
             android:icon="@drawable/cup_2_"
+            android:title="ROBOWARS" />
 
-            android:title="Robowars" />
-        <item
-            android:id="@+id/drawer_tech"
-            android:icon="@drawable/vinyl_2_"
-            android:title="@string/tech"/>
-        <item
-            android:id="@+id/drawer_ideate"
-            android:icon="@drawable/lightbulb_2_"
-            android:title="@string/ideate"/>
 
         <!--master layout 2-->
         <item
             android:id="@+id/drawer_contact"
             android:icon="@drawable/pen_2_"
-            android:title="Contact Us" />
+            android:title="CONTACT US" />
         <item
-            android:id="@+id/drawer_initiative"
-            android:icon="@drawable/power_2_"
-            android:title="@string/initiatives"/>
+            android:id="@+id/drawer_dev"
+            android:icon="@drawable/pen_2_"
+            android:title="DEVELOPERS" />
+
         <item
             android:id="@+id/drawer_ozone"
             android:icon="@drawable/joypad_2_"
-            android:title="E-Sports" />
+            android:title="E-SPORTS" />
         <!--master layout 3-->
-        <item
-            android:id="@+id/drawer_summit"
-            android:icon="@drawable/_x39__2_"
-            android:title="@string/summit"/>
-        <item
-            android:id="@+id/drawer_lectures"
-            android:icon="@drawable/lectures"
-            android:title="@string/lectures"/>
-        <item
-            android:id="@+id/drawer_exhi"
-            android:icon="@drawable/pic_2_"
-            android:title="@string/exhibitions"/>
+
 
         <!--master layout 4-->
-        <item
-            android:id="@+id/drawer_mun"
-            android:icon="@drawable/ic_language_24px"
-            android:title="Developers" />
-        <item
-            android:id="@+id/drawer_cyclothon"
-            android:icon="@drawable/ic_directions_bike_24px"
-            android:title="@string/cyclothon"/>
-        <item
-            android:id="@+id/drawer_sponsers"
-            android:icon="@drawable/_x24__2_"
-            android:title="@string/sponsers"/>
 
 
         <item

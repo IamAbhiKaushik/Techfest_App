@@ -47,13 +47,13 @@ public class HomePage extends AppCompatActivity {
     ImageView logoutImage, notificationUser, mapimage, homeimage, aboutimage, schedimage;
     Drawable noti;
     Bitmap imagebit;
+    Fragment ak;
     boolean doubleBackToExitPressedOnce = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -67,6 +67,7 @@ public class HomePage extends AppCompatActivity {
         homeimage = (ImageView) findViewById(R.id.QR_bottom);
         schedimage = (ImageView) findViewById(R.id.schedule_bottom);
         aboutimage = (ImageView) findViewById(R.id.favorite_bottom);
+//        ak = (Fragment) findViewById(R.id.fragment_space);
 
 
 //        setSupportActionBar(toolbar);
@@ -115,22 +116,52 @@ public class HomePage extends AppCompatActivity {
 
                 }
                 if (id == R.id.drawer_compi) {
-//                    Intent intent = new Intent(HomePage.this, MapListFragment.class);
-//                    intent.putExtra("_ID", 0);
-//                    startActivity(intent);
-                    MapListFragment mapFragment = new MapListFragment();
+                    BettingFragment mapFragment = new BettingFragment();
                     FragmentManager manager = getSupportFragmentManager();
                     FragmentTransaction transaction = manager.beginTransaction();
                     transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
                     transaction.addToBackStack(null);
                     transaction.commit();
+                    item.setChecked(true);
+                }
+                if (id == R.id.drawer_ozone) {
+                    ESportsFragment mapFragment = new ESportsFragment();
+                    FragmentManager manager = getSupportFragmentManager();
+                    FragmentTransaction transaction = manager.beginTransaction();
+                    transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
+                    transaction.addToBackStack(null);
+                    transaction.commit();
+                    item.setChecked(true);
                 }
                 if (id == R.id.drawer_contact) {
 
-                    Intent intent = new Intent(HomePage.this, ContactActivity.class);
-                    intent.putExtra("_ID", 0);
-                    startActivity(intent);
-                    fragment = new MapListFragment();
+                    ContactFragment mapFragment = new ContactFragment();
+                    FragmentManager manager = getSupportFragmentManager();
+                    FragmentTransaction transaction = manager.beginTransaction();
+                    transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
+                    transaction.addToBackStack(null);
+                    transaction.commit();
+                    item.setChecked(true);
+                }
+                if (id == R.id.drawer_contact) {
+
+                    ContactFragment mapFragment = new ContactFragment();
+                    FragmentManager manager = getSupportFragmentManager();
+                    FragmentTransaction transaction = manager.beginTransaction();
+                    transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
+                    transaction.addToBackStack(null);
+                    transaction.commit();
+                    item.setChecked(true);
+                }
+                if (id == R.id.drawer_dev) {
+
+                    DevelopersFragment mapFragment = new DevelopersFragment();
+                    FragmentManager manager = getSupportFragmentManager();
+                    FragmentTransaction transaction = manager.beginTransaction();
+                    transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
+                    transaction.addToBackStack(null);
+                    transaction.commit();
+                    item.setChecked(true);
                 }
 
                 return false;
@@ -159,8 +190,6 @@ public class HomePage extends AppCompatActivity {
                         notificationUser.setImageBitmap(imagebit);
                     }
                     emailNoti.setText(email);
-
-                    // TODO: Update the email in drawer header for the user
                     displayEmail.setText(email);
                     displayName.setText(name);
 //                    Toast.makeText(HomePage.this,"Hello " + email , Toast.LENGTH_SHORT).show();
@@ -207,8 +236,13 @@ public class HomePage extends AppCompatActivity {
         aboutimage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomePage.this, FaqActivity.class);
-                startActivity(intent);
+
+                FAQragment faqFragment = new FAQragment();
+                FragmentManager manager = getSupportFragmentManager();
+                FragmentTransaction transaction = manager.beginTransaction();
+                transaction.replace(R.id.fragment_space, faqFragment, faqFragment.getTag());
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
         });
         schedimage.setOnClickListener(new View.OnClickListener() {
@@ -285,12 +319,12 @@ public void onBackPressed() {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         mAuth.addAuthStateListener(mAuthListner);
     }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        mAuth.removeAuthStateListener(mAuthListner);
-    }
+//
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//        mAuth.removeAuthStateListener(mAuthListner);
+//    }
 
     public static class Data_super {
         public static final ArrayList<data> loff = new ArrayList<data>();
