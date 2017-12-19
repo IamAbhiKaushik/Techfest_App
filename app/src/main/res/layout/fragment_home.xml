@@ -70,7 +70,8 @@
             android:layout_height="match_parent"
             android:background="@android:color/darker_gray"
             android:backgroundTint="#4d555c"
-            android:elevation="10dp" />
+            android:elevation="10dp"
+            android:layout_marginTop="20dp"/>
         <!--ozone-->
         <LinearLayout
             android:id="@+id/ozone"
@@ -104,7 +105,8 @@
             android:layout_height="match_parent"
             android:background="@android:color/darker_gray"
             android:backgroundTint="#4d555c"
-            android:elevation="10dp" />
+            android:elevation="10dp"
+            android:layout_marginTop="20dp"/>
 
         <LinearLayout
             android:id="@+id/workshop"
@@ -143,7 +145,8 @@
         android:background="@android:color/darker_gray"
         android:backgroundTint="#4d555c"
         android:elevation="10dp"
-        android:padding="16dp" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
     <!--Master layout 2-->
     <LinearLayout
         android:id="@+id/row2"
@@ -267,7 +270,8 @@
         android:background="@android:color/darker_gray"
         android:backgroundTint="#4d555c"
         android:elevation="10dp"
-        android:padding="16dp" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
     <!--master layout 3-->
     <LinearLayout
         android:id="@+id/row3"
@@ -311,7 +315,8 @@
             android:layout_height="match_parent"
             android:background="@android:color/darker_gray"
             android:backgroundTint="#4d555c"
-            android:elevation="10dp" />
+            android:elevation="10dp"
+            android:layout_marginBottom="20dp"/>
         <!--Ideate-->
         <LinearLayout
             android:id="@+id/ideate"
@@ -344,7 +349,8 @@
             android:layout_height="match_parent"
             android:background="@android:color/darker_gray"
             android:backgroundTint="#4d555c"
-            android:elevation="10dp" />
+            android:elevation="10dp"
+            android:layout_marginBottom="20dp"/>
         <!--initiative-->
 
 
