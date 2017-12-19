@@ -24,7 +24,7 @@
 
             <fragment
                 android:id="@+id/fragment_space"
-                android:name="com.example.nautatvanavlakha.abcd.HomeFragment"
+                android:name="com.techfest.tf2017.abcd.HomeFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical" />

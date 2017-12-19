@@ -35,14 +35,17 @@
                     android:id="@+id/tv0"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.4" />
+                    android:layout_weight="0.4"
+                    android:padding="5dp"
+                    />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.6"
                     android:orientation="vertical"
-                    android:paddingTop="10dp">
+                    android:paddingTop="10dp"
+                    android:paddingLeft="5dp">
 
                     <TextView
                         android:id="@+id/tv1"
@@ -51,7 +54,8 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="Event Name"
-                        android:textSize="25sp" />
+                        android:textSize="20sp"
+                        android:textColor="#4fa5d5"/>
 
                     <TextView
                         android:id="@+id/tv2"
@@ -60,7 +64,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="Date and Venue"
-                        android:textSize="20sp" />
+                        android:textSize="18sp" />
 
 
                 </LinearLayout>

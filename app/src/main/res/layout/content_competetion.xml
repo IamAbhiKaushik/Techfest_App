@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FF646161"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.nautatvanavlakha.abcd.CompetetionActivity"
+    tools:context="com.example.nautatvanavlakha.abcd.com.techfest.nautatvanavlakha.abcd.CompetetionActivity"
     tools:showIn="@layout/activity_competetion">
 
     <ListView

@@ -8,8 +8,8 @@
     app:behavior_hideable="true"
     app:elevation="4dp"
     app:layout_behavior="@string/bottom_sheet_behavior"
-    tools:context="com.example.nautatvanavlakha.abcd.EventFragment">
-    <include layout="@layout/custom_toolbar_1" />
+    tools:context="com.example.nautatvanavlakha.abcd.com.techfest.nautatvanavlakha.abcd.EventFragment">
+    <include layout="@layout/custom_toolbar" />
 
     <LinearLayout
         android:layout_width="match_parent"
