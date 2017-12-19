@@ -12,12 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-        <include layout="@layout/toolbar_main" />
+        <!--<include layout="@layout/toolbar_main" />-->
         <LinearLayout
             android:id="@+id/fragment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:baselineAligned="false"
             android:fitsSystemWindows="true"
@@ -28,7 +27,7 @@
                 android:name="com.example.nautatvanavlakha.abcd.HomeFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"></fragment>
+                android:orientation="vertical" />
         </LinearLayout>
 
         <!--The bottom bar-->
@@ -69,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
                     android:contentDescription="@string/schedule"
-                    android:src="@drawable/betteing_new" />
+                    android:src="@drawable/bet" />
 
                 <ImageView
                     android:id="@+id/favorite_bottom"

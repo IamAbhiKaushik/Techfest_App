@@ -34,30 +34,12 @@ public class ItemAdapter extends ArrayAdapter<Item> {
 
         View listItemView = currentView;
         if (listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.item_list, parent, false);
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
 //        final ImageView = (ImageView) listItemView.findViewById(R.id.main_view);
         Item currentFile = getItem(position);
-        //   ImageView iv1 = (ImageView)listItemView.findViewById(R.id.iv1);
-        //   Picasso.with(getContext()).load(currentFile.getImageResource()).placeholder(R.drawable.unnamed).resize(80,80).centerCrop().into(iv1);
-        Picasso.with(getContext()).load(currentFile.getImageResource()).placeholder(R.drawable.no_internet).into(new Target() {
-
-            @Override
-            public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
-//                ll.set(new BitmapDrawable(getContext().getResources(), bitmap));
-            }
-
-            @Override
-            public void onBitmapFailed(Drawable errorDrawable) {
-
-            }
-
-            @Override
-            public void onPrepareLoad(Drawable placeHolderDrawable) {
-
-            }
-
-        });
+        ImageView iv1 = (ImageView) listItemView.findViewById(R.id.tv0);
+        Picasso.with(getContext()).load(currentFile.getImageResource()).placeholder(R.drawable.no_internet).fit().centerCrop().into(iv1);
 
         TextView tv1 = (TextView) listItemView.findViewById(R.id.tv1);
         tv1.setText(currentFile.getEvent_name());

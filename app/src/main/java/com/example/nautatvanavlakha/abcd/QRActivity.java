@@ -37,7 +37,6 @@ public class QRActivity extends AppCompatActivity implements ZXingScannerView.Re
                 //Request Location Permission
                 checkCameraPermission();
             }
-
         }
         mScannerView = (ZXingScannerView) findViewById(R.id.scanner_view);
     }
@@ -109,7 +108,6 @@ public class QRActivity extends AppCompatActivity implements ZXingScannerView.Re
                         })
                         .create()
                         .show();
-
 
             } else ActivityCompat.requestPermissions(QRActivity.this,
                     new String[]{Manifest.permission.CAMERA},

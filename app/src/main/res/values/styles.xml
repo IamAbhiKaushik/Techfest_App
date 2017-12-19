@@ -8,7 +8,7 @@
         <item name="colorAccent">#3E5B72</item>
 
         <!--change color of subheadings-->
-        <item name="android:textColorSecondary">#000</item>
+        <item name="android:textColorSecondary">#fff</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

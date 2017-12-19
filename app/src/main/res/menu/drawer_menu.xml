@@ -3,42 +3,42 @@
     <group android:checkableBehavior="single">
         <!--master layout 1-->
         <item
+            android:id="@+id/drawer_home"
+            android:icon="@drawable/cup_2_"
+            android:title="HOME" />
+        <item
             android:id="@+id/drawer_compi"
             android:icon="@drawable/cup_2_"
             android:title="ROBOWARS" />
-
-
-        <!--master layout 2-->
-        <item
-            android:id="@+id/drawer_contact"
-            android:icon="@drawable/pen_2_"
-            android:title="CONTACT US" />
-        <item
-            android:id="@+id/drawer_dev"
-            android:icon="@drawable/pen_2_"
-            android:title="DEVELOPERS" />
-
         <item
             android:id="@+id/drawer_ozone"
             android:icon="@drawable/joypad_2_"
             android:title="E-SPORTS" />
-        <!--master layout 3-->
-
-
-        <!--master layout 4-->
-
-
+        <item
+            android:id="@+id/drawer_mun"
+            android:icon="@drawable/joypad_2_"
+            android:title="TWMUN" />
+        <item
+            android:id="@+id/drawer_faq"
+            android:icon="@drawable/joypad_2_"
+            android:title="FAQs" />
         <item
             android:id="@+id/subheader"
             android:title="More"
-
             >
             <menu>
+                <item
+                    android:id="@+id/drawer_contact"
+                    android:icon="@drawable/pen_2_"
+                    android:title="CONTACT US" />
+                <item
+                    android:id="@+id/drawer_dev"
+                    android:icon="@drawable/pen_2_"
+                    android:title="DEVELOPERS" />
                 <item
                     android:id="@+id/LogoutBTN"
                     android:icon="@drawable/ic_exit_to_app_white_24dp"
                     android:title="@string/logout" />
-
             </menu>
         </item>
     </group>

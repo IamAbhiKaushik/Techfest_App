@@ -236,8 +236,16 @@ public class HomePage extends AppCompatActivity {
         homeimage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomePage.this, QRActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(HomePage.this, QRActivity.class);
+//                startActivity(intent);
+                QRFragment mapFragment = new QRFragment();
+                FragmentManager manager = getSupportFragmentManager();
+                FragmentTransaction transaction = manager.beginTransaction();
+                count++;
+                mDrawer.closeDrawer(GravityCompat.START);
+                transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
         });
         aboutimage.setOnClickListener(new View.OnClickListener() {

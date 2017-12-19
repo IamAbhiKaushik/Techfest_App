@@ -14,10 +14,12 @@
 
         <ImageView
             android:id="@+id/home_logo"
-            android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
             android:src="@drawable/tf_logo" />
 
 
@@ -51,8 +53,8 @@
                 android:contentDescription="@string/compi"
                 android:paddingEnd="35dp"
                 android:paddingStart="35dp"
-                android:src="@drawable/cup_2_"
-                android:paddingTop="20dp"/>
+                android:paddingTop="20dp"
+                android:src="@drawable/cup_2_" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -64,11 +66,11 @@
                 android:textSize="12sp" />
         </LinearLayout>
         <View
-            android:layout_height="match_parent"
             android:layout_width="1dp"
+            android:layout_height="match_parent"
             android:background="@android:color/darker_gray"
-            android:elevation="10dp"
-            android:backgroundTint="#4d555c"/>
+            android:backgroundTint="#4d555c"
+            android:elevation="10dp" />
         <!--ozone-->
         <LinearLayout
             android:id="@+id/ozone"
@@ -84,9 +86,9 @@
                 android:contentDescription="@string/ozone"
                 android:paddingEnd="35dp"
                 android:paddingStart="35dp"
+                android:paddingTop="20dp"
                 android:src="@drawable/joypad_2_"
-                tools:ignore="NestedWeights"
-                android:paddingTop="20dp"/>
+                tools:ignore="NestedWeights" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -98,11 +100,11 @@
                 android:textSize="12sp" />
         </LinearLayout>
         <View
-            android:layout_height="match_parent"
             android:layout_width="1dp"
+            android:layout_height="match_parent"
             android:background="@android:color/darker_gray"
-            android:elevation="10dp"
-            android:backgroundTint="#4d555c"/>
+            android:backgroundTint="#4d555c"
+            android:elevation="10dp" />
 
         <LinearLayout
             android:id="@+id/workshop"
@@ -118,9 +120,9 @@
                 android:contentDescription="@string/workshop"
                 android:paddingEnd="35dp"
                 android:paddingStart="35dp"
+                android:paddingTop="20dp"
                 android:src="@drawable/pen_2_"
-                tools:ignore="NestedWeights"
-                android:paddingTop="20dp"/>
+                tools:ignore="NestedWeights" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -136,11 +138,12 @@
 
     </LinearLayout>
     <View
-        android:layout_height="1dp"
         android:layout_width="match_parent"
+        android:layout_height="1dp"
         android:background="@android:color/darker_gray"
+        android:backgroundTint="#4d555c"
         android:elevation="10dp"
-        android:backgroundTint="#4d555c"/>
+        android:padding="16dp" />
     <!--Master layout 2-->
     <LinearLayout
         android:id="@+id/row2"
@@ -170,8 +173,8 @@
                 android:contentDescription="@string/tech"
                 android:paddingEnd="35dp"
                 android:paddingStart="35dp"
-                android:src="@drawable/vinyl_2_"
-                android:paddingTop="20dp"/>
+                android:paddingTop="20dp"
+                android:src="@drawable/vinyl_2_" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -183,11 +186,11 @@
                 android:textSize="12sp" />
         </LinearLayout>
         <View
-            android:layout_height="match_parent"
             android:layout_width="1dp"
+            android:layout_height="match_parent"
             android:background="@android:color/darker_gray"
-            android:elevation="10dp"
-            android:backgroundTint="#4d555c"/>
+            android:backgroundTint="#4d555c"
+            android:elevation="10dp" />
         <!--summit-->
         <LinearLayout
             android:id="@+id/summit"
@@ -204,9 +207,9 @@
                 android:gravity="center"
                 android:paddingEnd="35dp"
                 android:paddingStart="35dp"
+                android:paddingTop="20dp"
                 android:src="@drawable/_x39__2_"
-                tools:ignore="NestedWeights"
-                android:paddingTop="20dp"/>
+                tools:ignore="NestedWeights" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -218,11 +221,11 @@
                 android:textSize="12sp" />
         </LinearLayout>
         <View
-            android:layout_height="match_parent"
             android:layout_width="1dp"
+            android:layout_height="match_parent"
             android:background="@android:color/darker_gray"
-            android:elevation="10dp"
-            android:backgroundTint="#4d555c"/>
+            android:backgroundTint="#4d555c"
+            android:elevation="10dp" />
         <!--initiative-->
 
 
@@ -241,9 +244,9 @@
                 android:contentDescription="@string/exhibitions"
                 android:paddingEnd="35dp"
                 android:paddingStart="35dp"
+                android:paddingTop="20dp"
                 android:src="@drawable/pic_2_"
-                tools:ignore="NestedWeights"
-                android:paddingTop="20dp"/>
+                tools:ignore="NestedWeights" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -259,11 +262,12 @@
 
     </LinearLayout>
     <View
-        android:layout_height="1dp"
         android:layout_width="match_parent"
+        android:layout_height="1dp"
         android:background="@android:color/darker_gray"
+        android:backgroundTint="#4d555c"
         android:elevation="10dp"
-        android:backgroundTint="#4d555c"/>
+        android:padding="16dp" />
     <!--master layout 3-->
     <LinearLayout
         android:id="@+id/row3"
@@ -289,9 +293,9 @@
                 android:contentDescription="@string/initiatives"
                 android:paddingEnd="35dp"
                 android:paddingStart="35dp"
+                android:paddingTop="20dp"
                 android:src="@drawable/power_2_"
-                tools:ignore="NestedWeights"
-                android:paddingTop="20dp"/>
+                tools:ignore="NestedWeights" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -303,11 +307,11 @@
                 android:textSize="12sp" />
         </LinearLayout>
         <View
-            android:layout_height="match_parent"
             android:layout_width="1dp"
+            android:layout_height="match_parent"
             android:background="@android:color/darker_gray"
-            android:elevation="10dp"
-            android:backgroundTint="#4d555c"/>
+            android:backgroundTint="#4d555c"
+            android:elevation="10dp" />
         <!--Ideate-->
         <LinearLayout
             android:id="@+id/ideate"
@@ -323,8 +327,8 @@
                 android:contentDescription="@string/ideate"
                 android:paddingEnd="35dp"
                 android:paddingStart="35dp"
-                android:src="@drawable/lightbulb_2_"
-                android:paddingTop="20dp"/>
+                android:paddingTop="20dp"
+                android:src="@drawable/lightbulb_2_" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -336,11 +340,11 @@
                 android:textSize="12sp" />
         </LinearLayout>
         <View
-            android:layout_height="match_parent"
             android:layout_width="1dp"
+            android:layout_height="match_parent"
             android:background="@android:color/darker_gray"
-            android:elevation="10dp"
-            android:backgroundTint="#4d555c"/>
+            android:backgroundTint="#4d555c"
+            android:elevation="10dp" />
         <!--initiative-->
 
 
@@ -359,9 +363,9 @@
                 android:gravity="center"
                 android:paddingEnd="35dp"
                 android:paddingStart="35dp"
+                android:paddingTop="20dp"
                 android:src="@drawable/lecture_home"
-                tools:ignore="NestedWeights"
-                android:paddingTop="20dp"/>
+                tools:ignore="NestedWeights" />
 
             <TextView
                 android:layout_width="match_parent"

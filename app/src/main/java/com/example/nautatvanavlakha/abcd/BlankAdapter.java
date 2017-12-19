@@ -31,30 +31,3 @@ public class BlankAdapter extends FragmentPagerAdapter {
         return 9;
     }
 }
-
-
-//        if(position == 0){
-//            return Blanosition == 1){
-//            return kFragment.newInstance(position+1,tabTitle[position]);
-//        } else if(pBlankFragment.newInstance(position+1,tabTitle[position]);
-//        } else if(position == 2){
-//            return BlankFragment.newInstance(position+1,tabTitle[position]);
-//        } else if(position == 3){
-//            return BlankFragment.newInstance(position+1,tabTitle[position]);
-//        } else if(position == 4){
-//            return BlankFragment.newInstance(position+1,tabTitle[position]);
-//        } else if(position == 5){
-//            return BlankFragment.newInstance(position+1,tabTitle[position]);
-//        } else if(position == 6){
-//            return BlankFragment.newInstance(position+1,tabTitle[position]);
-//        } else if(position == 7){
-//            return BlankFragment.newInstance(position+1,tabTitle[position]);
-//        } else if(position == 8){
-//            return BlankFragment.newInstance(position+1,tabTitle[position]);
-//        } else if(position == 9){
-//            return BlankFragment.newInstance(position+1,tabTitle[position]);
-//        } else if(position == 10){
-//            return BlankFragment.newInstance(position+1,tabTitle[position]);
-//        } else {
-//            return BlankFragment.newInstance(position+1,tabTitle[position]);
-//        }
