@@ -33,10 +33,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp"
+                android:paddingLeft="20dp"
                 android:gravity="center"
                 android:paddingTop="20dp"
                 android:text="Click place to get location"
-                android:textColor="#fff"
+                style="@style/mapcolor"
                 android:textSize="25sp" />
         </RelativeLayout>
 
@@ -58,19 +59,20 @@
                     android:background="@color/cardview_shadow_end_color"
                     android:paddingBottom="16dp"
                     android:paddingTop="16dp"
-                    app:cardBackgroundColor="#fff"
+                    app:cardBackgroundColor="#212a33"
                     app:cardCornerRadius="5dp">
 
                     <TextView
                         android:id="@+id/convo"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/shadow"
+                        android:background="@drawable/back"
                         android:gravity="center"
                         android:paddingBottom="12dp"
                         android:paddingTop="12dp"
                         android:text="Convocation Hall"
-                        android:textColor="#000"
+                        style="@style/mapcolor"
+                        android:fontFamily="sans-serif-light"
                         android:textSize="25sp" />
                 </android.support.v7.widget.CardView>
 
@@ -81,18 +83,20 @@
                     android:layout_marginLeft="25dp"
                     android:layout_marginRight="25dp"
                     android:background="@color/cardview_shadow_end_color"
-                    app:cardBackgroundColor="#fff"
+                    app:cardBackgroundColor="#212a33"
                     app:cardCornerRadius="5dp">
 
                     <TextView
                         android:id="@+id/lhc"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:background="@drawable/back"
                         android:gravity="center"
                         android:paddingBottom="12dp"
                         android:paddingTop="12dp"
                         android:text="Lecture Complex (LHC)"
-                        android:textColor="#000"
+                        style="@style/mapcolor"
+                        android:fontFamily="sans-serif-light"
                         android:textSize="25sp" />
                 </android.support.v7.widget.CardView>
 
@@ -105,7 +109,7 @@
                     android:background="@color/cardview_shadow_end_color"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
-                    app:cardBackgroundColor="#fff"
+                    app:cardBackgroundColor="#212a33"
                     app:cardCornerRadius="5dp">
 
                     <TextView
@@ -116,8 +120,10 @@
                         android:paddingBottom="12dp"
                         android:paddingTop="12dp"
                         android:text="LT-PCSA"
-                        android:textColor="#000"
-                        android:textSize="25sp" />
+                        style="@style/mapcolor"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="25sp"
+                        android:background="@drawable/back"/>
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -129,7 +135,7 @@
                     android:background="@color/cardview_shadow_end_color"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
-                    app:cardBackgroundColor="#fff"
+                    app:cardBackgroundColor="#212a33"
                     app:cardCornerRadius="5dp">
 
                     <TextView
@@ -140,8 +146,10 @@
                         android:paddingBottom="12dp"
                         android:paddingTop="12dp"
                         android:text="Gymkhana Grounds"
-                        android:textColor="#000"
-                        android:textSize="25sp" />
+                        style="@style/mapcolor"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="25sp"
+                        android:background="@drawable/back"/>
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -153,7 +161,7 @@
                     android:background="@color/cardview_shadow_end_color"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
-                    app:cardBackgroundColor="#fff"
+                    app:cardBackgroundColor="#212a33"
                     app:cardCornerRadius="5dp">
 
                     <TextView
@@ -164,8 +172,10 @@
                         android:paddingBottom="12dp"
                         android:paddingTop="12dp"
                         android:text="NCC Grounds"
-                        android:textColor="#000"
-                        android:textSize="25sp" />
+                        style="@style/mapcolor"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="25sp"
+                        android:background="@drawable/back"/>
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -177,20 +187,21 @@
                     android:background="@color/cardview_shadow_end_color"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
-                    app:cardBackgroundColor="#fff"
+                    app:cardBackgroundColor="#212a33"
                     app:cardCornerRadius="5dp">
 
                     <TextView
                         android:id="@+id/fck"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginBottom="20dp"
                         android:gravity="center"
                         android:paddingBottom="12dp"
                         android:paddingTop="12dp"
                         android:text="FC Kohli Auditorium "
-                        android:textColor="#000"
-                        android:textSize="25sp" />
+                        style="@style/mapcolor"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="25sp"
+                        android:background="@drawable/back"/>
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -202,7 +213,7 @@
                     android:background="@color/cardview_shadow_end_color"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
-                    app:cardBackgroundColor="#fff"
+                    app:cardBackgroundColor="#212a33"
                     app:cardCornerRadius="5dp">
 
                     <TextView
@@ -213,8 +224,10 @@
                         android:paddingBottom="12dp"
                         android:paddingTop="12dp"
                         android:text="New Swimming Pool"
-                        android:textColor="#000"
-                        android:textSize="25sp" />
+                        style="@style/mapcolor"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="25sp"
+                        android:background="@drawable/back"/>
                 </android.support.v7.widget.CardView>
 
 
@@ -227,7 +240,7 @@
                     android:background="@color/cardview_shadow_end_color"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
-                    app:cardBackgroundColor="#fff"
+                    app:cardBackgroundColor="#212a33"
                     app:cardCornerRadius="5dp">
 
                     <TextView
@@ -238,8 +251,10 @@
                         android:paddingBottom="12dp"
                         android:paddingTop="12dp"
                         android:text="Kendriya Vidyalaya (KV)"
-                        android:textColor="#000"
-                        android:textSize="25sp" />
+                        style="@style/mapcolor"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="25sp"
+                        android:background="@drawable/back"/>
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -251,7 +266,7 @@
                     android:background="@color/cardview_shadow_end_color"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
-                    app:cardBackgroundColor="#fff"
+                    app:cardBackgroundColor="#212a33"
                     app:cardCornerRadius="5dp">
 
                     <TextView
@@ -262,8 +277,10 @@
                         android:paddingBottom="12dp"
                         android:paddingTop="12dp"
                         android:text="SAC Accomodation Desk"
-                        android:textColor="#000"
-                        android:textSize="25sp" />
+                        style="@style/mapcolor"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="25sp"
+                        android:background="@drawable/back"/>
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -275,7 +292,7 @@
                     android:background="@color/cardview_shadow_end_color"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
-                    app:cardBackgroundColor="#fff"
+                    app:cardBackgroundColor="#212a33"
                     app:cardCornerRadius="5dp">
 
                     <TextView
@@ -286,8 +303,10 @@
                         android:paddingBottom="12dp"
                         android:paddingTop="12dp"
                         android:text="SJM SOM"
-                        android:textColor="#000"
-                        android:textSize="25sp" />
+                        style="@style/mapcolor"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="25sp"
+                        android:background="@drawable/back"/>
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -299,7 +318,7 @@
                     android:background="@color/cardview_shadow_end_color"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
-                    app:cardBackgroundColor="#fff"
+                    app:cardBackgroundColor="#212a33"
                     app:cardCornerRadius="5dp">
 
                     <TextView
@@ -310,8 +329,10 @@
                         android:paddingBottom="12dp"
                         android:paddingTop="12dp"
                         android:text="Open Air Theatre (OAT)"
-                        android:textColor="#000"
-                        android:textSize="25sp" />
+                        style="@style/mapcolor"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="25sp"
+                        android:background="@drawable/back"/>
                 </android.support.v7.widget.CardView>
 
                 <TextView
@@ -320,8 +341,10 @@
                     android:layout_gravity="center"
                     android:layout_marginBottom="20dp"
                     android:text="EATERIES"
-                    android:textColor="#fff"
-                    android:textSize="30dp" />
+                    style="@style/mapcolor"
+                    android:textSize="30dp"
+                    android:background="#212a33"/>
+
 
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
@@ -332,7 +355,7 @@
                     android:background="@color/cardview_shadow_end_color"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
-                    app:cardBackgroundColor="#fff"
+                    app:cardBackgroundColor="#212a33"
                     app:cardCornerRadius="5dp">
 
                     <TextView
@@ -343,8 +366,10 @@
                         android:paddingBottom="12dp"
                         android:paddingTop="12dp"
                         android:text="SAC Food Court"
-                        android:textColor="#000"
-                        android:textSize="25sp" />
+                        style="@style/mapcolor"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="25sp"
+                        android:background="@drawable/back"/>
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -356,7 +381,7 @@
                     android:background="@color/cardview_shadow_end_color"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
-                    app:cardBackgroundColor="#fff"
+                    app:cardBackgroundColor="#212a33"
                     app:cardCornerRadius="5dp">
 
                     <TextView
@@ -367,8 +392,10 @@
                         android:paddingBottom="12dp"
                         android:paddingTop="12dp"
                         android:text="Day Food Court"
-                        android:textColor="#000"
-                        android:textSize="25sp" />
+                        style="@style/mapcolor"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="25sp"
+                        android:background="@drawable/back"/>
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -380,7 +407,7 @@
                     android:background="@color/cardview_shadow_end_color"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
-                    app:cardBackgroundColor="#fff"
+                    app:cardBackgroundColor="#212a33"
                     app:cardCornerRadius="5dp">
 
                     <TextView
@@ -391,8 +418,10 @@
                         android:paddingBottom="12dp"
                         android:paddingTop="12dp"
                         android:text="The Campus Hub"
-                        android:textColor="#000"
-                        android:textSize="25sp" />
+                        style="@style/mapcolor"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="25sp"
+                        android:background="@drawable/back"/>
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -404,7 +433,7 @@
                     android:background="@color/cardview_shadow_end_color"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
-                    app:cardBackgroundColor="#fff"
+                    app:cardBackgroundColor="#212a33"
                     app:cardCornerRadius="5dp">
 
                     <TextView
@@ -415,8 +444,10 @@
                         android:paddingBottom="12dp"
                         android:paddingTop="12dp"
                         android:text="Brews n Bites"
-                        android:textColor="#000"
-                        android:textSize="25sp" />
+                        style="@style/mapcolor"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="25sp"
+                        android:background="@drawable/back" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -428,7 +459,7 @@
                     android:background="@color/cardview_shadow_end_color"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
-                    app:cardBackgroundColor="#fff"
+                    app:cardBackgroundColor="#212a33"
                     app:cardCornerRadius="5dp">
 
                     <TextView
@@ -439,8 +470,10 @@
                         android:paddingBottom="12dp"
                         android:paddingTop="12dp"
                         android:text="Gulmohar"
-                        android:textColor="#000"
-                        android:textSize="25sp" />
+                        style="@style/mapcolor"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="25sp"
+                        android:background="@drawable/back"/>
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -452,7 +485,7 @@
                     android:background="@color/cardview_shadow_end_color"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
-                    app:cardBackgroundColor="#fff"
+                    app:cardBackgroundColor="#212a33"
                     app:cardCornerRadius="5dp">
 
                     <TextView
@@ -463,8 +496,10 @@
                         android:paddingBottom="12dp"
                         android:paddingTop="12dp"
                         android:text="Amul Parlour"
-                        android:textColor="#000"
-                        android:textSize="25sp" />
+                        style="@style/mapcolor"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="25sp"
+                        android:background="@drawable/back"/>
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
@@ -476,7 +511,7 @@
                     android:background="@color/cardview_shadow_end_color"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
-                    app:cardBackgroundColor="#fff"
+                    app:cardBackgroundColor="#212a33"
                     app:cardCornerRadius="5dp">
 
                     <TextView
@@ -487,8 +522,10 @@
                         android:paddingBottom="12dp"
                         android:paddingTop="12dp"
                         android:text="Nescafe Cafe"
-                        android:textColor="#000"
-                        android:textSize="25sp" />
+                        style="@style/mapcolor"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="25sp"
+                        android:background="@drawable/back"/>
                 </android.support.v7.widget.CardView>
             </LinearLayout>
 

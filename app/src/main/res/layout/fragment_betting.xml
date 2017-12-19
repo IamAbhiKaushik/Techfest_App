@@ -23,23 +23,34 @@
         android:textColor="#FFF"
         android:textSize="30sp" />
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:fontFamily="sans-serif-light"
-        android:lineSpacingExtra="2dp"
-        android:text="Witness fierce fighting robots from across the world and beat the audience inbetting on the bots you think will survive!\n\nWith exciting prizes for the best betters, you just cannot miss this robot combat extravaganza!\nTo join the virtual betting, start off at techfest.org/betting"
-        android:textColor="#FFF"
-        android:textSize="20sp" />
+        android:layout_marginBottom="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="150dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:fontFamily="sans-serif-light"
+                android:lineSpacingExtra="2dp"
+                android:text="Witness fierce fighting robots from across the world and beat the audience inbetting on the bots you think will survive!\n\nWith exciting prizes for the best betters, you just cannot miss this robot combat extravaganza!\nTo join the virtual betting, start off at techfest.org/betting"
+                android:textColor="#FFF"
+                android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/robomore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="0dp"
-        android:background="@drawable/back"
-        android:text="MORE"
-        android:textColor="#FFF" />
+            <Button
+                android:id="@+id/robomore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/back"
+                android:text="MORE"
+                android:textColor="#FFF" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
