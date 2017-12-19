@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.nautatvanavlakha.abcd.R;
+import com.techfest.tf2017.abcd.R;
 
 public class SplashActivity extends Activity {
     // Splash screen timer

@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.nautatvanavlakha.abcd.R;
+import com.techfest.tf2017.abcd.R;
 
 
 public class ESportsFragment extends Fragment {

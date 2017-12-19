@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.example.nautatvanavlakha.abcd.R;
+import com.techfest.tf2017.abcd.R;
 
 public class SponserActivity extends AppCompatActivity {
 

@@ -24,7 +24,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.nautatvanavlakha.abcd.R;
+import com.techfest.tf2017.abcd.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

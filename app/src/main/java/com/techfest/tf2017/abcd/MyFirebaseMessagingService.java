@@ -6,7 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.NotificationCompat;
 
-import com.example.nautatvanavlakha.abcd.R;
+import com.techfest.tf2017.abcd.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;

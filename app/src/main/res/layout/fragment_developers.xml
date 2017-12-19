@@ -52,7 +52,7 @@
                 android:text="+91-8291473881\ne-mail:abisheksinghal@gmail.com"
                 android:textSize="10sp"
                 android:textColor="#fff"
-                />
+                 />
 
             <TextView
                 android:id="@+id/textnae"

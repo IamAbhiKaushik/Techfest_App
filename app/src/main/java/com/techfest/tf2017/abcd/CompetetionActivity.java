@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.eftimoff.viewpagertransformers.DepthPageTransformer;
-import com.example.nautatvanavlakha.abcd.R;
+import com.techfest.tf2017.abcd.R;
 
 public class CompetetionActivity extends AppCompatActivity {
 

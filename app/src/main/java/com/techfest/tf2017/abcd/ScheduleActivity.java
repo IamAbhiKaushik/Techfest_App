@@ -3,7 +3,7 @@ package com.techfest.tf2017.abcd;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.nautatvanavlakha.abcd.R;
+import com.techfest.tf2017.abcd.R;
 
 public class ScheduleActivity extends AppCompatActivity {
 

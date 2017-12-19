@@ -17,8 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.nautatvanavlakha.abcd.*;
-import com.example.nautatvanavlakha.abcd.R;
+import com.techfest.tf2017.abcd.R;
 import com.google.zxing.Result;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
@@ -42,7 +41,7 @@ public class QRFragment extends Fragment implements ZXingScannerView.ResultHandl
             }
 
         }
-        View qrcodeview = inflater.inflate(com.example.nautatvanavlakha.abcd.R.layout.fragment_qr, container, false);
+        View qrcodeview = inflater.inflate(com.techfest.tf2017.abcd.R.layout.fragment_qr, container, false);
 
         mScannerView = (ZXingScannerView) qrcodeview.findViewById(R.id.scanner_view);
         return qrcodeview;

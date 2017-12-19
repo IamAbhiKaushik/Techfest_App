@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.nautatvanavlakha.abcd.R;
+import com.techfest.tf2017.abcd.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MapListActivity extends AppCompatActivity {
