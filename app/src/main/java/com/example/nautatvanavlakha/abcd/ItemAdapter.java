@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -33,19 +34,17 @@ public class ItemAdapter extends ArrayAdapter<Item> {
 
         View listItemView = currentView;
         if (listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
-
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.item_list, parent, false);
         }
-        final LinearLayout ll = (LinearLayout) listItemView.findViewById(R.id.main_view);
+//        final ImageView = (ImageView) listItemView.findViewById(R.id.main_view);
         Item currentFile = getItem(position);
         //   ImageView iv1 = (ImageView)listItemView.findViewById(R.id.iv1);
         //   Picasso.with(getContext()).load(currentFile.getImageResource()).placeholder(R.drawable.unnamed).resize(80,80).centerCrop().into(iv1);
-        Picasso.with(getContext()).load(currentFile.getImageResource()).placeholder(R.drawable.unnamed).into(new Target() {
-
+        Picasso.with(getContext()).load(currentFile.getImageResource()).placeholder(R.drawable.no_internet).into(new Target() {
 
             @Override
             public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
-                ll.setBackground(new BitmapDrawable(getContext().getResources(), bitmap));
+//                ll.set(new BitmapDrawable(getContext().getResources(), bitmap));
             }
 
             @Override

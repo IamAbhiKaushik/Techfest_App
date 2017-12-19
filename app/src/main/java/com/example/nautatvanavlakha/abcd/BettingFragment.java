@@ -15,13 +15,9 @@ import android.widget.TextView;
 
 public class BettingFragment extends Fragment {
     Button button;
-
-
     public BettingFragment() {
         // Required empty public constructor
     }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -40,9 +36,4 @@ public class BettingFragment extends Fragment {
         });
         return frag;
     }
-
-
-
-
-
 }
