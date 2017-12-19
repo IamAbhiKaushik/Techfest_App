@@ -8,7 +8,7 @@
     app:behavior_hideable="true"
     app:elevation="4dp"
     app:layout_behavior="@string/bottom_sheet_behavior"
-    tools:context="com.example.nautatvanavlakha.abcd.com.techfest.nautatvanavlakha.abcd.EventFragment">
+    tools:context="com.techfest.tf2017.abcd.EventFragment">
     <include layout="@layout/custom_toolbar" />
 
     <LinearLayout

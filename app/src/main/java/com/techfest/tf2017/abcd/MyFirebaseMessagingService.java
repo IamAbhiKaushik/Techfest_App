@@ -52,7 +52,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 ////
 ////        mAuth = FirebaseAuth.getInstance();
 ////        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
-//        NotificationData notiData =new NotificationData(message,tittle,id);
 //        mDatabaseReference.child(id).setValue(notiData);
 
 

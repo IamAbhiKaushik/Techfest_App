@@ -47,6 +47,13 @@
                 android:paddingTop="10dp">
 
                 <ImageView
+                    android:id="@+id/favorite_bottom"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:contentDescription="@string/fav"
+                    android:src="@drawable/home" />
+                <ImageView
                     android:id="@+id/map_bottom"
                     android:layout_width="0sp"
                     android:layout_height="wrap_content"
@@ -70,13 +77,7 @@
                     android:contentDescription="@string/schedule"
                     android:src="@drawable/bet" />
 
-                <ImageView
-                    android:id="@+id/favorite_bottom"
-                    android:layout_width="0sp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.25"
-                    android:contentDescription="@string/fav"
-                    android:src="@drawable/faq_n" />
+
             </LinearLayout>
         </LinearLayout>
 

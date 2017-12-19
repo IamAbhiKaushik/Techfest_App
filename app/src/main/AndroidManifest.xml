@@ -39,9 +39,6 @@
             android:name="com.techfest.tf2017.abcd.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.techfest.tf2017.abcd.NotificationActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name="com.techfest.tf2017.abcd.CompetetionActivity"
             android:parentActivityName="com.techfest.tf2017.abcd.HomePage"
             android:screenOrientation="portrait"

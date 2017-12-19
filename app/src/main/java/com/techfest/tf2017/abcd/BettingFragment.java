@@ -26,7 +26,7 @@ public class BettingFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri tt = Uri.parse("https://www.techfest.org/betting");
+                Uri tt = Uri.parse("https://www.techfest.org");
                 // Create a new intent to view the news URI
                 Intent websiteIntent = new Intent(Intent.ACTION_VIEW, tt);
                 // Send the intent to launch a new activity

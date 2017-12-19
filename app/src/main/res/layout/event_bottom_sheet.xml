@@ -28,11 +28,11 @@
 
             <ImageView
                 android:id="@+id/event_image"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
-                android:scaleType="center"
+                android:scaleType="fitCenter"
                 android:src="@drawable/image" />
 
 
@@ -61,12 +61,13 @@
                 android:layout_height="wrap_content"
                 android:gravity="end"
                 android:orientation="horizontal"
-
                 >
-
 
             </LinearLayout>
 
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -75,54 +76,32 @@
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:paddingTop="10dp"
-                android:weightSum="60"
-
-
-                >
+                android:weightSum="60">
 
                 <TextView
                     android:id="@+id/event_description"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="50"
+                    android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
                     android:text="@string/event_description"
                     android:textColor="#FFFFFF"
                     android:textSize="15sp"
                     android:textStyle="italic" />
 
-                <android.support.v7.widget.CardView
-                    android:id="@+id/view2"
-                    android:layout_width="match_parent"
+                <Button
+                    android:id="@+id/km"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="30dp"
-                    android:elevation="12dp"
-                    android:innerRadius="0dp"
-                    android:shape="ring"
-                    android:thicknessRatio="1.9"
-                    app:cardCornerRadius="20dp">
-
-                    <Button
-                        android:id="@+id/km"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_weight="10"
-                        android:background="#212A33"
-                        android:fontFamily="sans-serif-light"
-                        android:padding="10dp"
-                        android:text="Explore More"
-                        android:textColor="#cccccc"
-                        android:textSize='16sp' />
-                </android.support.v7.widget.CardView>
-
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/back"
+                    android:text="MORE"
+                    android:textColor="#FFF" />
 
             </LinearLayout>
-
+            </ScrollView>
 
         </LinearLayout>
-
 
     </LinearLayout>
 

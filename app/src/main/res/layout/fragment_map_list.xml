@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -27,53 +28,506 @@
 
             <TextView
                 android:id="@+id/textView3"
+                style="@style/mapcolor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp"
                 android:gravity="center"
+                android:paddingLeft="20dp"
                 android:paddingTop="20dp"
                 android:text="Click place to get location"
-                android:textColor="#fff"
                 android:textSize="25sp" />
         </RelativeLayout>
 
-        <android.support.v7.widget.CardView
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"
-            app:cardBackgroundColor="#ccc"
-            app:cardCornerRadius="10dp">
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/convo"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Convocation Hall"
-                android:textColor="#000"
-                android:textSize="30sp" />
-        </android.support.v7.widget.CardView>
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            app:cardBackgroundColor="#ffffff">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp"
+                    app:cardBackgroundColor="#212a33"
+                    app:cardCornerRadius="5dp">
 
-            <TextView
-                android:id="@+id/pcsa"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="LT Pcsa"
-                android:textColor="#000"
-                android:textSize="30sp" />
-        </android.support.v7.widget.CardView>
+                    <TextView
+                        android:id="@+id/convo"
+                        style="@style/mapcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="Convocation Hall"
+                        android:textSize="25sp" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    app:cardBackgroundColor="#212a33"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:id="@+id/lhc"
+                        style="@style/mapcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="Lecture Complex (LHC)"
+                        android:textSize="25sp" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    app:cardBackgroundColor="#212a33"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:id="@+id/pcsa"
+                        style="@style/mapcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="LT-PCSA"
+                        android:textSize="25sp" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    app:cardBackgroundColor="#212a33"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:id="@+id/gymkhana"
+                        style="@style/mapcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="Gymkhana Grounds"
+                        android:textSize="25sp" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    app:cardBackgroundColor="#212a33"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:id="@+id/ncc"
+                        style="@style/mapcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="NCC Grounds"
+                        android:textSize="25sp" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    app:cardBackgroundColor="#212a33"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:id="@+id/fck"
+                        style="@style/mapcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="FC Kohli Auditorium "
+                        android:textSize="25sp" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    app:cardBackgroundColor="#212a33"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:id="@+id/newSwim"
+                        style="@style/mapcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="New Swimming Pool"
+                        android:textSize="25sp" />
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    app:cardBackgroundColor="#212a33"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:id="@+id/kv"
+                        style="@style/mapcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="Kendriya Vidyalaya (KV)"
+                        android:textSize="25sp" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    app:cardBackgroundColor="#212a33"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:id="@+id/sac"
+                        style="@style/mapcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="SAC Accomodation Desk"
+                        android:textSize="25sp" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    app:cardBackgroundColor="#212a33"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:id="@+id/som"
+                        style="@style/mapcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="SJM SOM"
+                        android:textSize="25sp" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    app:cardBackgroundColor="#212a33"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:id="@+id/oat"
+                        style="@style/mapcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="Open Air Theatre (OAT)"
+                        android:textSize="25sp" />
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    style="@style/mapcolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:background="#212a33"
+                    android:text="EATERIES"
+                    android:textSize="30dp" />
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    app:cardBackgroundColor="#212a33"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:id="@+id/sacfc"
+                        style="@style/mapcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="SAC Food Court"
+                        android:textSize="25sp" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    app:cardBackgroundColor="#212a33"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:id="@+id/dayfc"
+                        style="@style/mapcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="Day Food Court"
+                        android:textSize="25sp" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    app:cardBackgroundColor="#212a33"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:id="@+id/chub"
+                        style="@style/mapcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="The Campus Hub"
+                        android:textSize="25sp" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    app:cardBackgroundColor="#212a33"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:id="@+id/bb"
+                        style="@style/mapcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="Brews n Bites"
+                        android:textSize="25sp" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    app:cardBackgroundColor="#212a33"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:id="@+id/gulmohar"
+                        style="@style/mapcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="Gulmohar"
+                        android:textSize="25sp" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    app:cardBackgroundColor="#212a33"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:id="@+id/amul"
+                        style="@style/mapcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="Amul Parlour"
+                        android:textSize="25sp" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    app:cardBackgroundColor="#212a33"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:id="@+id/coffees"
+                        style="@style/mapcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="Nescafe Cafe"
+                        android:textSize="25sp" />
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+        </ScrollView>
 
     </LinearLayout>
 

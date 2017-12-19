@@ -119,7 +119,7 @@ public class HomePage extends AppCompatActivity {
                 }
                 if (id == R.id.drawer_compi) {
 
-                    BettingFragment mapFragment = new BettingFragment();
+                    RobowarsFragment mapFragment = new RobowarsFragment();
                     FragmentManager manager = getSupportFragmentManager();
                     FragmentTransaction transaction = manager.beginTransaction();
                     mDrawer.closeDrawer(GravityCompat.START);
@@ -158,6 +158,54 @@ public class HomePage extends AppCompatActivity {
                 if (id == R.id.drawer_dev) {
 
                     DevelopersFragment mapFragment = new DevelopersFragment();
+                    FragmentManager manager = getSupportFragmentManager();
+                    FragmentTransaction transaction = manager.beginTransaction();
+                    count++;
+                    mDrawer.closeDrawer(GravityCompat.START);
+                    transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
+                    transaction.addToBackStack(null);
+                    transaction.commit();
+                    item.setChecked(true);
+                }
+                if (id == R.id.drawer_sponser) {
+
+                    SponserFragment mapFragment = new SponserFragment();
+                    FragmentManager manager = getSupportFragmentManager();
+                    FragmentTransaction transaction = manager.beginTransaction();
+                    count++;
+                    mDrawer.closeDrawer(GravityCompat.START);
+                    transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
+                    transaction.addToBackStack(null);
+                    transaction.commit();
+                    item.setChecked(true);
+                }
+                if (id == R.id.drawer_home) {
+
+                    HomeFragment mapFragment = new HomeFragment();
+                    FragmentManager manager = getSupportFragmentManager();
+                    FragmentTransaction transaction = manager.beginTransaction();
+                    count++;
+                    mDrawer.closeDrawer(GravityCompat.START);
+                    transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
+                    transaction.addToBackStack(null);
+                    transaction.commit();
+                    item.setChecked(true);
+                }
+                if (id == R.id.drawer_mun) {
+
+                    MunFragment2 mapFragment = new MunFragment2();
+                    FragmentManager manager = getSupportFragmentManager();
+                    FragmentTransaction transaction = manager.beginTransaction();
+                    count++;
+                    mDrawer.closeDrawer(GravityCompat.START);
+                    transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
+                    transaction.addToBackStack(null);
+                    transaction.commit();
+                    item.setChecked(true);
+                }
+                if (id == R.id.drawer_faq) {
+
+                    FAQragment mapFragment = new FAQragment();
                     FragmentManager manager = getSupportFragmentManager();
                     FragmentTransaction transaction = manager.beginTransaction();
                     count++;
@@ -226,8 +274,14 @@ public class HomePage extends AppCompatActivity {
         mapimage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomePage.this, MapListActivity.class);
-                startActivity(intent);
+                MapListFragment mapFragment = new MapListFragment();
+                FragmentManager manager = getSupportFragmentManager();
+                FragmentTransaction transaction = manager.beginTransaction();
+                count++;
+                mDrawer.closeDrawer(GravityCompat.START);
+                transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
         });
         homeimage.setOnClickListener(new View.OnClickListener() {
@@ -248,7 +302,7 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                FAQragment faqFragment = new FAQragment();
+                HomeFragment faqFragment = new HomeFragment();
                 FragmentManager manager = getSupportFragmentManager();
                 FragmentTransaction transaction = manager.beginTransaction();
                 transaction.replace(R.id.fragment_space, faqFragment, faqFragment.getTag());
@@ -260,8 +314,13 @@ public class HomePage extends AppCompatActivity {
         schedimage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomePage.this, SponserActivity.class);
-                startActivity(intent);
+                RobowarsFragment mapFragment = new RobowarsFragment();
+                FragmentManager manager = getSupportFragmentManager();
+                FragmentTransaction transaction = manager.beginTransaction();
+                transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
+                transaction.addToBackStack(null);
+                count++;
+                transaction.commit();
             }
         });
 
@@ -284,17 +343,6 @@ public class HomePage extends AppCompatActivity {
 
         }
     }
-//
-//        @Override
-//    public void onBackPressed() {
-//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.DL);
-//        if (drawer != null && drawer.isDrawerOpen(GravityCompat.START)) {
-//            drawer.closeDrawer(GravityCompat.START);
-//        } else {
-//            super.onBackPressed();
-//        }
-////        super.onBackPressed();
-//    }
 @Override
 public void onBackPressed() {
     if (count == 0) {
