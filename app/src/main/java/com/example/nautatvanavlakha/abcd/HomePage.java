@@ -2,6 +2,7 @@ package com.example.nautatvanavlakha.abcd;
 
 import android.app.Activity;
 
+import android.content.DialogInterface;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.content.Intent;
@@ -21,6 +22,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -48,6 +50,7 @@ public class HomePage extends AppCompatActivity {
     Drawable noti;
     Bitmap imagebit;
     Fragment ak;
+    int count = 0;
     boolean doubleBackToExitPressedOnce = false;
 
     @Override
@@ -104,30 +107,39 @@ public class HomePage extends AppCompatActivity {
 
                 int id = item.getItemId();
                 if (item.isChecked()) {
-                    mDrawer.closeDrawer(GravityCompat.START);
                     item.setChecked(true);
+
                     return false;
                 }
                 if (id == R.id.LogoutBTN) {      /*Logout button*/
                     mAuth.signOut();
                     finish();
                     item.setChecked(true);
+                    mDrawer.closeDrawer(GravityCompat.START);
+                    count++;
                     startActivity(new Intent(HomePage.this, LoginActivity.class));
 
                 }
                 if (id == R.id.drawer_compi) {
+
                     BettingFragment mapFragment = new BettingFragment();
                     FragmentManager manager = getSupportFragmentManager();
                     FragmentTransaction transaction = manager.beginTransaction();
+                    mDrawer.closeDrawer(GravityCompat.START);
                     transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
+                    count++;
                     transaction.addToBackStack(null);
                     transaction.commit();
                     item.setChecked(true);
+
                 }
                 if (id == R.id.drawer_ozone) {
                     ESportsFragment mapFragment = new ESportsFragment();
                     FragmentManager manager = getSupportFragmentManager();
                     FragmentTransaction transaction = manager.beginTransaction();
+                    count++;
+                    mDrawer.closeDrawer(GravityCompat.START);
+
                     transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
                     transaction.addToBackStack(null);
                     transaction.commit();
@@ -138,26 +150,21 @@ public class HomePage extends AppCompatActivity {
                     ContactFragment mapFragment = new ContactFragment();
                     FragmentManager manager = getSupportFragmentManager();
                     FragmentTransaction transaction = manager.beginTransaction();
+                    count++;
+                    mDrawer.closeDrawer(GravityCompat.START);
                     transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
                     transaction.addToBackStack(null);
                     transaction.commit();
                     item.setChecked(true);
                 }
-                if (id == R.id.drawer_contact) {
 
-                    ContactFragment mapFragment = new ContactFragment();
-                    FragmentManager manager = getSupportFragmentManager();
-                    FragmentTransaction transaction = manager.beginTransaction();
-                    transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
-                    transaction.addToBackStack(null);
-                    transaction.commit();
-                    item.setChecked(true);
-                }
                 if (id == R.id.drawer_dev) {
 
                     DevelopersFragment mapFragment = new DevelopersFragment();
                     FragmentManager manager = getSupportFragmentManager();
                     FragmentTransaction transaction = manager.beginTransaction();
+                    count++;
+                    mDrawer.closeDrawer(GravityCompat.START);
                     transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
                     transaction.addToBackStack(null);
                     transaction.commit();
@@ -242,6 +249,7 @@ public class HomePage extends AppCompatActivity {
                 FragmentTransaction transaction = manager.beginTransaction();
                 transaction.replace(R.id.fragment_space, faqFragment, faqFragment.getTag());
                 transaction.addToBackStack(null);
+                count++;
                 transaction.commit();
             }
         });
@@ -285,23 +293,27 @@ public class HomePage extends AppCompatActivity {
 //    }
 @Override
 public void onBackPressed() {
-    if (doubleBackToExitPressedOnce) {
-        super.onBackPressed();
-        return;
-    }
-
-    this.doubleBackToExitPressedOnce = true;
-    Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
-
-    new Handler().postDelayed(new Runnable() {
-
-        @Override
-        public void run() {
-            doubleBackToExitPressedOnce = false;
+    if (count == 0) {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
         }
-    }, 2000);
-}
 
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce = false;
+            }
+        }, 2000);
+    } else {
+        count = count - 1;
+        super.onBackPressed();
+    }
+}
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Pass the event to ActionBarDrawerToggle, if it returns

@@ -21,7 +21,7 @@
         android:padding="10dp"
         android:text="Gamers League"
         android:textColor="#FFF"
-        android:textSize="45sp" />
+        android:textSize="30sp" />
 
     <ScrollView
         android:layout_width="match_parent"

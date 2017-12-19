@@ -75,7 +75,10 @@ public class LoginActivity extends AppCompatActivity {
 
 
                 if (user!=null){
-                    startActivity(new Intent(LoginActivity.this, HomePage.class));
+                    Intent home_intnet = new Intent(LoginActivity.this, HomePage.class);
+                    home_intnet.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(home_intnet);
+                    finish();
 
                 }else {
 
