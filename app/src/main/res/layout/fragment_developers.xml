@@ -1,13 +1,75 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.nautatvanavlakha.abcd.DevelopersFragment">
+    android:layout_height="wrap_content"
+    android:background="#212A33"
+    android:baselineAligned="false"
+    android:orientation="vertical"
 
-    <!-- TODO: Update blank fragment layout -->
+    android:paddingBottom="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/back"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Developers"
+        android:textColor="#FFF"
+        android:textSize="30sp" />
 
-</FrameLayout>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="10dp"
+        android:scaleType="centerCrop"
+        android:background="#212A33"
+        android:orientation="vertical"
+        >
+
+            <TextView
+                android:id="@+id/textname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abhishek Singhal"
+                android:textSize="20sp"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/textnam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+91-8291473881\ne-mail:abisheksinghal@gmail.com"
+                android:textSize="10sp"
+                android:textColor="#fff"
+                android:layout_toRightOf="@id/troll" />
+
+            <TextView
+                android:id="@+id/textnae"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prem Agrawal"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                />
+
+            <TextView
+                android:id="@+id/textna"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+91-8291473881\ne-mail:prem28ag@gmail.com"
+                android:textSize="10sp"
+                android:textColor="#fff" />
+
+    </LinearLayout>
+</LinearLayout>
