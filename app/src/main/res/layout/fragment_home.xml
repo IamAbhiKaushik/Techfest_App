@@ -7,8 +7,7 @@
     android:background="#212A33"
     android:baselineAligned="false"
     android:orientation="vertical"
-    android:paddingBottom="10dp"
-    tools:context="com.example.nautatvanavlakha.abcd.com.techfest.nautatvanavlakha.abcd.HomeFragment">
+    android:paddingBottom="10dp">
 
     <!--master layout 1-->
 
@@ -68,10 +67,10 @@
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
             android:background="@android:color/darker_gray"
             android:backgroundTint="#4d555c"
-            android:elevation="10dp"
-            android:layout_marginTop="20dp"/>
+            android:elevation="10dp" />
         <!--ozone-->
         <LinearLayout
             android:id="@+id/ozone"
@@ -103,10 +102,10 @@
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
             android:background="@android:color/darker_gray"
             android:backgroundTint="#4d555c"
-            android:elevation="10dp"
-            android:layout_marginTop="20dp"/>
+            android:elevation="10dp" />
 
         <LinearLayout
             android:id="@+id/workshop"
@@ -142,11 +141,11 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:background="@android:color/darker_gray"
         android:backgroundTint="#4d555c"
-        android:elevation="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
+        android:elevation="10dp" />
     <!--Master layout 2-->
     <LinearLayout
         android:id="@+id/row2"
@@ -267,11 +266,11 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:background="@android:color/darker_gray"
         android:backgroundTint="#4d555c"
-        android:elevation="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
+        android:elevation="10dp" />
     <!--master layout 3-->
     <LinearLayout
         android:id="@+id/row3"
@@ -313,10 +312,10 @@
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
             android:background="@android:color/darker_gray"
             android:backgroundTint="#4d555c"
-            android:elevation="10dp"
-            android:layout_marginBottom="20dp"/>
+            android:elevation="10dp" />
         <!--Ideate-->
         <LinearLayout
             android:id="@+id/ideate"
@@ -347,10 +346,10 @@
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
             android:background="@android:color/darker_gray"
             android:backgroundTint="#4d555c"
-            android:elevation="10dp"
-            android:layout_marginBottom="20dp"/>
+            android:elevation="10dp" />
         <!--initiative-->
 
 
