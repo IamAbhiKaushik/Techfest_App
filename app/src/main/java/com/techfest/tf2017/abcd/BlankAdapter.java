@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class BlankAdapter extends FragmentPagerAdapter {
     private Context mContext;
-    private String tabTitle[] = new String[]{"COMPETETION", "OZONE", "WORKSHOPS", "TECHNOHOLIX", "SUMMIT", "EXHIBITIONS", "INITIATIVES", "IDEATE", "LECTURES"};
+    private String tabTitle[] = new String[]{"COMPETITION", "OZONE", "WORKSHOPS", "TECHNOHOLIX", "SUMMIT", "EXHIBITIONS", "INITIATIVES", "IDEATE", "LECTURES"};
 
     public BlankAdapter(Context context, FragmentManager fm) {
         super(fm);

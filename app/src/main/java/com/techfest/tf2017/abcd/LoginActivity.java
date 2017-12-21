@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
         button=(SignInButton) findViewById(R.id.googleBtn);
 //        MoveToSignin=(TextView) findViewById(R.id.moveToSignin);
         displayEmail = (TextView) findViewById(R.id.emailUserDisplay);
-        ndisplayEmail = (TextView) findViewById(R.id.email_noti);
+//        ndisplayEmail = (TextView) findViewById(R.id.email_noti);
 
         mDatabaseReference = FirebaseDatabase.getInstance().getReference();
 

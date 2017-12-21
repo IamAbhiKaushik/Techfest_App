@@ -20,7 +20,7 @@
         <item
             android:id="@+id/drawer_sponser"
             android:icon="@drawable/money"
-            android:title="SPONSERS" />
+            android:title="SPONSORS" />
         <item
             android:id="@+id/drawer_faq"
             android:icon="@drawable/comment_question"

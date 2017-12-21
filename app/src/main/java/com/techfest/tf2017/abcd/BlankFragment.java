@@ -186,7 +186,7 @@ public class BlankFragment extends Fragment implements LoaderCallbacks<List<Item
                 eventDescription.setText(currentItem.getDescR());
 
                 eventVenue.setText(currentItem.getTime_venue());
-                Picasso.with(getActivity()).load(currentItem.getImageResource()).placeholder(R.drawable.no_internet).into(eventImage);
+                Picasso.with(getActivity()).load(currentItem.getImageResource()).placeholder(R.drawable.loading).into(eventImage);
                 if (behavior.getState() == BottomSheetBehavior.STATE_COLLAPSED) {
                     //bottomSheet.setLayoutParams(new CoordinatorLayout.LayoutParams(CoordinatorLayout.LayoutParams.MATCH_PARENT, CoordinatorLayout.LayoutParams.MATCH_PARENT));
                     behavior.setState(BottomSheetBehavior.STATE_EXPANDED);

@@ -63,9 +63,9 @@ public class HomePage extends AppCompatActivity {
 
         emailDisplay = getString(R.string.emaildrawer);
 //        noti = getDrawable(R.drawable.ic_notifications_active_24px);
-        logoutImage = (ImageView) findViewById(R.id.logout_noti);
-        emailNoti = (TextView) findViewById(R.id.email_noti);
-        notificationUser = (ImageView) findViewById(R.id.notificationimg);
+//        logoutImage = (ImageView) findViewById(R.id.logout_noti);
+//        emailNoti = (TextView) findViewById(R.id.email_noti);
+//        notificationUser = (ImageView) findViewById(R.id.notificationimg);
         mapimage = (ImageView) findViewById(R.id.map_bottom);
         homeimage = (ImageView) findViewById(R.id.QR_bottom);
         schedimage = (ImageView) findViewById(R.id.schedule_bottom);
