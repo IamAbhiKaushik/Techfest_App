@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 
 /**
@@ -28,7 +30,19 @@ public class SponserFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sponser, container, false);
+        View sponnser = inflater.inflate(R.layout.fragment_sponser, container, false);
+        WebView myWebView = (WebView) sponnser.findViewById(R.id.webView);
+        myWebView.loadUrl("http://techfest.org/events/mediaapp.html");
+
+        myWebView.setWebViewClient(new WebViewClient() {
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                view.loadUrl(url);
+                return true;
+            }
+        });
+        return sponnser;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -41,12 +55,7 @@ public class SponserFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
+
     }
 
     @Override

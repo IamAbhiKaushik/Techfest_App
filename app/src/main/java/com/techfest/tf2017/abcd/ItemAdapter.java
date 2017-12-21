@@ -35,7 +35,7 @@ public class ItemAdapter extends ArrayAdapter<Item> {
 //        final ImageView = (ImageView) listItemView.findViewById(R.id.main_view);
         Item currentFile = getItem(position);
         ImageView iv1 = (ImageView) listItemView.findViewById(R.id.tv0);
-        Picasso.with(getContext()).load(currentFile.getImageResource()).placeholder(R.drawable.no_internet).fit().into(iv1);
+        Picasso.with(getContext()).load(currentFile.getImageResource()).placeholder(R.drawable.loading).fit().into(iv1);
 
         TextView tv1 = (TextView) listItemView.findViewById(R.id.tv1);
         tv1.setText(currentFile.getEvent_name());

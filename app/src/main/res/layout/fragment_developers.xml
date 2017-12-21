@@ -1,11 +1,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="#212A33"
     android:baselineAligned="false"
     android:orientation="vertical"
-
     android:paddingBottom="10dp"
     android:paddingLeft="20dp"
     android:paddingRight="20dp">
@@ -23,53 +22,119 @@
         android:textColor="#FFF"
         android:textSize="30sp" />
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:paddingLeft="0dp"
-        android:paddingRight="0dp"
-        android:paddingTop="0dp"
-        android:paddingBottom="10dp"
-        android:scaleType="centerCrop"
-        android:background="#212A33"
-        android:orientation="vertical"
-        >
+    <LinearLayout style="@style/Department">
 
-            <TextView
-                android:id="@+id/textname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Abhishek Singhal"
-                android:textSize="20sp"
-                android:textColor="#fff" />
+        <LinearLayout style="@style/CG_Row">
 
-            <TextView
-                android:id="@+id/textnam"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+91-8291473881\ne-mail:abisheksinghal@gmail.com"
-                android:textSize="10sp"
-                android:textColor="#fff"
-                 />
+            <LinearLayout style="@style/CG_Holder">
 
-            <TextView
-                android:id="@+id/textnae"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Prem Agrawal"
-                android:textSize="20sp"
-                android:textColor="#fff"
-                />
+                <TextView
+                    style="@style/CG_Name"
+                    android:text="Abhishek Singhal" />
 
-            <TextView
-                android:id="@+id/textna"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+91-8291473881\ne-mail:prem28ag@gmail.com"
-                android:textSize="10sp"
-                android:textColor="#fff" />
+                <TextView
+                    style="@style/CG_Contact"
+                    android:text="+91-8291473951" />
 
+            </LinearLayout>
+
+            <LinearLayout style="@style/CG_Holder">
+
+                <TextView
+                    style="@style/CG_Name"
+                    android:text="Aditya Jadhav" />
+
+                <TextView
+                    style="@style/CG_Contact"
+                    android:text="+91-7821984483" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/CG_Row">
+
+            <LinearLayout style="@style/CG_Holder">
+
+                <TextView
+                    style="@style/CG_Name"
+                    android:text="Aman Gautam" />
+
+                <TextView
+                    style="@style/CG_Contact"
+                    android:text="+91-8840710589" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/CG_Holder">
+
+                <TextView
+                    style="@style/CG_Name"
+                    android:text="Prem Agrawal" />
+
+                <TextView
+                    style="@style/CG_Contact"
+                    android:text="+91-8291473881" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/CG_Row">
+
+            <LinearLayout style="@style/CG_Holder">
+
+                <TextView
+                    style="@style/CG_Name"
+                    android:text="Nautatva Navlakha" />
+
+                <TextView
+                    style="@style/CG_Contact"
+                    android:text="+91-9834143900" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/CG_Holder">
+
+                <TextView
+                    style="@style/CG_Name"
+                    android:text="Aman Kumar" />
+
+                <TextView
+                    style="@style/CG_Contact"
+                    android:text="+91-8291475120" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/Department">
+
+        <LinearLayout style="@style/CG_Row">
+
+            <LinearLayout style="@style/CG_Holder">
+
+                <TextView
+                    style="@style/CG_Name"
+                    android:text="Aman Thangellapally" />
+
+                <TextView
+                    style="@style/CG_Contact"
+                    android:text="+91-9491821345" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/CG_Row">
+
+
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

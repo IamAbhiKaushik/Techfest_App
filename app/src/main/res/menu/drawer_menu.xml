@@ -3,11 +3,11 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/drawer_home"
-            android:icon="@drawable/cup_2_"
+            android:icon="@drawable/home_n"
             android:title="HOME" />
         <item
             android:id="@+id/drawer_compi"
-            android:icon="@drawable/cup_2_"
+            android:icon="@drawable/robot"
             android:title="ROBOWARS" />
         <item
             android:id="@+id/drawer_ozone"
@@ -15,15 +15,15 @@
             android:title="E-SPORTS" />
         <item
             android:id="@+id/drawer_mun"
-            android:icon="@drawable/joypad_2_"
+            android:icon="@drawable/twmun"
             android:title="TWMUN" />
         <item
             android:id="@+id/drawer_sponser"
-            android:icon="@drawable/joypad_2_"
+            android:icon="@drawable/money"
             android:title="SPONSERS" />
         <item
             android:id="@+id/drawer_faq"
-            android:icon="@drawable/joypad_2_"
+            android:icon="@drawable/comment_question"
             android:title="FAQs" />
 
         <item
@@ -33,7 +33,7 @@
             <menu>
                 <item
                     android:id="@+id/drawer_contact"
-                    android:icon="@drawable/pen_2_"
+                    android:icon="@drawable/contact"
                     android:title="CONTACT US" />
                 <item
                     android:id="@+id/drawer_dev"

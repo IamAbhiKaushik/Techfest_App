@@ -14,7 +14,7 @@ public class SponserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sponser);
         WebView myWebView = (WebView) findViewById(R.id.webView);
-        myWebView.loadUrl("https://www.techfest.org/betting");
+        myWebView.loadUrl("http://techfest.org/events/mediaapp.html");
 
         myWebView.setWebViewClient(new WebViewClient() {
 

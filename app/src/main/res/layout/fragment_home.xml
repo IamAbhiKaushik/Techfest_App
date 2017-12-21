@@ -4,12 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="0px"
+    android:layout_marginTop="-20dp"
     android:background="#212A33"
     android:baselineAligned="false"
     android:orientation="vertical"
     android:paddingBottom="10dp">
-
-    <!--master layout 1-->
 
         <ImageView
             android:id="@+id/home_logo"
@@ -20,7 +19,6 @@
             android:paddingLeft="50dp"
             android:paddingRight="50dp"
             android:src="@drawable/tf_logo" />
-
 
     <LinearLayout
         android:id="@+id/row1"
@@ -158,6 +156,7 @@
         android:paddingStart="20dp">
 
         <!--workshop-->
+
         <!--technoholix-->
         <LinearLayout
             android:id="@+id/technoholix"

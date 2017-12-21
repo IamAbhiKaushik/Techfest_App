@@ -11,7 +11,8 @@
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="10.5">
+        android:layout_weight="10.5"
+        android:background="#212A33">
 
     </android.support.v4.view.ViewPager>
 
@@ -25,10 +26,10 @@
         app:paddingStart="12dp"
         app:tabBackground="@color/colorPrimaryDark"
         app:tabGravity="fill"
-        app:tabIndicatorColor="#fff"
+        app:tabIndicatorColor="#4fa5d5"
         app:tabMaxWidth="0dp"
         app:tabMode="scrollable"
-        app:tabSelectedTextColor="#000"
+        app:tabSelectedTextColor="#4fa5d5"
         app:tabTextColor="#ffffff" />
 
 

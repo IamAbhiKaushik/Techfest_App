@@ -44,8 +44,8 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.6"
                     android:orientation="vertical"
-                    android:paddingTop="10dp"
-                    android:paddingLeft="5dp">
+                    android:paddingLeft="5dp"
+                    android:paddingTop="10dp">
 
                     <TextView
                         android:id="@+id/tv1"
@@ -54,8 +54,9 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="Event Name"
+                        android:textColor="#4fa5d5"
                         android:textSize="20sp"
-                        android:textColor="#4fa5d5"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tv2"
@@ -64,7 +65,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:text="Date and Venue"
-                        android:textSize="18sp" />
+                        android:textSize="14sp" />
 
 
                 </LinearLayout>

@@ -15,6 +15,20 @@
             android:orientation="vertical">
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/back"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="FAQs"
+                android:textColor="#FFF"
+                android:textSize="30sp" />
+            <TextView
                 style="@style/Question"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -104,26 +118,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="You first need to register for Techfest. Your accommodation will then be confirmed by the CL in coordination with the Hospitality Heads of the festival. The confirmation for the same will be communicated to the CL before 20th December." />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#212A33"
-            android:orientation="vertical">
-
-            <TextView
-                style="@style/Question"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="" />
-
-            <TextView
-                style="@style/Answer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="" />
 
         </LinearLayout>
 

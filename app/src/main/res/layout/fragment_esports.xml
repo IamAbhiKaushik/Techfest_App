@@ -9,7 +9,6 @@
     android:paddingRight="20dp"
     android:paddingTop="0dp"
     android:scaleType="centerCrop">
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,7 +21,6 @@
         android:text="Gamers League"
         android:textColor="#FFF"
         android:textSize="30sp" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,15 +40,14 @@
                 android:text="Techfest 2017-18 is proud to present the Biggest College Gaming Event in India - Techfest Razer Gamers League. The event consists of both online qualifiers and LAN finals for CS-GO and DOTA2 and offline tournament for NFS and FIFA18. The top 8 teams for each game will qualify for the LAN event. The dates for the LAN event are 29th to 31st December, 2017 and will happen during Techfest 2017 at IIT Bombay.\n\nRegistration is FREE for everyone. Last date for registrations for online qualifiers is 14th December 2017!"
                 android:textColor="#FFF"
                 android:textSize="20sp" />
-
             <Button
+                android:id="@+id/dabao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="150dp"
+                android:layout_marginBottom="40dp"
                 android:background="@drawable/back"
                 android:text="MORE"
-                android:id="@+id/dabao"
                 android:textColor="#FFF"
                 />
         </LinearLayout>

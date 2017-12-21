@@ -19,6 +19,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -53,7 +54,9 @@ public class HomePage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_home_page);
+
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -70,12 +73,12 @@ public class HomePage extends AppCompatActivity {
 //        ak = (Fragment) findViewById(R.id.fragment_space);
 
 
-//        setSupportActionBar(toolbar);
-//        if (getActionBar() != null) {
-//            // Display the top-left hamburger button
-//            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        }
-//        getSupportActionBar().setHomeButtonEnabled(true);
+        setSupportActionBar(toolbar);
+        if (getActionBar() != null) {
+            // Display the top-left hamburger button
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+        getSupportActionBar().setHomeButtonEnabled(true);
 
 
         // Make the hamburger button work
@@ -96,7 +99,13 @@ public class HomePage extends AppCompatActivity {
         mDrawerToggle.syncState();
 
         mNavigation = (NavigationView) findViewById(R.id.nav_view);
-
+        HomeFragment mapFragment = new HomeFragment();
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        mDrawer.closeDrawer(GravityCompat.START);
+        transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
+        transaction.addToBackStack(null);
+        transaction.commit();
         mNavigation.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -149,6 +158,7 @@ public class HomePage extends AppCompatActivity {
                     FragmentTransaction transaction = manager.beginTransaction();
                     count++;
                     mDrawer.closeDrawer(GravityCompat.START);
+
                     transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
                     transaction.addToBackStack(null);
                     transaction.commit();
@@ -168,7 +178,16 @@ public class HomePage extends AppCompatActivity {
                     item.setChecked(true);
                 }
                 if (id == R.id.drawer_sponser) {
+//                    startActivity(new Intent(HomePage.this, SponserActivity.class));
 
+//                    SponserFragment mapFragment = new SponserFragment();
+//                    FragmentManager manager = getSupportFragmentManager();
+//                FragmentTransaction transaction = manager.beginTransaction();
+//                    count++;
+//                    mDrawer.closeDrawer(GravityCompat.START);
+//                    transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
+//                    transaction.addToBackStack(null);
+//                    transaction.commit();
                     SponserFragment mapFragment = new SponserFragment();
                     FragmentManager manager = getSupportFragmentManager();
                     FragmentTransaction transaction = manager.beginTransaction();
@@ -177,6 +196,7 @@ public class HomePage extends AppCompatActivity {
                     transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
                     transaction.addToBackStack(null);
                     transaction.commit();
+//                    item.setChecked(true);
                     item.setChecked(true);
                 }
                 if (id == R.id.drawer_home) {
@@ -184,7 +204,10 @@ public class HomePage extends AppCompatActivity {
                     HomeFragment mapFragment = new HomeFragment();
                     FragmentManager manager = getSupportFragmentManager();
                     FragmentTransaction transaction = manager.beginTransaction();
-                    count++;
+                    while (manager.getBackStackEntryCount() != 0) {
+                        manager.popBackStackImmediate();
+                    }
+                    count = 0;
                     mDrawer.closeDrawer(GravityCompat.START);
                     transaction.replace(R.id.fragment_space, mapFragment, mapFragment.getTag());
                     transaction.addToBackStack(null);
@@ -239,9 +262,9 @@ public class HomePage extends AppCompatActivity {
                     imagebit = getBitmapfromURL(strURL);
                     if (imagebit != null) {
                         i.setImageBitmap(imagebit);
-                        notificationUser.setImageBitmap(imagebit);
+//                        notificationUser.setImageBitmap(imagebit);
                     }
-                    emailNoti.setText(email);
+//                    emailNoti.setText(email);
                     displayEmail.setText(email);
                     displayName.setText(name);
 //                    Toast.makeText(HomePage.this,"Hello " + email , Toast.LENGTH_SHORT).show();
@@ -263,14 +286,14 @@ public class HomePage extends AppCompatActivity {
 //                Toast.makeText(getApplicationContext(), drawerstring, Toast.LENGTH_SHORT).show();
 //            }
 //        });
-        logoutImage.setOnClickListener(new View.OnClickListener() {  /*Logout for button in notification*/
-            @Override
-            public void onClick(View v) {
-                mAuth.signOut();
-                finish();
-                startActivity(new Intent(HomePage.this, LoginActivity.class));
-            }
-        });
+//        logoutImage.setOnClickListener(new View.OnClickListener() {  /*Logout for button in notification*/
+//            @Override
+//            public void onClick(View v) {
+//                mAuth.signOut();
+//                finish();
+//                startActivity(new Intent(HomePage.this, LoginActivity.class));
+//            }
+//        });
         mapimage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -307,7 +330,10 @@ public class HomePage extends AppCompatActivity {
                 FragmentTransaction transaction = manager.beginTransaction();
                 transaction.replace(R.id.fragment_space, faqFragment, faqFragment.getTag());
                 transaction.addToBackStack(null);
-                count++;
+                while (manager.getBackStackEntryCount() != 0) {
+                    manager.popBackStackImmediate();
+                }
+                count = 0;
                 transaction.commit();
             }
         });
@@ -343,29 +369,32 @@ public class HomePage extends AppCompatActivity {
 
         }
     }
-@Override
-public void onBackPressed() {
-    if (count == 0) {
-        if (doubleBackToExitPressedOnce) {
-            super.onBackPressed();
-            return;
-        }
 
-        this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
-
-        new Handler().postDelayed(new Runnable() {
-
-            @Override
-            public void run() {
-                doubleBackToExitPressedOnce = false;
+    @Override
+    public void onBackPressed() {
+        if (count == 0) {
+            if (doubleBackToExitPressedOnce) {
+                super.onBackPressed();
+                super.onBackPressed();
+                return;
             }
-        }, 2000);
-    } else {
-        count = count - 1;
-        super.onBackPressed();
+
+            this.doubleBackToExitPressedOnce = true;
+            Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    doubleBackToExitPressedOnce = false;
+                }
+            }, 2000);
+        } else {
+            count = count - 1;
+            super.onBackPressed();
+        }
     }
-}
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Pass the event to ActionBarDrawerToggle, if it returns

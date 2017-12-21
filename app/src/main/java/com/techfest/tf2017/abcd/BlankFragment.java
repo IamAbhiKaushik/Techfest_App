@@ -35,12 +35,12 @@ public class BlankFragment extends Fragment implements LoaderCallbacks<List<Item
     public static final String ARG_PAGE = "ARG_PAGE";
     public static final String TITLE = "ARG_TITLE";
     final private String TAG = "BlankFragment";
+    public BottomSheetBehavior behavior;
     ArrayList<Item> item = new ArrayList<Item>();
     LinearLayout emptyView;
     private ItemAdapter adapter;
     private String Title;
     private int mPage;
-
 
     public BlankFragment() {
         // Required empty public constructor
@@ -122,7 +122,7 @@ public class BlankFragment extends Fragment implements LoaderCallbacks<List<Item
         final View rootView = inflater.inflate(R.layout.activity_competetion, container, false);
         emptyView = (LinearLayout) rootView.findViewById(R.id.empty_state);
         final View bottomSheet = rootView.findViewById(R.id.design_bottom_sheet);
-        final BottomSheetBehavior behavior = BottomSheetBehavior.from(bottomSheet);
+        behavior = BottomSheetBehavior.from(bottomSheet);
         behavior.setPeekHeight(0);
         behavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
             @Override
@@ -254,5 +254,7 @@ public class BlankFragment extends Fragment implements LoaderCallbacks<List<Item
     public void onLoaderReset(Loader<List<Item>> loader) {
         adapter.clear();
     }
+
+
 }
 
