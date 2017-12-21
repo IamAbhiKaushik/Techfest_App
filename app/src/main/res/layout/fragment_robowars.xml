@@ -39,7 +39,7 @@
                 android:layout_marginBottom="50dp"
                 android:fontFamily="sans-serif-light"
                 android:lineSpacingExtra="2dp"
-                android:text="Witness fierce fighting robots from across the world and beat the audience inbetting on the bots you think will survive!\n\nWith exciting prizes for the best betters, you just cannot miss this robot combat extravaganza!\nTo join the virtual betting, start off at techfest.org/betting"
+                android:text="Witness fierce fighting robots from across the world and beat the audience inbetting on the bots you think will survive!\n\nWith exciting prizes for the best betters, you just cannot miss this robot combat extravaganza!\nTo join the virtual betting"
                 android:textColor="#FFF"
                 android:textSize="20sp" />
             <Button
@@ -49,7 +49,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="0dp"
                 android:background="@drawable/back"
-                android:text="MORE"
+                android:padding="10dp"
+                android:text="START BETTING"
                 android:textColor="#FFF" />
         </LinearLayout>
     </ScrollView>

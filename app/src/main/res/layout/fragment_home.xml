@@ -18,7 +18,7 @@
             android:layout_marginRight="16dp"
             android:paddingLeft="50dp"
             android:paddingRight="50dp"
-            android:src="@drawable/tf_logo" />
+            android:src="@drawable/logo_tf" />
 
     <LinearLayout
         android:id="@+id/row1"
@@ -50,7 +50,6 @@
                 android:contentDescription="@string/compi"
                 android:paddingEnd="35dp"
                 android:paddingStart="35dp"
-                android:paddingTop="20dp"
                 android:src="@drawable/cup_2_" />
 
             <TextView
@@ -84,7 +83,6 @@
                 android:contentDescription="@string/ozone"
                 android:paddingEnd="35dp"
                 android:paddingStart="35dp"
-                android:paddingTop="20dp"
                 android:src="@drawable/joypad_2_"
                 tools:ignore="NestedWeights" />
 
@@ -119,7 +117,6 @@
                 android:contentDescription="@string/workshop"
                 android:paddingEnd="35dp"
                 android:paddingStart="35dp"
-                android:paddingTop="20dp"
                 android:src="@drawable/pen_2_"
                 tools:ignore="NestedWeights" />
 

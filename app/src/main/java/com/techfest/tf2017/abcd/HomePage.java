@@ -178,7 +178,6 @@ public class HomePage extends AppCompatActivity {
                     item.setChecked(true);
                 }
                 if (id == R.id.drawer_sponser) {
-//                    startActivity(new Intent(HomePage.this, SponserActivity.class));
 
 //                    SponserFragment mapFragment = new SponserFragment();
 //                    FragmentManager manager = getSupportFragmentManager();

@@ -36,9 +36,6 @@
             android:name="com.techfest.tf2017.abcd.HomePage"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.techfest.tf2017.abcd.MainActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name="com.techfest.tf2017.abcd.CompetetionActivity"
             android:parentActivityName="com.techfest.tf2017.abcd.HomePage"
             android:screenOrientation="portrait"
@@ -59,19 +56,6 @@
 
         <activity
             android:name="com.techfest.tf2017.abcd.MapListActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.techfest.tf2017.abcd.ScheduleActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.techfest.tf2017.abcd.SponserActivity"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.techfest.tf2017.abcd.BettingActivity"
             android:screenOrientation="portrait" />
     </application>
 

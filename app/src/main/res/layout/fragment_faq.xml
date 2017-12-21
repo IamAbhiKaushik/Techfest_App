@@ -157,7 +157,7 @@
                 style="@style/Answer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="No. The accommodation fee don’t include food . However, there will be food courts and eateries inside campus operational during Techfest to cater your food requirements." />
+                android:text="No, the accommodation fee doesn’t include food . However, there will be food courts and eateries inside campus operational during Techfest to cater your food requirements." />
 
         </LinearLayout>
 
@@ -177,7 +177,7 @@
                 style="@style/Answer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Preferably No , due to lot of rush your re-entry can't be assured for the same day" />
+                android:text="Preferably no , due to lot of rush your re-entry can't be assured for the same day" />
 
         </LinearLayout>
 
@@ -237,7 +237,7 @@
                 style="@style/Answer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="In case of any Emergency, please call the emergency number given on the Registration Booklet." />
+                android:text="In case of any Emergency, please call the emergency number given in the Registration Booklet." />
 
         </LinearLayout>
 
@@ -257,7 +257,7 @@
                 style="@style/Answer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Please use the security number given the Registration Booklet." />
+                android:text="Please use the security number given in the Registration Booklet." />
 
         </LinearLayout>
 

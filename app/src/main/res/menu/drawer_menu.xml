@@ -25,25 +25,18 @@
             android:id="@+id/drawer_faq"
             android:icon="@drawable/comment_question"
             android:title="FAQs" />
+        <item
+            android:id="@+id/drawer_contact"
+            android:icon="@drawable/contact"
+            android:title="CONTACT US" />
+        <item
+            android:id="@+id/drawer_dev"
+            android:icon="@drawable/pen_2_"
+            android:title="DEVELOPERS" />
 
         <item
-            android:id="@+id/subheader"
-            android:title="More"
-            >
-            <menu>
-                <item
-                    android:id="@+id/drawer_contact"
-                    android:icon="@drawable/contact"
-                    android:title="CONTACT US" />
-                <item
-                    android:id="@+id/drawer_dev"
-                    android:icon="@drawable/pen_2_"
-                    android:title="DEVELOPERS" />
-                <item
-                    android:id="@+id/LogoutBTN"
-                    android:icon="@drawable/ic_exit_to_app_white_24dp"
-                    android:title="@string/logout" />
-            </menu>
-        </item>
+            android:id="@+id/LogoutBTN"
+            android:icon="@drawable/ic_exit_to_app_white_24dp"
+            android:title="@string/logout" />
     </group>
 </menu>
