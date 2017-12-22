@@ -137,7 +137,7 @@
                 style="@style/Answer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="There are two types of bands that will be distributed along with the registration booklets- blue and red. Blue band will be given to the people who have accomodation while the red band will be given to the people who don’t have accomodation. People with red bands need to vacate the campus after 5 PM , but if you have passes for Technoholix then only people with red bands can stay inside campus." />
+                android:text="There are two types of bands that will be distributed along with the registration booklets- blue and green. Green band will be given to the people who have accomodation while the blue band will be given to the people who don’t have accomodation. People with red bands need to vacate the campus after 5 PM , but if you have passes for Technoholix then only people with red bands can stay inside campus." />
 
         </LinearLayout>
 

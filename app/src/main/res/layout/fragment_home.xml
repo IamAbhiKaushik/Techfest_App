@@ -365,9 +365,8 @@
                 android:paddingEnd="35dp"
                 android:paddingStart="35dp"
                 android:paddingTop="20dp"
-                android:src="@drawable/lecture_home"
+                android:src="@drawable/user_2_"
                 tools:ignore="NestedWeights" />
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -377,10 +376,7 @@
                 android:textColor="#ffffff"
                 android:textSize="12sp" />
         </LinearLayout>
-
     </LinearLayout>
-
-
 </LinearLayout>
 
     <!--</FrameLayout>-->

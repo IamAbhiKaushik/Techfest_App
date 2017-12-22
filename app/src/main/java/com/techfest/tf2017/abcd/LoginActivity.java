@@ -188,13 +188,13 @@ public class LoginActivity extends AppCompatActivity {
                             userNameString = user.getDisplayName();
                             Uri userUrl = user.getPhotoUrl();
                             String userImageString = userUrl.toString();
-                            DatabaseReference mChildDataRef = mDatabaseReference.child("Users").push();
-                            String key_user = mChildDataRef.getKey();
-                            mChildDataRef.child("keyUser").setValue(key_user);
-                            mChildDataRef.child("emailUser").setValue(userEmailString);
-                            mChildDataRef.child("passUser").setValue(userPassString);
-                            mChildDataRef.child("nameUser").setValue(userNameString);
-                            mChildDataRef.child("photoUser").setValue(userImageString);
+//                            DatabaseReference mChildDataRef = mDatabaseReference.child("Users").push();
+//                            String key_user = mChildDataRef.getKey();
+//                            mChildDataRef.child("keyUser").setValue(key_user);
+//                            mChildDataRef.child("emailUser").setValue(userEmailString);
+//                            mChildDataRef.child("passUser").setValue(userPassString);
+//                            mChildDataRef.child("nameUser").setValue(userNameString);
+//                            mChildDataRef.child("photoUser").setValue(userImageString);
 
                         } else {
                             // If sign in fails, display a message to the user.

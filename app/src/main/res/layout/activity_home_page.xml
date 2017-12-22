@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/DL"
     android:layout_width="match_parent"
@@ -52,38 +51,31 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
                     android:contentDescription="@string/fav"
-                    android:src="@drawable/home" />
+                    android:src="@drawable/homea" />
                 <ImageView
                     android:id="@+id/map_bottom"
                     android:layout_width="0sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
                     android:contentDescription="@string/map"
-                    android:src="@drawable/map" />
-
+                    android:src="@drawable/map_new" />
                 <ImageView
                     android:id="@+id/QR_bottom"
                     android:layout_width="0sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
                     android:contentDescription="@string/scanQR"
-                    android:src="@drawable/qrscan" />
-
+                    android:src="@drawable/qrscanner" />
                 <ImageView
                     android:id="@+id/schedule_bottom"
                     android:layout_width="0sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
                     android:contentDescription="@string/schedule"
-                    android:src="@drawable/bet" />
-
-
+                    android:src="@drawable/mon" />
             </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
-
-
     <!--Left drawer here-->
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"

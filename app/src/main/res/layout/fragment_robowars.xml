@@ -39,7 +39,7 @@
                 android:layout_marginBottom="50dp"
                 android:fontFamily="sans-serif-light"
                 android:lineSpacingExtra="2dp"
-                android:text="Witness fierce fighting robots from across the world and beat the audience inbetting on the bots you think will survive!\n\nWith exciting prizes for the best betters, you just cannot miss this robot combat extravaganza!\nTo join the virtual betting"
+                android:text="Witness fierce fighting robots from across the world and beat the audience in betting on the bots you think will survive!\n\nWith exciting prizes for the best betters, you just cannot miss this robot combat extravaganza!\nTo join the virtual betting"
                 android:textColor="#FFF"
                 android:textSize="20sp" />
             <Button
