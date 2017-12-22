@@ -2,13 +2,13 @@ package com.techfest.tf2017.abcd;
 
 import java.util.ArrayList;
 
-public class data {
+class data {
 
-    private ArrayList<String> name;
-    private ArrayList<String> link;
-    private ArrayList<String> imglink;
-    private ArrayList<String> intro;
-    private ArrayList<String> time;
+    private final ArrayList<String> name;
+    private final ArrayList<String> link;
+    private final ArrayList<String> imglink;
+    private final ArrayList<String> intro;
+    private final ArrayList<String> time;
 
     public data(ArrayList<String> mname, ArrayList<String> mlink, ArrayList<String> minglink, ArrayList<String> mintro, ArrayList<String> mtime) {
 

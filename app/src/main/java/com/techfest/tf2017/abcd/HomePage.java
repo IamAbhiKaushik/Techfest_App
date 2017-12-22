@@ -37,19 +37,26 @@ import java.util.ArrayList;
 
 public class HomePage extends AppCompatActivity {
 
-    DrawerLayout mDrawer;
-    ActionBarDrawerToggle mDrawerToggle;
-    NavigationView mNavigation;
-    FirebaseAuth mAuth;
-    FirebaseAuth.AuthStateListener mAuthListner;
-    TextView displayEmail, emailNoti, displayName;
-    String emailDisplay;
-    ImageView logoutImage, notificationUser, mapimage, homeimage, aboutimage, schedimage;
+    private DrawerLayout mDrawer;
+    private ActionBarDrawerToggle mDrawerToggle;
+    private NavigationView mNavigation;
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListner;
+    private TextView displayEmail;
+    TextView emailNoti;
+    private TextView displayName;
+    private String emailDisplay;
+    ImageView logoutImage;
+    ImageView notificationUser;
+    private ImageView mapimage;
+    private ImageView homeimage;
+    private ImageView aboutimage;
+    private ImageView schedimage;
     Drawable noti;
-    Bitmap imagebit;
+    private Bitmap imagebit;
     Fragment ak;
-    int count = 0;
-    boolean doubleBackToExitPressedOnce = false;
+    private int count = 0;
+    private boolean doubleBackToExitPressedOnce = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -351,7 +358,7 @@ public class HomePage extends AppCompatActivity {
 
     }
 
-    public Bitmap getBitmapfromURL(String src) {
+    private Bitmap getBitmapfromURL(String src) {
 
         try {
             URL url = new URL(src);

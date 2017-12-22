@@ -17,7 +17,7 @@ import java.util.ArrayList;
  * Created by amank on 2/12/17.
  */
 
-public class ItemAdapter extends ArrayAdapter<Item> {
+class ItemAdapter extends ArrayAdapter<Item> {
 
     public ItemAdapter(Activity context, ArrayList<Item> news) {
 

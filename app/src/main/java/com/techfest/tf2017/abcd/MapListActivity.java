@@ -19,7 +19,7 @@ public class MapListActivity extends AppCompatActivity {
     DrawerLayout mDrawer;
     ActionBarDrawerToggle mDrawerToggle;
     NavigationView mNavigation;
-    FirebaseAuth mAuth;
+    private FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListner;
 
     @Override

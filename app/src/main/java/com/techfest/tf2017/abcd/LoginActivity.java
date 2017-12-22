@@ -37,16 +37,20 @@ public class LoginActivity extends AppCompatActivity {
     private final static int RC_SIGN_IN = 123;
     //Views and Widgets
     Button LoginBtn ;
-    TextView MoveToSignin ,displayEmail,ndisplayEmail;
+    TextView MoveToSignin;
+    private TextView displayEmail;
+    TextView ndisplayEmail;
     EditText userEmail,userPass ;
-    String userEmailString,userPassString,userNameString;
+    private String userEmailString;
+    private String userPassString;
+    private String userNameString;
     //Create Firebase Fields
-    FirebaseAuth mAuth;
-    FirebaseAuth.AuthStateListener mAuthListner;
-    SignInButton button;
-    GoogleSignInClient mGoogleSignInClient;
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListner;
+    private SignInButton button;
+    private GoogleSignInClient mGoogleSignInClient;
     GoogleApiClient mGoogleApiClient;
-    DatabaseReference mDatabaseReference;
+    private DatabaseReference mDatabaseReference;
 
 
     @Override

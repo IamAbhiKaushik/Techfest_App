@@ -5,13 +5,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-public class BlankAdapter extends FragmentPagerAdapter {
-    private Context mContext;
-    private String tabTitle[] = new String[]{"COMPETITION", "OZONE", "WORKSHOPS", "TECHNOHOLIX", "SUMMIT", "EXHIBITIONS", "INITIATIVES", "IDEATE", "LECTURES"};
+class BlankAdapter extends FragmentPagerAdapter {
+    private final String[] tabTitle = new String[]{"COMPETITION", "OZONE", "WORKSHOPS", "TECHNOHOLIX", "SUMMIT", "EXHIBITIONS", "INITIATIVES", "IDEATE", "LECTURES"};
 
     public BlankAdapter(Context context, FragmentManager fm) {
         super(fm);
-        this.mContext = context;
+        Context mContext = context;
     }
 
     @Override

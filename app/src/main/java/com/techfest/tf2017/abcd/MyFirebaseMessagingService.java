@@ -14,8 +14,8 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
-    DatabaseReference mDatabaseReference;
-    FirebaseAuth mAuth;
+    private DatabaseReference mDatabaseReference;
+    private FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListner;
 
     @Override

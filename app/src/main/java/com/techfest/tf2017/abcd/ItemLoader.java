@@ -9,8 +9,8 @@ import java.util.List;
  * Created by amank on 5/12/17.
  */
 
-public class ItemLoader extends AsyncTaskLoader<List<Item>> {
-    private int i;
+class ItemLoader extends AsyncTaskLoader<List<Item>> {
+    private final int i;
 
     public ItemLoader(Context context, int k) {
         super(context);

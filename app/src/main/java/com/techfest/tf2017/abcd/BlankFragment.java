@@ -32,12 +32,12 @@ import java.util.List;
 
 
 public class BlankFragment extends Fragment implements LoaderCallbacks<List<Item>> {
-    public static final String ARG_PAGE = "ARG_PAGE";
-    public static final String TITLE = "ARG_TITLE";
+    private static final String ARG_PAGE = "ARG_PAGE";
+    private static final String TITLE = "ARG_TITLE";
     final private String TAG = "BlankFragment";
-    public BottomSheetBehavior behavior;
-    ArrayList<Item> item = new ArrayList<Item>();
-    LinearLayout emptyView;
+    private BottomSheetBehavior behavior;
+    private final ArrayList<Item> item = new ArrayList<Item>();
+    private LinearLayout emptyView;
     private ItemAdapter adapter;
     private String Title;
     private int mPage;
