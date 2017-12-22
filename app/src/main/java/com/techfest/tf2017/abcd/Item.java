@@ -4,17 +4,17 @@ package com.techfest.tf2017.abcd;
  * Created by amank on 28/11/17.
  */
 
-public class Item {
+class Item {
 
-    private String event_name;
+    private final String event_name;
 
-    private String imageResource;
+    private final String imageResource;
 
-    private String time_venue;
+    private final String time_venue;
 
-    private String introR;
+    private final String introR;
 
-    private String descR;
+    private final String descR;
 
     public Item(String mevent_name, String mimageResource, String mtime_venue, String mdescR, String mintroR) {
 

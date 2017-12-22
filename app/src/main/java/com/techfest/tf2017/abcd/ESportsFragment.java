@@ -17,7 +17,7 @@ import com.techfest.tf2017.abcd.R;
 public class ESportsFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
-    TextView button;
+    private TextView button;
 
     public ESportsFragment() {
         // Required empty public constructor

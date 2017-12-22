@@ -15,7 +15,7 @@ import java.util.ArrayList;
  * Created by amank on 5/12/17.
  */
 
-public class MyApp extends Application {
+class MyApp extends Application {
 
     @Override
     public void onCreate() {

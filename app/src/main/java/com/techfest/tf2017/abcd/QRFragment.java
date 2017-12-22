@@ -24,7 +24,7 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 
 public class QRFragment extends Fragment implements ZXingScannerView.ResultHandler {
-    public static final int MY_PERMISSIONS_REQUEST_CAMERA = 99;
+    private static final int MY_PERMISSIONS_REQUEST_CAMERA = 99;
     private ZXingScannerView mScannerView;
 
 

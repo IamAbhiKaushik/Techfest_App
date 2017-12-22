@@ -8,14 +8,13 @@ import android.os.Handler;
 import com.techfest.tf2017.abcd.R;
 
 public class SplashActivity extends Activity {
-    // Splash screen timer
-    private static int SPLASH_TIME_OUT = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        int SPLASH_TIME_OUT = 3000;
         new Handler().postDelayed(new Runnable() {
 
             /*

@@ -7,7 +7,7 @@ import java.util.List;
  * Created by amank on 5/12/17.
  */
 
-public class QueryFutil {
+class QueryFutil {
 
 
     public static List<Item> fetchData(int mPage) {

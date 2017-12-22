@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class RobowarsFragment extends Fragment {
 
-    TextView button;
+    private TextView button;
 
     private OnFragmentInteractionListener mListener;
 
